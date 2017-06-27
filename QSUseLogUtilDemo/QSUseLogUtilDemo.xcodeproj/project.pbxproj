@@ -1,0 +1,821 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		88875F841EB822E900C9C679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875F831EB822E900C9C679 /* main.m */; };
+		88875F871EB822E900C9C679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875F861EB822E900C9C679 /* AppDelegate.m */; };
+		88875F8A1EB822E900C9C679 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875F891EB822E900C9C679 /* ViewController.m */; };
+		88875F8D1EB822E900C9C679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88875F8B1EB822E900C9C679 /* Main.storyboard */; };
+		88875F8F1EB822E900C9C679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88875F8E1EB822E900C9C679 /* Assets.xcassets */; };
+		88875F921EB822E900C9C679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88875F901EB822E900C9C679 /* LaunchScreen.storyboard */; };
+		88875F9D1EB822EA00C9C679 /* QSUseLogUtilDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875F9C1EB822EA00C9C679 /* QSUseLogUtilDemoTests.m */; };
+		88875FA81EB822EA00C9C679 /* QSUseLogUtilDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875FA71EB822EA00C9C679 /* QSUseLogUtilDemoUITests.m */; };
+		88875FE41EB879AA00C9C679 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875F891EB822E900C9C679 /* ViewController.m */; };
+		88875FE51EB879AA00C9C679 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875F861EB822E900C9C679 /* AppDelegate.m */; };
+		88875FE71EB879AA00C9C679 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875F831EB822E900C9C679 /* main.m */; };
+		88875FE91EB879AA00C9C679 /* libPods-QSUseLogUtilDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 596836713319C989E4D7B225 /* libPods-QSUseLogUtilDemo.a */; };
+		88875FEB1EB879AA00C9C679 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88875F901EB822E900C9C679 /* LaunchScreen.storyboard */; };
+		88875FEC1EB879AA00C9C679 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88875F8E1EB822E900C9C679 /* Assets.xcassets */; };
+		88875FED1EB879AA00C9C679 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88875F8B1EB822E900C9C679 /* Main.storyboard */; };
+		88875FF71EB8882400C9C679 /* QSOldLogUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 88875FF61EB8882400C9C679 /* QSOldLogUtil.m */; };
+		888760131EB9CD9E00C9C679 /* QSLogFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 8887600E1EB9CD9E00C9C679 /* QSLogFormatter.m */; };
+		888760141EB9CD9E00C9C679 /* QSLogUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 888760101EB9CD9E00C9C679 /* QSLogUtil.m */; };
+		888760151EB9CD9E00C9C679 /* QSLogView.m in Sources */ = {isa = PBXBuildFile; fileRef = 888760121EB9CD9E00C9C679 /* QSLogView.m */; };
+		888760191EB9CE3200C9C679 /* YYWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 888760181EB9CE3200C9C679 /* YYWeakProxy.m */; };
+		EB10B26C23045271FF7D04E0 /* libPods-QSUseLogUtilDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 596836713319C989E4D7B225 /* libPods-QSUseLogUtilDemo.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		88875F991EB822EA00C9C679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88875F771EB822E900C9C679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88875F7E1EB822E900C9C679;
+			remoteInfo = QSUseLogUtilDemo;
+		};
+		88875FA41EB822EA00C9C679 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 88875F771EB822E900C9C679 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88875F7E1EB822E900C9C679;
+			remoteInfo = QSUseLogUtilDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		00330A2D225F03AFC34D62B9 /* Pods-QSUseLogUtilDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSUseLogUtilDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QSUseLogUtilDemo/Pods-QSUseLogUtilDemo.release.xcconfig"; sourceTree = "<group>"; };
+		596836713319C989E4D7B225 /* libPods-QSUseLogUtilDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QSUseLogUtilDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		75F14B91FF9EAFD3800A1ECA /* Pods-QSUseLogUtilDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSUseLogUtilDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QSUseLogUtilDemo/Pods-QSUseLogUtilDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		88875F7F1EB822E900C9C679 /* QSUseLogUtilDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSUseLogUtilDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		88875F831EB822E900C9C679 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		88875F851EB822E900C9C679 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		88875F861EB822E900C9C679 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		88875F881EB822E900C9C679 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		88875F891EB822E900C9C679 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		88875F8C1EB822E900C9C679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		88875F8E1EB822E900C9C679 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		88875F911EB822E900C9C679 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		88875F931EB822E900C9C679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88875F981EB822EA00C9C679 /* QSUseLogUtilDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSUseLogUtilDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88875F9C1EB822EA00C9C679 /* QSUseLogUtilDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSUseLogUtilDemoTests.m; sourceTree = "<group>"; };
+		88875F9E1EB822EA00C9C679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88875FA31EB822EA00C9C679 /* QSUseLogUtilDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSUseLogUtilDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		88875FA71EB822EA00C9C679 /* QSUseLogUtilDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSUseLogUtilDemoUITests.m; sourceTree = "<group>"; };
+		88875FA91EB822EA00C9C679 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88875FD81EB82CE200C9C679 /* QSUseLogUtilDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QSUseLogUtilDemo-Prefix.pch"; sourceTree = "<group>"; };
+		88875FF31EB879AA00C9C679 /* QSUseLogUtilDemo copy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "QSUseLogUtilDemo copy.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		88875FF41EB879AA00C9C679 /* QSUseLogUtilDemo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "QSUseLogUtilDemo copy-Info.plist"; path = "/Users/zhongpingjiang/Desktop/MYCode/QSUseLogUtilDemo/QSUseLogUtilDemo copy-Info.plist"; sourceTree = "<absolute>"; };
+		88875FF51EB8882400C9C679 /* QSOldLogUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSOldLogUtil.h; sourceTree = "<group>"; };
+		88875FF61EB8882400C9C679 /* QSOldLogUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSOldLogUtil.m; sourceTree = "<group>"; };
+		8887600D1EB9CD9E00C9C679 /* QSLogFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSLogFormatter.h; sourceTree = "<group>"; };
+		8887600E1EB9CD9E00C9C679 /* QSLogFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSLogFormatter.m; sourceTree = "<group>"; };
+		8887600F1EB9CD9E00C9C679 /* QSLogUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSLogUtil.h; sourceTree = "<group>"; };
+		888760101EB9CD9E00C9C679 /* QSLogUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSLogUtil.m; sourceTree = "<group>"; };
+		888760111EB9CD9E00C9C679 /* QSLogView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSLogView.h; sourceTree = "<group>"; };
+		888760121EB9CD9E00C9C679 /* QSLogView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSLogView.m; sourceTree = "<group>"; };
+		888760171EB9CE3200C9C679 /* YYWeakProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYWeakProxy.h; sourceTree = "<group>"; };
+		888760181EB9CE3200C9C679 /* YYWeakProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYWeakProxy.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		88875F7C1EB822E900C9C679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB10B26C23045271FF7D04E0 /* libPods-QSUseLogUtilDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875F951EB822EA00C9C679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875FA01EB822EA00C9C679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875FE81EB879AA00C9C679 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88875FE91EB879AA00C9C679 /* libPods-QSUseLogUtilDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		88875F761EB822E900C9C679 = {
+			isa = PBXGroup;
+			children = (
+				88875F811EB822E900C9C679 /* QSUseLogUtilDemo */,
+				88875F9B1EB822EA00C9C679 /* QSUseLogUtilDemoTests */,
+				88875FA61EB822EA00C9C679 /* QSUseLogUtilDemoUITests */,
+				88875F801EB822E900C9C679 /* Products */,
+				A2F0C0C5B1E5A450B1740F97 /* Pods */,
+				C703460C1E9C415ECC0E9905 /* Frameworks */,
+				88875FF41EB879AA00C9C679 /* QSUseLogUtilDemo copy-Info.plist */,
+			);
+			sourceTree = "<group>";
+		};
+		88875F801EB822E900C9C679 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				88875F7F1EB822E900C9C679 /* QSUseLogUtilDemo.app */,
+				88875F981EB822EA00C9C679 /* QSUseLogUtilDemoTests.xctest */,
+				88875FA31EB822EA00C9C679 /* QSUseLogUtilDemoUITests.xctest */,
+				88875FF31EB879AA00C9C679 /* QSUseLogUtilDemo copy.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		88875F811EB822E900C9C679 /* QSUseLogUtilDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8887600C1EB9CD9E00C9C679 /* NewLogUtil */,
+				88875FD91EB82EA900C9C679 /* OldLogUtil */,
+				88875F851EB822E900C9C679 /* AppDelegate.h */,
+				88875F861EB822E900C9C679 /* AppDelegate.m */,
+				88875F881EB822E900C9C679 /* ViewController.h */,
+				88875F891EB822E900C9C679 /* ViewController.m */,
+				88875F8B1EB822E900C9C679 /* Main.storyboard */,
+				88875F8E1EB822E900C9C679 /* Assets.xcassets */,
+				88875F901EB822E900C9C679 /* LaunchScreen.storyboard */,
+				88875F931EB822E900C9C679 /* Info.plist */,
+				88875F821EB822E900C9C679 /* Supporting Files */,
+			);
+			path = QSUseLogUtilDemo;
+			sourceTree = "<group>";
+		};
+		88875F821EB822E900C9C679 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				88875F831EB822E900C9C679 /* main.m */,
+				88875FD81EB82CE200C9C679 /* QSUseLogUtilDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		88875F9B1EB822EA00C9C679 /* QSUseLogUtilDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				88875F9C1EB822EA00C9C679 /* QSUseLogUtilDemoTests.m */,
+				88875F9E1EB822EA00C9C679 /* Info.plist */,
+			);
+			path = QSUseLogUtilDemoTests;
+			sourceTree = "<group>";
+		};
+		88875FA61EB822EA00C9C679 /* QSUseLogUtilDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				88875FA71EB822EA00C9C679 /* QSUseLogUtilDemoUITests.m */,
+				88875FA91EB822EA00C9C679 /* Info.plist */,
+			);
+			path = QSUseLogUtilDemoUITests;
+			sourceTree = "<group>";
+		};
+		88875FD91EB82EA900C9C679 /* OldLogUtil */ = {
+			isa = PBXGroup;
+			children = (
+				88875FF51EB8882400C9C679 /* QSOldLogUtil.h */,
+				88875FF61EB8882400C9C679 /* QSOldLogUtil.m */,
+			);
+			name = OldLogUtil;
+			path = Log;
+			sourceTree = "<group>";
+		};
+		8887600C1EB9CD9E00C9C679 /* NewLogUtil */ = {
+			isa = PBXGroup;
+			children = (
+				888760161EB9CE3200C9C679 /* YYWeakProxy */,
+				8887600D1EB9CD9E00C9C679 /* QSLogFormatter.h */,
+				8887600E1EB9CD9E00C9C679 /* QSLogFormatter.m */,
+				8887600F1EB9CD9E00C9C679 /* QSLogUtil.h */,
+				888760101EB9CD9E00C9C679 /* QSLogUtil.m */,
+				888760111EB9CD9E00C9C679 /* QSLogView.h */,
+				888760121EB9CD9E00C9C679 /* QSLogView.m */,
+			);
+			path = NewLogUtil;
+			sourceTree = "<group>";
+		};
+		888760161EB9CE3200C9C679 /* YYWeakProxy */ = {
+			isa = PBXGroup;
+			children = (
+				888760171EB9CE3200C9C679 /* YYWeakProxy.h */,
+				888760181EB9CE3200C9C679 /* YYWeakProxy.m */,
+			);
+			path = YYWeakProxy;
+			sourceTree = "<group>";
+		};
+		A2F0C0C5B1E5A450B1740F97 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				75F14B91FF9EAFD3800A1ECA /* Pods-QSUseLogUtilDemo.debug.xcconfig */,
+				00330A2D225F03AFC34D62B9 /* Pods-QSUseLogUtilDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C703460C1E9C415ECC0E9905 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				596836713319C989E4D7B225 /* libPods-QSUseLogUtilDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		88875F7E1EB822E900C9C679 /* QSUseLogUtilDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88875FAC1EB822EA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemo" */;
+			buildPhases = (
+				8EF53A80CD4998ECC5CFF141 /* [CP] Check Pods Manifest.lock */,
+				88875F7B1EB822E900C9C679 /* Sources */,
+				88875F7C1EB822E900C9C679 /* Frameworks */,
+				88875F7D1EB822E900C9C679 /* Resources */,
+				24A5872BDB5FA4F1D4B84B50 /* [CP] Embed Pods Frameworks */,
+				1A21268C7994B5F239A4F0FD /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSUseLogUtilDemo;
+			productName = QSUseLogUtilDemo;
+			productReference = 88875F7F1EB822E900C9C679 /* QSUseLogUtilDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		88875F971EB822EA00C9C679 /* QSUseLogUtilDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88875FAF1EB822EA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemoTests" */;
+			buildPhases = (
+				88875F941EB822EA00C9C679 /* Sources */,
+				88875F951EB822EA00C9C679 /* Frameworks */,
+				88875F961EB822EA00C9C679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88875F9A1EB822EA00C9C679 /* PBXTargetDependency */,
+			);
+			name = QSUseLogUtilDemoTests;
+			productName = QSUseLogUtilDemoTests;
+			productReference = 88875F981EB822EA00C9C679 /* QSUseLogUtilDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		88875FA21EB822EA00C9C679 /* QSUseLogUtilDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88875FB21EB822EA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemoUITests" */;
+			buildPhases = (
+				88875F9F1EB822EA00C9C679 /* Sources */,
+				88875FA01EB822EA00C9C679 /* Frameworks */,
+				88875FA11EB822EA00C9C679 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				88875FA51EB822EA00C9C679 /* PBXTargetDependency */,
+			);
+			name = QSUseLogUtilDemoUITests;
+			productName = QSUseLogUtilDemoUITests;
+			productReference = 88875FA31EB822EA00C9C679 /* QSUseLogUtilDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		88875FE01EB879AA00C9C679 /* QSUseLogUtilDemo copy */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 88875FF01EB879AA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemo copy" */;
+			buildPhases = (
+				88875FE11EB879AA00C9C679 /* [CP] Check Pods Manifest.lock */,
+				88875FE21EB879AA00C9C679 /* Sources */,
+				88875FE81EB879AA00C9C679 /* Frameworks */,
+				88875FEA1EB879AA00C9C679 /* Resources */,
+				88875FEE1EB879AA00C9C679 /* [CP] Embed Pods Frameworks */,
+				88875FEF1EB879AA00C9C679 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "QSUseLogUtilDemo copy";
+			productName = QSUseLogUtilDemo;
+			productReference = 88875FF31EB879AA00C9C679 /* QSUseLogUtilDemo copy.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		88875F771EB822E900C9C679 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = shaoqing;
+				TargetAttributes = {
+					88875F7E1EB822E900C9C679 = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6S2E2NHF33;
+						ProvisioningStyle = Automatic;
+					};
+					88875F971EB822EA00C9C679 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 88875F7E1EB822E900C9C679;
+					};
+					88875FA21EB822EA00C9C679 = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 88875F7E1EB822E900C9C679;
+					};
+					88875FE01EB879AA00C9C679 = {
+						DevelopmentTeam = 6S2E2NHF33;
+					};
+				};
+			};
+			buildConfigurationList = 88875F7A1EB822E900C9C679 /* Build configuration list for PBXProject "QSUseLogUtilDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 88875F761EB822E900C9C679;
+			productRefGroup = 88875F801EB822E900C9C679 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88875F7E1EB822E900C9C679 /* QSUseLogUtilDemo */,
+				88875F971EB822EA00C9C679 /* QSUseLogUtilDemoTests */,
+				88875FA21EB822EA00C9C679 /* QSUseLogUtilDemoUITests */,
+				88875FE01EB879AA00C9C679 /* QSUseLogUtilDemo copy */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		88875F7D1EB822E900C9C679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88875F921EB822E900C9C679 /* LaunchScreen.storyboard in Resources */,
+				88875F8F1EB822E900C9C679 /* Assets.xcassets in Resources */,
+				88875F8D1EB822E900C9C679 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875F961EB822EA00C9C679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875FA11EB822EA00C9C679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875FEA1EB879AA00C9C679 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88875FEB1EB879AA00C9C679 /* LaunchScreen.storyboard in Resources */,
+				88875FEC1EB879AA00C9C679 /* Assets.xcassets in Resources */,
+				88875FED1EB879AA00C9C679 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1A21268C7994B5F239A4F0FD /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSUseLogUtilDemo/Pods-QSUseLogUtilDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		24A5872BDB5FA4F1D4B84B50 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSUseLogUtilDemo/Pods-QSUseLogUtilDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88875FE11EB879AA00C9C679 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		88875FEE1EB879AA00C9C679 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSUseLogUtilDemo/Pods-QSUseLogUtilDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88875FEF1EB879AA00C9C679 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSUseLogUtilDemo/Pods-QSUseLogUtilDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8EF53A80CD4998ECC5CFF141 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		88875F7B1EB822E900C9C679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				888760151EB9CD9E00C9C679 /* QSLogView.m in Sources */,
+				88875F8A1EB822E900C9C679 /* ViewController.m in Sources */,
+				88875F871EB822E900C9C679 /* AppDelegate.m in Sources */,
+				88875FF71EB8882400C9C679 /* QSOldLogUtil.m in Sources */,
+				888760191EB9CE3200C9C679 /* YYWeakProxy.m in Sources */,
+				888760131EB9CD9E00C9C679 /* QSLogFormatter.m in Sources */,
+				888760141EB9CD9E00C9C679 /* QSLogUtil.m in Sources */,
+				88875F841EB822E900C9C679 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875F941EB822EA00C9C679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88875F9D1EB822EA00C9C679 /* QSUseLogUtilDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875F9F1EB822EA00C9C679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88875FA81EB822EA00C9C679 /* QSUseLogUtilDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		88875FE21EB879AA00C9C679 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88875FE41EB879AA00C9C679 /* ViewController.m in Sources */,
+				88875FE51EB879AA00C9C679 /* AppDelegate.m in Sources */,
+				88875FE71EB879AA00C9C679 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		88875F9A1EB822EA00C9C679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88875F7E1EB822E900C9C679 /* QSUseLogUtilDemo */;
+			targetProxy = 88875F991EB822EA00C9C679 /* PBXContainerItemProxy */;
+		};
+		88875FA51EB822EA00C9C679 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 88875F7E1EB822E900C9C679 /* QSUseLogUtilDemo */;
+			targetProxy = 88875FA41EB822EA00C9C679 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		88875F8B1EB822E900C9C679 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88875F8C1EB822E900C9C679 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		88875F901EB822E900C9C679 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				88875F911EB822E900C9C679 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		88875FAA1EB822EA00C9C679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		88875FAB1EB822EA00C9C679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		88875FAD1EB822EA00C9C679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F14B91FF9EAFD3800A1ECA /* Pods-QSUseLogUtilDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSUseLogUtilDemo/QSUseLogUtilDemo-Prefix.pch";
+				INFOPLIST_FILE = QSUseLogUtilDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseGoogleVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		88875FAE1EB822EA00C9C679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00330A2D225F03AFC34D62B9 /* Pods-QSUseLogUtilDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSUseLogUtilDemo/QSUseLogUtilDemo-Prefix.pch";
+				INFOPLIST_FILE = QSUseLogUtilDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseGoogleVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		88875FB01EB822EA00C9C679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSUseLogUtilDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseLogUtilDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSUseLogUtilDemo.app/QSUseLogUtilDemo";
+			};
+			name = Debug;
+		};
+		88875FB11EB822EA00C9C679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSUseLogUtilDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseLogUtilDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSUseLogUtilDemo.app/QSUseLogUtilDemo";
+			};
+			name = Release;
+		};
+		88875FB31EB822EA00C9C679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSUseLogUtilDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseLogUtilDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSUseLogUtilDemo;
+			};
+			name = Debug;
+		};
+		88875FB41EB822EA00C9C679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSUseLogUtilDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseLogUtilDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSUseLogUtilDemo;
+			};
+			name = Release;
+		};
+		88875FF11EB879AA00C9C679 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 75F14B91FF9EAFD3800A1ECA /* Pods-QSUseLogUtilDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSUseLogUtilDemo/QSUseLogUtilDemo-Prefix.pch";
+				INFOPLIST_FILE = "QSUseLogUtilDemo copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseLogUtilDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		88875FF21EB879AA00C9C679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 00330A2D225F03AFC34D62B9 /* Pods-QSUseLogUtilDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSUseLogUtilDemo/QSUseLogUtilDemo-Prefix.pch";
+				INFOPLIST_FILE = "QSUseLogUtilDemo copy-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseLogUtilDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		88875F7A1EB822E900C9C679 /* Build configuration list for PBXProject "QSUseLogUtilDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88875FAA1EB822EA00C9C679 /* Debug */,
+				88875FAB1EB822EA00C9C679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88875FAC1EB822EA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88875FAD1EB822EA00C9C679 /* Debug */,
+				88875FAE1EB822EA00C9C679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88875FAF1EB822EA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88875FB01EB822EA00C9C679 /* Debug */,
+				88875FB11EB822EA00C9C679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88875FB21EB822EA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88875FB31EB822EA00C9C679 /* Debug */,
+				88875FB41EB822EA00C9C679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		88875FF01EB879AA00C9C679 /* Build configuration list for PBXNativeTarget "QSUseLogUtilDemo copy" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				88875FF11EB879AA00C9C679 /* Debug */,
+				88875FF21EB879AA00C9C679 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 88875F771EB822E900C9C679 /* Project object */;
+}

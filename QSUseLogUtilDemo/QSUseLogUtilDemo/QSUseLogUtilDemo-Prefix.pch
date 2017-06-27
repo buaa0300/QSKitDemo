@@ -1,0 +1,35 @@
+//
+//  QSUseLogUtilDemo-Prefix.pch
+//  QSUseLogUtilDemo
+//
+//  Created by zhongpingjiang on 17/5/2.
+//  Copyright © 2017年 shaoqing. All rights reserved.
+//
+
+#ifndef QSUseLogUtilDemo_Prefix_pch
+#define QSUseLogUtilDemo_Prefix_pch
+
+#import "CocoaLumberjack.h"
+#import "QSOldLogUtil.h"
+
+#define SCREEN_HEIGHT CGRectGetHeight([[UIScreen mainScreen] bounds])
+#define SCREEN_WIDTH  CGRectGetWidth([[UIScreen mainScreen] bounds])
+
+#ifdef DEBUG
+static const long ddLogLevel = DDLogLevelDebug;
+#else
+static const long ddLogLevel = DDLogLevelOff;  //无日志
+#endif
+
+//#if DEBUG
+//#define QSLOG(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
+//#else
+//#define QSLOG(fmt,...) {}
+//#endif
+
+#define QSLOG(fmt, ...) LOG_MAYBE(LOG_ASYNC_ENABLED, LOG_LEVEL_DEF, DDLogFlagDebug, 0, nil, __PRETTY_FUNCTION__, fmt, ##__VA_ARGS__);
+
+
+
+
+#endif /* QSUseLogUtilDemo_Prefix_pch */

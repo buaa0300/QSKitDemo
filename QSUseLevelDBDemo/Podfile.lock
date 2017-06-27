@@ -1,0 +1,18 @@
+PODS:
+  - leveldb-library (1.18.3)
+  - Objective-LevelDB (2.1.5):
+    - leveldb-library (~> 1.18.2)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - Objective-LevelDB
+  - YYModel
+
+SPEC CHECKSUMS:
+  leveldb-library: 10fb39c39e243db4af1828441162405bbcec1404
+  Objective-LevelDB: fa075efd9d0be645aee51847cc3ee70cdadb80ce
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: ee96bd68ae17854a1bb024a955ce23359ddf62ac
+
+COCOAPODS: 1.1.1
