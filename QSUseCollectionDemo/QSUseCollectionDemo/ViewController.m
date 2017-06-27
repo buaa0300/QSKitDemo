@@ -82,7 +82,6 @@
     NSMutableArray *arr = [NSMutableArray mutableArrayUsingWeakReferences];
     [arr addObject:self.content];  //数组不强引用self.content
     
-    NSMapTable
 }
 
 - (void)didReceiveMemoryWarning {
