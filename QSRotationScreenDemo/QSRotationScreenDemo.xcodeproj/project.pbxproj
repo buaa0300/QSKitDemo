@@ -1,0 +1,696 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		885049971EF0D89B00160B54 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049961EF0D89B00160B54 /* main.m */; };
+		8850499A1EF0D89B00160B54 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049991EF0D89B00160B54 /* AppDelegate.m */; };
+		8850499D1EF0D89B00160B54 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8850499C1EF0D89B00160B54 /* ViewController.m */; };
+		885049A01EF0D89B00160B54 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8850499E1EF0D89B00160B54 /* Main.storyboard */; };
+		885049A21EF0D89B00160B54 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 885049A11EF0D89B00160B54 /* Assets.xcassets */; };
+		885049A51EF0D89B00160B54 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 885049A31EF0D89B00160B54 /* LaunchScreen.storyboard */; };
+		885049B01EF0D89B00160B54 /* QSRotationScreenDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049AF1EF0D89B00160B54 /* QSRotationScreenDemoTests.m */; };
+		885049BB1EF0D89B00160B54 /* QSRotationScreenDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049BA1EF0D89B00160B54 /* QSRotationScreenDemoUITests.m */; };
+		885049D41EF0D8D200160B54 /* QSBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049CC1EF0D8D200160B54 /* QSBaseController.m */; };
+		885049D51EF0D8D200160B54 /* QSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049CE1EF0D8D200160B54 /* QSNavigationController.m */; };
+		885049D61EF0D8D200160B54 /* QSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049D01EF0D8D200160B54 /* QSTabBarController.m */; };
+		885049DB1EF0DABA00160B54 /* QSPage1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049DA1EF0DABA00160B54 /* QSPage1Controller.m */; };
+		885049DE1EF0DB9B00160B54 /* QSShow1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049DD1EF0DB9B00160B54 /* QSShow1Controller.m */; };
+		885049FC1EF2966100160B54 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 885049E21EF2966100160B54 /* Info.plist */; };
+		885049FD1EF2966100160B54 /* MASCompositeConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049E41EF2966100160B54 /* MASCompositeConstraint.m */; };
+		885049FE1EF2966100160B54 /* MASConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049E71EF2966100160B54 /* MASConstraint.m */; };
+		885049FF1EF2966100160B54 /* MASConstraintMaker.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049E91EF2966100160B54 /* MASConstraintMaker.m */; };
+		88504A001EF2966100160B54 /* MASLayoutConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049EB1EF2966100160B54 /* MASLayoutConstraint.m */; };
+		88504A011EF2966100160B54 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049EF1EF2966100160B54 /* MASViewAttribute.m */; };
+		88504A021EF2966100160B54 /* MASViewConstraint.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049F11EF2966100160B54 /* MASViewConstraint.m */; };
+		88504A031EF2966100160B54 /* NSArray+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049F31EF2966100160B54 /* NSArray+MASAdditions.m */; };
+		88504A041EF2966100160B54 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049F61EF2966100160B54 /* NSLayoutConstraint+MASDebugAdditions.m */; };
+		88504A051EF2966100160B54 /* View+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049F81EF2966100160B54 /* View+MASAdditions.m */; };
+		88504A061EF2966100160B54 /* ViewController+MASAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 885049FB1EF2966100160B54 /* ViewController+MASAdditions.m */; };
+		88504A091EF2978400160B54 /* QSShow2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 88504A081EF2978400160B54 /* QSShow2Controller.m */; };
+		88504A0C1EF2979200160B54 /* QSShow3Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 88504A0B1EF2979200160B54 /* QSShow3Controller.m */; };
+		88504A0F1EF2AA0A00160B54 /* QSShow4Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 88504A0E1EF2AA0A00160B54 /* QSShow4Controller.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		885049AC1EF0D89B00160B54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8850498A1EF0D89B00160B54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885049911EF0D89B00160B54;
+			remoteInfo = QSRotationScreenDemo;
+		};
+		885049B71EF0D89B00160B54 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8850498A1EF0D89B00160B54 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 885049911EF0D89B00160B54;
+			remoteInfo = QSRotationScreenDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		885049921EF0D89B00160B54 /* QSRotationScreenDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSRotationScreenDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		885049961EF0D89B00160B54 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		885049981EF0D89B00160B54 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		885049991EF0D89B00160B54 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8850499B1EF0D89B00160B54 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8850499C1EF0D89B00160B54 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8850499F1EF0D89B00160B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		885049A11EF0D89B00160B54 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		885049A41EF0D89B00160B54 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		885049A61EF0D89B00160B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885049AB1EF0D89B00160B54 /* QSRotationScreenDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSRotationScreenDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		885049AF1EF0D89B00160B54 /* QSRotationScreenDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSRotationScreenDemoTests.m; sourceTree = "<group>"; };
+		885049B11EF0D89B00160B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885049B61EF0D89B00160B54 /* QSRotationScreenDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSRotationScreenDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		885049BA1EF0D89B00160B54 /* QSRotationScreenDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSRotationScreenDemoUITests.m; sourceTree = "<group>"; };
+		885049BC1EF0D89B00160B54 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885049CB1EF0D8D200160B54 /* QSBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSBaseController.h; sourceTree = "<group>"; };
+		885049CC1EF0D8D200160B54 /* QSBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSBaseController.m; sourceTree = "<group>"; };
+		885049CD1EF0D8D200160B54 /* QSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSNavigationController.h; sourceTree = "<group>"; };
+		885049CE1EF0D8D200160B54 /* QSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSNavigationController.m; sourceTree = "<group>"; };
+		885049CF1EF0D8D200160B54 /* QSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTabBarController.h; sourceTree = "<group>"; };
+		885049D01EF0D8D200160B54 /* QSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTabBarController.m; sourceTree = "<group>"; };
+		885049D91EF0DABA00160B54 /* QSPage1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPage1Controller.h; sourceTree = "<group>"; };
+		885049DA1EF0DABA00160B54 /* QSPage1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPage1Controller.m; sourceTree = "<group>"; };
+		885049DC1EF0DB9B00160B54 /* QSShow1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSShow1Controller.h; sourceTree = "<group>"; };
+		885049DD1EF0DB9B00160B54 /* QSShow1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSShow1Controller.m; sourceTree = "<group>"; };
+		885049DF1EF0DDB300160B54 /* QSRotationScreenDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QSRotationScreenDemo-Prefix.pch"; sourceTree = "<group>"; };
+		885049E21EF2966100160B54 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		885049E31EF2966100160B54 /* MASCompositeConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASCompositeConstraint.h; sourceTree = "<group>"; };
+		885049E41EF2966100160B54 /* MASCompositeConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASCompositeConstraint.m; sourceTree = "<group>"; };
+		885049E51EF2966100160B54 /* MASConstraint+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MASConstraint+Private.h"; sourceTree = "<group>"; };
+		885049E61EF2966100160B54 /* MASConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraint.h; sourceTree = "<group>"; };
+		885049E71EF2966100160B54 /* MASConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraint.m; sourceTree = "<group>"; };
+		885049E81EF2966100160B54 /* MASConstraintMaker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASConstraintMaker.h; sourceTree = "<group>"; };
+		885049E91EF2966100160B54 /* MASConstraintMaker.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASConstraintMaker.m; sourceTree = "<group>"; };
+		885049EA1EF2966100160B54 /* MASLayoutConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASLayoutConstraint.h; sourceTree = "<group>"; };
+		885049EB1EF2966100160B54 /* MASLayoutConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASLayoutConstraint.m; sourceTree = "<group>"; };
+		885049EC1EF2966100160B54 /* Masonry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Masonry.h; sourceTree = "<group>"; };
+		885049ED1EF2966100160B54 /* MASUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASUtilities.h; sourceTree = "<group>"; };
+		885049EE1EF2966100160B54 /* MASViewAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewAttribute.h; sourceTree = "<group>"; };
+		885049EF1EF2966100160B54 /* MASViewAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewAttribute.m; sourceTree = "<group>"; };
+		885049F01EF2966100160B54 /* MASViewConstraint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASViewConstraint.h; sourceTree = "<group>"; };
+		885049F11EF2966100160B54 /* MASViewConstraint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MASViewConstraint.m; sourceTree = "<group>"; };
+		885049F21EF2966100160B54 /* NSArray+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASAdditions.h"; sourceTree = "<group>"; };
+		885049F31EF2966100160B54 /* NSArray+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+MASAdditions.m"; sourceTree = "<group>"; };
+		885049F41EF2966100160B54 /* NSArray+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		885049F51EF2966100160B54 /* NSLayoutConstraint+MASDebugAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSLayoutConstraint+MASDebugAdditions.h"; sourceTree = "<group>"; };
+		885049F61EF2966100160B54 /* NSLayoutConstraint+MASDebugAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSLayoutConstraint+MASDebugAdditions.m"; sourceTree = "<group>"; };
+		885049F71EF2966100160B54 /* View+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASAdditions.h"; sourceTree = "<group>"; };
+		885049F81EF2966100160B54 /* View+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "View+MASAdditions.m"; sourceTree = "<group>"; };
+		885049F91EF2966100160B54 /* View+MASShorthandAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "View+MASShorthandAdditions.h"; sourceTree = "<group>"; };
+		885049FA1EF2966100160B54 /* ViewController+MASAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ViewController+MASAdditions.h"; sourceTree = "<group>"; };
+		885049FB1EF2966100160B54 /* ViewController+MASAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ViewController+MASAdditions.m"; sourceTree = "<group>"; };
+		88504A071EF2978400160B54 /* QSShow2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSShow2Controller.h; sourceTree = "<group>"; };
+		88504A081EF2978400160B54 /* QSShow2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSShow2Controller.m; sourceTree = "<group>"; };
+		88504A0A1EF2979200160B54 /* QSShow3Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSShow3Controller.h; sourceTree = "<group>"; };
+		88504A0B1EF2979200160B54 /* QSShow3Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSShow3Controller.m; sourceTree = "<group>"; };
+		88504A0D1EF2AA0A00160B54 /* QSShow4Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSShow4Controller.h; sourceTree = "<group>"; };
+		88504A0E1EF2AA0A00160B54 /* QSShow4Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSShow4Controller.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8850498F1EF0D89B00160B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885049A81EF0D89B00160B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885049B31EF0D89B00160B54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		885049891EF0D89B00160B54 = {
+			isa = PBXGroup;
+			children = (
+				885049941EF0D89B00160B54 /* QSRotationScreenDemo */,
+				885049AE1EF0D89B00160B54 /* QSRotationScreenDemoTests */,
+				885049B91EF0D89B00160B54 /* QSRotationScreenDemoUITests */,
+				885049931EF0D89B00160B54 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		885049931EF0D89B00160B54 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				885049921EF0D89B00160B54 /* QSRotationScreenDemo.app */,
+				885049AB1EF0D89B00160B54 /* QSRotationScreenDemoTests.xctest */,
+				885049B61EF0D89B00160B54 /* QSRotationScreenDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		885049941EF0D89B00160B54 /* QSRotationScreenDemo */ = {
+			isa = PBXGroup;
+			children = (
+				885049E01EF2966100160B54 /* Vendor */,
+				885049D81EF0DAA000160B54 /* Other */,
+				885049C81EF0D8D200160B54 /* BaseController */,
+				885049981EF0D89B00160B54 /* AppDelegate.h */,
+				885049991EF0D89B00160B54 /* AppDelegate.m */,
+				8850499B1EF0D89B00160B54 /* ViewController.h */,
+				8850499C1EF0D89B00160B54 /* ViewController.m */,
+				8850499E1EF0D89B00160B54 /* Main.storyboard */,
+				885049A11EF0D89B00160B54 /* Assets.xcassets */,
+				885049A31EF0D89B00160B54 /* LaunchScreen.storyboard */,
+				885049A61EF0D89B00160B54 /* Info.plist */,
+				885049951EF0D89B00160B54 /* Supporting Files */,
+			);
+			path = QSRotationScreenDemo;
+			sourceTree = "<group>";
+		};
+		885049951EF0D89B00160B54 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				885049961EF0D89B00160B54 /* main.m */,
+				885049DF1EF0DDB300160B54 /* QSRotationScreenDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		885049AE1EF0D89B00160B54 /* QSRotationScreenDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				885049AF1EF0D89B00160B54 /* QSRotationScreenDemoTests.m */,
+				885049B11EF0D89B00160B54 /* Info.plist */,
+			);
+			path = QSRotationScreenDemoTests;
+			sourceTree = "<group>";
+		};
+		885049B91EF0D89B00160B54 /* QSRotationScreenDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				885049BA1EF0D89B00160B54 /* QSRotationScreenDemoUITests.m */,
+				885049BC1EF0D89B00160B54 /* Info.plist */,
+			);
+			path = QSRotationScreenDemoUITests;
+			sourceTree = "<group>";
+		};
+		885049C81EF0D8D200160B54 /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				885049CB1EF0D8D200160B54 /* QSBaseController.h */,
+				885049CC1EF0D8D200160B54 /* QSBaseController.m */,
+				885049CD1EF0D8D200160B54 /* QSNavigationController.h */,
+				885049CE1EF0D8D200160B54 /* QSNavigationController.m */,
+				885049CF1EF0D8D200160B54 /* QSTabBarController.h */,
+				885049D01EF0D8D200160B54 /* QSTabBarController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
+		885049D81EF0DAA000160B54 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				885049D91EF0DABA00160B54 /* QSPage1Controller.h */,
+				885049DA1EF0DABA00160B54 /* QSPage1Controller.m */,
+				885049DC1EF0DB9B00160B54 /* QSShow1Controller.h */,
+				885049DD1EF0DB9B00160B54 /* QSShow1Controller.m */,
+				88504A071EF2978400160B54 /* QSShow2Controller.h */,
+				88504A081EF2978400160B54 /* QSShow2Controller.m */,
+				88504A0A1EF2979200160B54 /* QSShow3Controller.h */,
+				88504A0B1EF2979200160B54 /* QSShow3Controller.m */,
+				88504A0D1EF2AA0A00160B54 /* QSShow4Controller.h */,
+				88504A0E1EF2AA0A00160B54 /* QSShow4Controller.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		885049E01EF2966100160B54 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				885049E11EF2966100160B54 /* Masonry */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
+		885049E11EF2966100160B54 /* Masonry */ = {
+			isa = PBXGroup;
+			children = (
+				885049E21EF2966100160B54 /* Info.plist */,
+				885049E31EF2966100160B54 /* MASCompositeConstraint.h */,
+				885049E41EF2966100160B54 /* MASCompositeConstraint.m */,
+				885049E51EF2966100160B54 /* MASConstraint+Private.h */,
+				885049E61EF2966100160B54 /* MASConstraint.h */,
+				885049E71EF2966100160B54 /* MASConstraint.m */,
+				885049E81EF2966100160B54 /* MASConstraintMaker.h */,
+				885049E91EF2966100160B54 /* MASConstraintMaker.m */,
+				885049EA1EF2966100160B54 /* MASLayoutConstraint.h */,
+				885049EB1EF2966100160B54 /* MASLayoutConstraint.m */,
+				885049EC1EF2966100160B54 /* Masonry.h */,
+				885049ED1EF2966100160B54 /* MASUtilities.h */,
+				885049EE1EF2966100160B54 /* MASViewAttribute.h */,
+				885049EF1EF2966100160B54 /* MASViewAttribute.m */,
+				885049F01EF2966100160B54 /* MASViewConstraint.h */,
+				885049F11EF2966100160B54 /* MASViewConstraint.m */,
+				885049F21EF2966100160B54 /* NSArray+MASAdditions.h */,
+				885049F31EF2966100160B54 /* NSArray+MASAdditions.m */,
+				885049F41EF2966100160B54 /* NSArray+MASShorthandAdditions.h */,
+				885049F51EF2966100160B54 /* NSLayoutConstraint+MASDebugAdditions.h */,
+				885049F61EF2966100160B54 /* NSLayoutConstraint+MASDebugAdditions.m */,
+				885049F71EF2966100160B54 /* View+MASAdditions.h */,
+				885049F81EF2966100160B54 /* View+MASAdditions.m */,
+				885049F91EF2966100160B54 /* View+MASShorthandAdditions.h */,
+				885049FA1EF2966100160B54 /* ViewController+MASAdditions.h */,
+				885049FB1EF2966100160B54 /* ViewController+MASAdditions.m */,
+			);
+			path = Masonry;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		885049911EF0D89B00160B54 /* QSRotationScreenDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 885049BF1EF0D89B00160B54 /* Build configuration list for PBXNativeTarget "QSRotationScreenDemo" */;
+			buildPhases = (
+				8850498E1EF0D89B00160B54 /* Sources */,
+				8850498F1EF0D89B00160B54 /* Frameworks */,
+				885049901EF0D89B00160B54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSRotationScreenDemo;
+			productName = QSRotationScreenDemo;
+			productReference = 885049921EF0D89B00160B54 /* QSRotationScreenDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		885049AA1EF0D89B00160B54 /* QSRotationScreenDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 885049C21EF0D89B00160B54 /* Build configuration list for PBXNativeTarget "QSRotationScreenDemoTests" */;
+			buildPhases = (
+				885049A71EF0D89B00160B54 /* Sources */,
+				885049A81EF0D89B00160B54 /* Frameworks */,
+				885049A91EF0D89B00160B54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				885049AD1EF0D89B00160B54 /* PBXTargetDependency */,
+			);
+			name = QSRotationScreenDemoTests;
+			productName = QSRotationScreenDemoTests;
+			productReference = 885049AB1EF0D89B00160B54 /* QSRotationScreenDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		885049B51EF0D89B00160B54 /* QSRotationScreenDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 885049C51EF0D89B00160B54 /* Build configuration list for PBXNativeTarget "QSRotationScreenDemoUITests" */;
+			buildPhases = (
+				885049B21EF0D89B00160B54 /* Sources */,
+				885049B31EF0D89B00160B54 /* Frameworks */,
+				885049B41EF0D89B00160B54 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				885049B81EF0D89B00160B54 /* PBXTargetDependency */,
+			);
+			name = QSRotationScreenDemoUITests;
+			productName = QSRotationScreenDemoUITests;
+			productReference = 885049B61EF0D89B00160B54 /* QSRotationScreenDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8850498A1EF0D89B00160B54 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = shaoqing;
+				TargetAttributes = {
+					885049911EF0D89B00160B54 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 6S2E2NHF33;
+						ProvisioningStyle = Automatic;
+					};
+					885049AA1EF0D89B00160B54 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 885049911EF0D89B00160B54;
+					};
+					885049B51EF0D89B00160B54 = {
+						CreatedOnToolsVersion = 8.3.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 885049911EF0D89B00160B54;
+					};
+				};
+			};
+			buildConfigurationList = 8850498D1EF0D89B00160B54 /* Build configuration list for PBXProject "QSRotationScreenDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 885049891EF0D89B00160B54;
+			productRefGroup = 885049931EF0D89B00160B54 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				885049911EF0D89B00160B54 /* QSRotationScreenDemo */,
+				885049AA1EF0D89B00160B54 /* QSRotationScreenDemoTests */,
+				885049B51EF0D89B00160B54 /* QSRotationScreenDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		885049901EF0D89B00160B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885049FC1EF2966100160B54 /* Info.plist in Resources */,
+				885049A51EF0D89B00160B54 /* LaunchScreen.storyboard in Resources */,
+				885049A21EF0D89B00160B54 /* Assets.xcassets in Resources */,
+				885049A01EF0D89B00160B54 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885049A91EF0D89B00160B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885049B41EF0D89B00160B54 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8850498E1EF0D89B00160B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885049DE1EF0DB9B00160B54 /* QSShow1Controller.m in Sources */,
+				88504A0F1EF2AA0A00160B54 /* QSShow4Controller.m in Sources */,
+				8850499D1EF0D89B00160B54 /* ViewController.m in Sources */,
+				88504A031EF2966100160B54 /* NSArray+MASAdditions.m in Sources */,
+				8850499A1EF0D89B00160B54 /* AppDelegate.m in Sources */,
+				885049971EF0D89B00160B54 /* main.m in Sources */,
+				88504A051EF2966100160B54 /* View+MASAdditions.m in Sources */,
+				88504A001EF2966100160B54 /* MASLayoutConstraint.m in Sources */,
+				885049FE1EF2966100160B54 /* MASConstraint.m in Sources */,
+				88504A041EF2966100160B54 /* NSLayoutConstraint+MASDebugAdditions.m in Sources */,
+				885049FD1EF2966100160B54 /* MASCompositeConstraint.m in Sources */,
+				88504A091EF2978400160B54 /* QSShow2Controller.m in Sources */,
+				885049DB1EF0DABA00160B54 /* QSPage1Controller.m in Sources */,
+				885049D61EF0D8D200160B54 /* QSTabBarController.m in Sources */,
+				885049D51EF0D8D200160B54 /* QSNavigationController.m in Sources */,
+				88504A0C1EF2979200160B54 /* QSShow3Controller.m in Sources */,
+				885049FF1EF2966100160B54 /* MASConstraintMaker.m in Sources */,
+				88504A061EF2966100160B54 /* ViewController+MASAdditions.m in Sources */,
+				88504A021EF2966100160B54 /* MASViewConstraint.m in Sources */,
+				885049D41EF0D8D200160B54 /* QSBaseController.m in Sources */,
+				88504A011EF2966100160B54 /* MASViewAttribute.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885049A71EF0D89B00160B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885049B01EF0D89B00160B54 /* QSRotationScreenDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		885049B21EF0D89B00160B54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885049BB1EF0D89B00160B54 /* QSRotationScreenDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		885049AD1EF0D89B00160B54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885049911EF0D89B00160B54 /* QSRotationScreenDemo */;
+			targetProxy = 885049AC1EF0D89B00160B54 /* PBXContainerItemProxy */;
+		};
+		885049B81EF0D89B00160B54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 885049911EF0D89B00160B54 /* QSRotationScreenDemo */;
+			targetProxy = 885049B71EF0D89B00160B54 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8850499E1EF0D89B00160B54 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8850499F1EF0D89B00160B54 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		885049A31EF0D89B00160B54 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				885049A41EF0D89B00160B54 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		885049BD1EF0D89B00160B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		885049BE1EF0D89B00160B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		885049C01EF0D89B00160B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSRotationScreenDemo/QSRotationScreenDemo-Prefix.pch";
+				INFOPLIST_FILE = QSRotationScreenDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseGoogleVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		885049C11EF0D89B00160B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSRotationScreenDemo/QSRotationScreenDemo-Prefix.pch";
+				INFOPLIST_FILE = QSRotationScreenDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseGoogleVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		885049C31EF0D89B00160B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSRotationScreenDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSRotationScreenDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSRotationScreenDemo.app/QSRotationScreenDemo";
+			};
+			name = Debug;
+		};
+		885049C41EF0D89B00160B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSRotationScreenDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSRotationScreenDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSRotationScreenDemo.app/QSRotationScreenDemo";
+			};
+			name = Release;
+		};
+		885049C61EF0D89B00160B54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSRotationScreenDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSRotationScreenDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSRotationScreenDemo;
+			};
+			name = Debug;
+		};
+		885049C71EF0D89B00160B54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSRotationScreenDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSRotationScreenDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSRotationScreenDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8850498D1EF0D89B00160B54 /* Build configuration list for PBXProject "QSRotationScreenDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885049BD1EF0D89B00160B54 /* Debug */,
+				885049BE1EF0D89B00160B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		885049BF1EF0D89B00160B54 /* Build configuration list for PBXNativeTarget "QSRotationScreenDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885049C01EF0D89B00160B54 /* Debug */,
+				885049C11EF0D89B00160B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		885049C21EF0D89B00160B54 /* Build configuration list for PBXNativeTarget "QSRotationScreenDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885049C31EF0D89B00160B54 /* Debug */,
+				885049C41EF0D89B00160B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		885049C51EF0D89B00160B54 /* Build configuration list for PBXNativeTarget "QSRotationScreenDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				885049C61EF0D89B00160B54 /* Debug */,
+				885049C71EF0D89B00160B54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8850498A1EF0D89B00160B54 /* Project object */;
+}

@@ -1,1 +1,4 @@
 # QSKitDemo
+
+QSUseCollectionDemo
+QSRotationScreenDemo
