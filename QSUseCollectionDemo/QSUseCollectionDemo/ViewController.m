@@ -11,11 +11,13 @@
 #import "QSThreadSafeMutableDictionary.h"
 #import "QSThreadSafeCounter.h"
 
+#import "NSMutableArray+WeakReferences.h"
+
 
 @interface ViewController ()
 
 @property (nonatomic,strong) NSMutableArray* someArray;
-
+@property (nonatomic,copy) NSString *content;
 @end
 
 @implementation ViewController
@@ -24,7 +26,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
 
-    //安全
+    //线程安全的NSMutableArray
     QSThreadSafeMutableArray *safeArray = [[QSThreadSafeMutableArray alloc]init];
     dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
     
@@ -43,7 +45,7 @@
         NSLog(@"%@",obj);
     }];
     
-    
+    //线程安全的NSMutableDictionary
     QSThreadSafeMutableDictionary *safeDic = [[QSThreadSafeMutableDictionary alloc]init];
     for (NSInteger i = 0; i < 10; i++) {
         
@@ -61,6 +63,7 @@
         NSLog(@"key = %@ , value = %@",key,obj);
     }];
     
+    //线程安全的计数器
     QSThreadSafeCounter *counter = [[QSThreadSafeCounter alloc]init];
     for (NSInteger i = 0; i < 10; i++) {
         
@@ -73,7 +76,13 @@
     sleep(1);
     NSLog(@"打印数值");
     NSLog(@"%d",[counter value]);
-
+    
+    //弱引用数组对象
+    self.content = @"内容";
+    NSMutableArray *arr = [NSMutableArray mutableArrayUsingWeakReferences];
+    [arr addObject:self.content];  //数组不强引用self.content
+    
+    NSMapTable
 }
 
 - (void)didReceiveMemoryWarning {

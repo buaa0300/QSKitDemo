@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		88F0DB2C1F00EE28008B3D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB2B1F00EE28008B3D90 /* main.m */; };
 		88F0DB2F1F00EE28008B3D90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB2E1F00EE28008B3D90 /* AppDelegate.m */; };
-		88F0DB321F00EE28008B3D90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB311F00EE28008B3D90 /* ViewController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		88F0DB321F00EE28008B3D90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB311F00EE28008B3D90 /* ViewController.m */; };
 		88F0DB351F00EE28008B3D90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F0DB331F00EE28008B3D90 /* Main.storyboard */; };
 		88F0DB371F00EE28008B3D90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88F0DB361F00EE28008B3D90 /* Assets.xcassets */; };
 		88F0DB3A1F00EE28008B3D90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88F0DB381F00EE28008B3D90 /* LaunchScreen.storyboard */; };
