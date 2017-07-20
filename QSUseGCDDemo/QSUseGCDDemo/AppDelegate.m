@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "YYDispatchQueuePool.h"
+#import "QSAsyncTaskQueue.h"
 
 @interface AppDelegate ()
 
@@ -19,25 +20,64 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
-//    YYDispatchQueueGetForQOS(NSQualityOfServiceUtility);
-    dispatch_async(queue, ^{
-        
-        NSLog(@"thread-name = %@",[NSThread currentThread]);
+    //将网络请求整合进去
+    
+    
+    QSAsyncTask *task1 = [[QSAsyncTask alloc]initWithName:@"network" block:^{
+    
         sleep(0.3);
+        NSLog(@"do network");
+    }];
+    
+    QSAsyncTask *task2 = [[QSAsyncTask alloc]initWithName:@"writing" block:^{
         
-        NSLog(@"读取缓存数据");
+        sleep(0.3);
+        NSLog(@"do writing");
+    }];
+    
+    QSAsyncTask *task3 = [[QSAsyncTask alloc]initWithName:@"reading" block:^{
         
-        dispatch_async(queue, ^{
-           
-             NSLog(@"thread-name = %@",[NSThread currentThread]);
-            sleep(0.4);
-            NSLog(@"网络请求");
-            
-        });
+        sleep(0.3);
+        NSLog(@"do reading");
+    }];
+    
+    QSAsyncTaskQueue *queue = [[QSAsyncTaskQueue alloc]init];
+    [queue setCompleteBlock:^{
+    
+        NSLog(@"全部执行完毕!");
         
-        
-    });
+    }];
+    
+    [queue addAsyncTask:task1];
+    [queue addAsyncTask:task2];
+    [queue addAsyncTask:task3];
+    [queue start];
+    
+    
+    
+    
+    
+    
+//    
+//    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//
+//    dispatch_async(queue, ^{
+//        
+//        NSLog(@"thread-name = %@",[NSThread currentThread]);
+//        sleep(0.3);
+//        
+//        NSLog(@"读取缓存数据");
+//        
+//        dispatch_async(queue, ^{
+//           
+//             NSLog(@"thread-name = %@",[NSThread currentThread]);
+//            sleep(0.4);
+//            NSLog(@"网络请求");
+//            
+//        });
+//        
+//        
+//    });
 
     
     

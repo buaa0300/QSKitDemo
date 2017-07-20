@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44F5ED9B1F20FACD00363496 /* QSAsyncTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5ED9A1F20FACD00363496 /* QSAsyncTask.m */; };
+		44F5ED9E1F20FADF00363496 /* QSAsyncTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5ED9D1F20FADF00363496 /* QSAsyncTaskQueue.m */; };
 		886B02111F20C00200028057 /* YYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B02101F20C00200028057 /* YYDispatchQueuePool.m */; };
 		88F0DB821F034C82008B3D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB811F034C82008B3D90 /* main.m */; };
 		88F0DB851F034C82008B3D90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB841F034C82008B3D90 /* AppDelegate.m */; };
@@ -37,6 +39,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44F5ED991F20FACD00363496 /* QSAsyncTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAsyncTask.h; sourceTree = "<group>"; };
+		44F5ED9A1F20FACD00363496 /* QSAsyncTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAsyncTask.m; sourceTree = "<group>"; };
+		44F5ED9C1F20FADF00363496 /* QSAsyncTaskQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSAsyncTaskQueue.h; sourceTree = "<group>"; };
+		44F5ED9D1F20FADF00363496 /* QSAsyncTaskQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAsyncTaskQueue.m; sourceTree = "<group>"; };
 		886B020F1F20C00200028057 /* YYDispatchQueuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDispatchQueuePool.h; sourceTree = "<group>"; };
 		886B02101F20C00200028057 /* YYDispatchQueuePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDispatchQueuePool.m; sourceTree = "<group>"; };
 		88F0DB7D1F034C82008B3D90 /* QSUseGCDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSUseGCDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +90,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44F5ED981F20FAB900363496 /* AsyncTask */ = {
+			isa = PBXGroup;
+			children = (
+				44F5ED991F20FACD00363496 /* QSAsyncTask.h */,
+				44F5ED9A1F20FACD00363496 /* QSAsyncTask.m */,
+				44F5ED9C1F20FADF00363496 /* QSAsyncTaskQueue.h */,
+				44F5ED9D1F20FADF00363496 /* QSAsyncTaskQueue.m */,
+			);
+			path = AsyncTask;
+			sourceTree = "<group>";
+		};
 		886B020E1F20C00200028057 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
@@ -159,6 +176,7 @@
 		88F0DBB31F034C99008B3D90 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				44F5ED981F20FAB900363496 /* AsyncTask */,
 				886B020E1F20C00200028057 /* Vendor */,
 				88F0DBB41F039B3F008B3D90 /* QSAccountManager.h */,
 				88F0DBB51F039B3F008B3D90 /* QSAccountManager.m */,
@@ -304,6 +322,8 @@
 				88F0DBB61F039B3F008B3D90 /* QSAccountManager.m in Sources */,
 				88F0DB851F034C82008B3D90 /* AppDelegate.m in Sources */,
 				88F0DB821F034C82008B3D90 /* main.m in Sources */,
+				44F5ED9B1F20FACD00363496 /* QSAsyncTask.m in Sources */,
+				44F5ED9E1F20FADF00363496 /* QSAsyncTaskQueue.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
