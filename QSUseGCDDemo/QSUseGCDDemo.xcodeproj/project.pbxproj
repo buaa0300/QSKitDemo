@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		886B02111F20C00200028057 /* YYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B02101F20C00200028057 /* YYDispatchQueuePool.m */; };
 		88F0DB821F034C82008B3D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB811F034C82008B3D90 /* main.m */; };
 		88F0DB851F034C82008B3D90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB841F034C82008B3D90 /* AppDelegate.m */; };
 		88F0DB881F034C82008B3D90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB871F034C82008B3D90 /* ViewController.m */; };
@@ -36,6 +37,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		886B020F1F20C00200028057 /* YYDispatchQueuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDispatchQueuePool.h; sourceTree = "<group>"; };
+		886B02101F20C00200028057 /* YYDispatchQueuePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDispatchQueuePool.m; sourceTree = "<group>"; };
 		88F0DB7D1F034C82008B3D90 /* QSUseGCDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSUseGCDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F0DB811F034C82008B3D90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88F0DB831F034C82008B3D90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +84,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		886B020E1F20C00200028057 /* Vendor */ = {
+			isa = PBXGroup;
+			children = (
+				886B020F1F20C00200028057 /* YYDispatchQueuePool.h */,
+				886B02101F20C00200028057 /* YYDispatchQueuePool.m */,
+			);
+			path = Vendor;
+			sourceTree = "<group>";
+		};
 		88F0DB741F034C82008B3D90 = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +159,7 @@
 		88F0DBB31F034C99008B3D90 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				886B020E1F20C00200028057 /* Vendor */,
 				88F0DBB41F039B3F008B3D90 /* QSAccountManager.h */,
 				88F0DBB51F039B3F008B3D90 /* QSAccountManager.m */,
 			);
@@ -286,6 +299,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				886B02111F20C00200028057 /* YYDispatchQueuePool.m in Sources */,
 				88F0DB881F034C82008B3D90 /* ViewController.m in Sources */,
 				88F0DBB61F039B3F008B3D90 /* QSAccountManager.m in Sources */,
 				88F0DB851F034C82008B3D90 /* AppDelegate.m in Sources */,
@@ -523,6 +537,7 @@
 				88F0DBAC1F034C82008B3D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88F0DBAD1F034C82008B3D90 /* Build configuration list for PBXNativeTarget "QSUseGCDDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -531,6 +546,7 @@
 				88F0DBAF1F034C82008B3D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		88F0DBB01F034C82008B3D90 /* Build configuration list for PBXNativeTarget "QSUseGCDDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -539,6 +555,7 @@
 				88F0DBB21F034C82008B3D90 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

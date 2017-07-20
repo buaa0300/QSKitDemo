@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "YYDispatchQueuePool.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,33 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    dispatch_queue_t queue = dispatch_get_global_queue(0, 0);
+//    YYDispatchQueueGetForQOS(NSQualityOfServiceUtility);
+    dispatch_async(queue, ^{
+        
+        NSLog(@"thread-name = %@",[NSThread currentThread]);
+        sleep(0.3);
+        
+        NSLog(@"读取缓存数据");
+        
+        dispatch_async(queue, ^{
+           
+             NSLog(@"thread-name = %@",[NSThread currentThread]);
+            sleep(0.4);
+            NSLog(@"网络请求");
+            
+        });
+        
+        
+    });
+
+    
+    
+    
+    
+    
+    
     return YES;
 }
 
