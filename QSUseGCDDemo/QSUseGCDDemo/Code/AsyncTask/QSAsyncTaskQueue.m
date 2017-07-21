@@ -58,9 +58,8 @@
     //分配线程
     dispatch_queue_t queue = YYDispatchQueueGetForQOS(NSQualityOfServiceBackground);
 
-    dispatch_sync(queue, ^{
-        
-        NSLog(@"开始执行的任务是:%@",asyncTask.taskName);
+    dispatch_async(queue, ^{
+        NSLog(@"开始执行的任务是:%@ -- thread:%@",asyncTask.taskName,[NSThread currentThread]);
         [asyncTask start];
          
         //执行结束
@@ -70,10 +69,16 @@
             [self p_executerTask:asyncTask];
             
         }else{
+            
             if ([self p_isAllFinishTasks]) {
-                if (self.completeBlock) {
-                    self.completeBlock();
-                }
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                
+                    if (self.completeBlock) {
+                        self.completeBlock();
+                    }
+                });
+                
+               
             }
         }
     });

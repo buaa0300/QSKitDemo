@@ -10,6 +10,9 @@
 		44F5ED9B1F20FACD00363496 /* QSAsyncTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5ED9A1F20FACD00363496 /* QSAsyncTask.m */; };
 		44F5ED9E1F20FADF00363496 /* QSAsyncTaskQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 44F5ED9D1F20FADF00363496 /* QSAsyncTaskQueue.m */; };
 		886B02111F20C00200028057 /* YYDispatchQueuePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 886B02101F20C00200028057 /* YYDispatchQueuePool.m */; };
+		887BC9091F2201E800C9835C /* QSDispatchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 887BC9081F2201E800C9835C /* QSDispatchQueue.m */; };
+		887BC9111F2204C100C9835C /* EXTSelectorChecking.m in Sources */ = {isa = PBXBuildFile; fileRef = 887BC90E1F2204C100C9835C /* EXTSelectorChecking.m */; };
+		887BC9121F2204C100C9835C /* Version in Resources */ = {isa = PBXBuildFile; fileRef = 887BC9101F2204C100C9835C /* Version */; };
 		88F0DB821F034C82008B3D90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB811F034C82008B3D90 /* main.m */; };
 		88F0DB851F034C82008B3D90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB841F034C82008B3D90 /* AppDelegate.m */; };
 		88F0DB881F034C82008B3D90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88F0DB871F034C82008B3D90 /* ViewController.m */; };
@@ -45,6 +48,14 @@
 		44F5ED9D1F20FADF00363496 /* QSAsyncTaskQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSAsyncTaskQueue.m; sourceTree = "<group>"; };
 		886B020F1F20C00200028057 /* YYDispatchQueuePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYDispatchQueuePool.h; sourceTree = "<group>"; };
 		886B02101F20C00200028057 /* YYDispatchQueuePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YYDispatchQueuePool.m; sourceTree = "<group>"; };
+		887BC9071F2201E800C9835C /* QSDispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDispatchQueue.h; sourceTree = "<group>"; };
+		887BC9081F2201E800C9835C /* QSDispatchQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSDispatchQueue.m; sourceTree = "<group>"; };
+		887BC90B1F2204C100C9835C /* EXTKeyPathCoding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTKeyPathCoding.h; sourceTree = "<group>"; };
+		887BC90C1F2204C100C9835C /* EXTScope.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTScope.h; sourceTree = "<group>"; };
+		887BC90D1F2204C100C9835C /* EXTSelectorChecking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EXTSelectorChecking.h; sourceTree = "<group>"; };
+		887BC90E1F2204C100C9835C /* EXTSelectorChecking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EXTSelectorChecking.m; sourceTree = "<group>"; };
+		887BC90F1F2204C100C9835C /* metamacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = metamacros.h; sourceTree = "<group>"; };
+		887BC9101F2204C100C9835C /* Version */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Version; sourceTree = "<group>"; };
 		88F0DB7D1F034C82008B3D90 /* QSUseGCDDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSUseGCDDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		88F0DB811F034C82008B3D90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		88F0DB831F034C82008B3D90 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -97,6 +108,8 @@
 				44F5ED9A1F20FACD00363496 /* QSAsyncTask.m */,
 				44F5ED9C1F20FADF00363496 /* QSAsyncTaskQueue.h */,
 				44F5ED9D1F20FADF00363496 /* QSAsyncTaskQueue.m */,
+				887BC9071F2201E800C9835C /* QSDispatchQueue.h */,
+				887BC9081F2201E800C9835C /* QSDispatchQueue.m */,
 			);
 			path = AsyncTask;
 			sourceTree = "<group>";
@@ -104,10 +117,24 @@
 		886B020E1F20C00200028057 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				887BC90A1F2204C100C9835C /* extobjc */,
 				886B020F1F20C00200028057 /* YYDispatchQueuePool.h */,
 				886B02101F20C00200028057 /* YYDispatchQueuePool.m */,
 			);
 			path = Vendor;
+			sourceTree = "<group>";
+		};
+		887BC90A1F2204C100C9835C /* extobjc */ = {
+			isa = PBXGroup;
+			children = (
+				887BC90B1F2204C100C9835C /* EXTKeyPathCoding.h */,
+				887BC90C1F2204C100C9835C /* EXTScope.h */,
+				887BC90D1F2204C100C9835C /* EXTSelectorChecking.h */,
+				887BC90E1F2204C100C9835C /* EXTSelectorChecking.m */,
+				887BC90F1F2204C100C9835C /* metamacros.h */,
+				887BC9101F2204C100C9835C /* Version */,
+			);
+			path = extobjc;
 			sourceTree = "<group>";
 		};
 		88F0DB741F034C82008B3D90 = {
@@ -291,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				88F0DB901F034C82008B3D90 /* LaunchScreen.storyboard in Resources */,
+				887BC9121F2204C100C9835C /* Version in Resources */,
 				88F0DB8D1F034C82008B3D90 /* Assets.xcassets in Resources */,
 				88F0DB8B1F034C82008B3D90 /* Main.storyboard in Resources */,
 			);
@@ -318,10 +346,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				886B02111F20C00200028057 /* YYDispatchQueuePool.m in Sources */,
+				887BC9111F2204C100C9835C /* EXTSelectorChecking.m in Sources */,
 				88F0DB881F034C82008B3D90 /* ViewController.m in Sources */,
 				88F0DBB61F039B3F008B3D90 /* QSAccountManager.m in Sources */,
 				88F0DB851F034C82008B3D90 /* AppDelegate.m in Sources */,
 				88F0DB821F034C82008B3D90 /* main.m in Sources */,
+				887BC9091F2201E800C9835C /* QSDispatchQueue.m in Sources */,
 				44F5ED9B1F20FACD00363496 /* QSAsyncTask.m in Sources */,
 				44F5ED9E1F20FADF00363496 /* QSAsyncTaskQueue.m in Sources */,
 			);

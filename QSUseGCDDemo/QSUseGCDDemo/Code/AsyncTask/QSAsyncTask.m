@@ -62,9 +62,11 @@
 - (void)cancel{
     
     _taskStatus = QSAsyncTaskStatusCanceled;
-    
-    
+}
 
+- (NSString *)description{
+    
+    return [NSString stringWithFormat:@"taskName:%@,taskStatus:%d",self.taskName,(int)self.taskStatus];
 }
 
 @end
