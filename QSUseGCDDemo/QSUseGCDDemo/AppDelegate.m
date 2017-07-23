@@ -23,39 +23,35 @@
     
     
     
-    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
-    
-    NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^(){
-        NSLog(@"执行第1次操作，线程：%@", [NSThread currentThread]);
-    }];
-    
-    NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^(){
-        NSLog(@"执行第2次操作，线程：%@", [NSThread currentThread]);
-    }];
-    
-    [queue addOperation:operation1];
-    [queue addOperation:operation2];
-    
-    
-    
-    
-//    dispatch_queue_t workConcurrentQueue = dispatch_queue_create("cccccccc", DISPATCH_QUEUE_CONCURRENT);
-
-    
-    
-    
-    //方式一
-//    QSDispatchQueue *queue = [[QSDispatchQueue alloc]initWithQueue:workConcurrentQueue concurrentCount:3];
-//    for (NSInteger i = 0; i < 10; i++) {
-//        [queue async:^{
-//            NSLog(@"thread-info:%@开始执行任务%d",[NSThread currentThread],(int)i);
-//            sleep(1);
-//            NSLog(@"thread-info:%@结束执行任务%d",[NSThread currentThread],(int)i);
-//        }];
-//    }
+//    NSOperationQueue *queue = [[NSOperationQueue alloc] init];
 //    
+//    NSBlockOperation *operation1 = [NSBlockOperation blockOperationWithBlock:^(){
+//        NSLog(@"执行第1次操作，线程：%@", [NSThread currentThread]);
+//    }];
 //    
-//    NSLog(@"主线程...,");
+//    NSBlockOperation *operation2 = [NSBlockOperation blockOperationWithBlock:^(){
+//        NSLog(@"执行第2次操作，线程：%@", [NSThread currentThread]);
+//    }];
+//    
+//    [queue addOperation:operation1];
+//    [queue addOperation:operation2];
+    
+    
+        //方式一
+    
+    dispatch_queue_t workConcurrentQueue = dispatch_queue_create("cccccccc", DISPATCH_QUEUE_CONCURRENT);
+    QSDispatchQueue *queue = [[QSDispatchQueue alloc]initWithQueue:workConcurrentQueue concurrentCount:3];
+    for (NSInteger i = 0; i < 10; i++) {
+        [queue async:^{
+            NSLog(@"thread-info:%@开始执行任务%d",[NSThread currentThread],(int)i);
+            sleep(1);
+            NSLog(@"thread-info:%@结束执行任务%d",[NSThread currentThread],(int)i);
+        }];
+    }
+    NSLog(@"主线程任务...");
+    
+    
+    
     //方式2
 //    dispatch_queue_t workConcurrentQueue = dispatch_queue_create("cccccccc", DISPATCH_QUEUE_CONCURRENT);
 //    dispatch_queue_t serialQueue = dispatch_queue_create("sssssssss",DISPATCH_QUEUE_SERIAL);
@@ -71,6 +67,7 @@
 //                dispatch_semaphore_signal(semaphore);});
 //        });
 //    }
+//    NSLog(@"主线程...!");
     
     
     
