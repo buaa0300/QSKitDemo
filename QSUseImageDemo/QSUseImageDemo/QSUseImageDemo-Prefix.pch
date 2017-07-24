@@ -1,0 +1,22 @@
+//
+//  QSUseImageDemo-Prefix.pch
+//  QSUseImageDemo
+//
+//  Created by zhongpingjiang on 2017/7/24.
+//  Copyright © 2017年 shaoqing. All rights reserved.
+//
+
+#ifndef QSUseImageDemo_Prefix_pch
+#define QSUseImageDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "UIImage+Tool.h"
+#import "NSData+Length.h"
+
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH [UIScreen mainScreen].bounds.size.width
+
+
+#endif /* QSUseImageDemo_Prefix_pch */
