@@ -47,6 +47,7 @@ static CGFloat titleID = 1;
     }
     
     [self.tableView reloadData];
+    [self hideLoadingView];
 }
 
 

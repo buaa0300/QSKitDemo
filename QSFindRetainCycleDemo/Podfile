@@ -1,0 +1,9 @@
+platform :ios, '8.0'
+
+target 'QSFindRetainCycleDemo' do
+
+    #内存泄漏检测
+    pod 'MLeaksFinder'
+    #
+    pod 'FBMemoryProfiler'
+end

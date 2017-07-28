@@ -21,6 +21,8 @@ typedef void(^QSTableViewCellActionBlock) (_Nullable id userInfo);
 @property (nonatomic,assign)CGFloat cellHeight;
 @property (nonatomic,strong)id userInfo;
 
+- (Class)cellClass;
+
 @end
 
 #pragma mark - QSTableViewCell

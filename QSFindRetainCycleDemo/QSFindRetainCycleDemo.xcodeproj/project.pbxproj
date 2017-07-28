@@ -1,0 +1,644 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E948DE1BFA0918F9C334090 /* libPods-QSFindRetainCycleDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 448207448C582580E265B8C9 /* libPods-QSFindRetainCycleDemo.a */; };
+		8821B1F71F29840100D7376D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B1F61F29840100D7376D /* main.m */; };
+		8821B1FA1F29840100D7376D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B1F91F29840100D7376D /* AppDelegate.m */; };
+		8821B1FD1F29840100D7376D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B1FC1F29840100D7376D /* ViewController.m */; };
+		8821B2001F29840100D7376D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8821B1FE1F29840100D7376D /* Main.storyboard */; };
+		8821B2021F29840100D7376D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8821B2011F29840100D7376D /* Assets.xcassets */; };
+		8821B2051F29840100D7376D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8821B2031F29840100D7376D /* LaunchScreen.storyboard */; };
+		8821B2101F29840100D7376D /* QSFindRetainCycleDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B20F1F29840100D7376D /* QSFindRetainCycleDemoTests.m */; };
+		8821B21B1F29840100D7376D /* QSFindRetainCycleDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B21A1F29840100D7376D /* QSFindRetainCycleDemoUITests.m */; };
+		8821B2341F29903300D7376D /* QSCacheCleanerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B2311F29903300D7376D /* QSCacheCleanerPlugin.m */; };
+		8821B2351F29903300D7376D /* QSRetainCycleLoggerPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B2331F29903300D7376D /* QSRetainCycleLoggerPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8821B20C1F29840100D7376D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8821B1EA1F29840100D7376D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8821B1F11F29840100D7376D;
+			remoteInfo = QSFindRetainCycleDemo;
+		};
+		8821B2171F29840100D7376D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 8821B1EA1F29840100D7376D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8821B1F11F29840100D7376D;
+			remoteInfo = QSFindRetainCycleDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		30E1F28EB7757D645BCAD884 /* Pods-QSFindRetainCycleDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSFindRetainCycleDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QSFindRetainCycleDemo/Pods-QSFindRetainCycleDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		448207448C582580E265B8C9 /* libPods-QSFindRetainCycleDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QSFindRetainCycleDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		8821B1F21F29840100D7376D /* QSFindRetainCycleDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSFindRetainCycleDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8821B1F61F29840100D7376D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8821B1F81F29840100D7376D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8821B1F91F29840100D7376D /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8821B1FB1F29840100D7376D /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8821B1FC1F29840100D7376D /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8821B1FF1F29840100D7376D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8821B2011F29840100D7376D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8821B2041F29840100D7376D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8821B2061F29840100D7376D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8821B20B1F29840100D7376D /* QSFindRetainCycleDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSFindRetainCycleDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8821B20F1F29840100D7376D /* QSFindRetainCycleDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSFindRetainCycleDemoTests.m; sourceTree = "<group>"; };
+		8821B2111F29840100D7376D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8821B2161F29840100D7376D /* QSFindRetainCycleDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSFindRetainCycleDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8821B21A1F29840100D7376D /* QSFindRetainCycleDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSFindRetainCycleDemoUITests.m; sourceTree = "<group>"; };
+		8821B21C1F29840100D7376D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8821B2301F29903300D7376D /* QSCacheCleanerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSCacheCleanerPlugin.h; sourceTree = "<group>"; };
+		8821B2311F29903300D7376D /* QSCacheCleanerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSCacheCleanerPlugin.m; sourceTree = "<group>"; };
+		8821B2321F29903300D7376D /* QSRetainCycleLoggerPlugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSRetainCycleLoggerPlugin.h; sourceTree = "<group>"; };
+		8821B2331F29903300D7376D /* QSRetainCycleLoggerPlugin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSRetainCycleLoggerPlugin.m; sourceTree = "<group>"; };
+		8821B2361F2993B300D7376D /* QSFindRetainCycleDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "QSFindRetainCycleDemo-Prefix.pch"; sourceTree = "<group>"; };
+		CEAAD44B015C61A6C7F7E1BB /* Pods-QSFindRetainCycleDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSFindRetainCycleDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QSFindRetainCycleDemo/Pods-QSFindRetainCycleDemo.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8821B1EF1F29840100D7376D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E948DE1BFA0918F9C334090 /* libPods-QSFindRetainCycleDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8821B2081F29840100D7376D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8821B2131F29840100D7376D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		84E3AE0A6629DE6E992BCDE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				30E1F28EB7757D645BCAD884 /* Pods-QSFindRetainCycleDemo.debug.xcconfig */,
+				CEAAD44B015C61A6C7F7E1BB /* Pods-QSFindRetainCycleDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8821B1E91F29840100D7376D = {
+			isa = PBXGroup;
+			children = (
+				8821B1F41F29840100D7376D /* QSFindRetainCycleDemo */,
+				8821B20E1F29840100D7376D /* QSFindRetainCycleDemoTests */,
+				8821B2191F29840100D7376D /* QSFindRetainCycleDemoUITests */,
+				8821B1F31F29840100D7376D /* Products */,
+				84E3AE0A6629DE6E992BCDE4 /* Pods */,
+				ADBEA96142C8D5F54FE6A435 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8821B1F31F29840100D7376D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8821B1F21F29840100D7376D /* QSFindRetainCycleDemo.app */,
+				8821B20B1F29840100D7376D /* QSFindRetainCycleDemoTests.xctest */,
+				8821B2161F29840100D7376D /* QSFindRetainCycleDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8821B1F41F29840100D7376D /* QSFindRetainCycleDemo */ = {
+			isa = PBXGroup;
+			children = (
+				8821B2281F298EC000D7376D /* FBExtension */,
+				8821B1F81F29840100D7376D /* AppDelegate.h */,
+				8821B1F91F29840100D7376D /* AppDelegate.m */,
+				8821B1FB1F29840100D7376D /* ViewController.h */,
+				8821B1FC1F29840100D7376D /* ViewController.m */,
+				8821B1FE1F29840100D7376D /* Main.storyboard */,
+				8821B2011F29840100D7376D /* Assets.xcassets */,
+				8821B2031F29840100D7376D /* LaunchScreen.storyboard */,
+				8821B2061F29840100D7376D /* Info.plist */,
+				8821B1F51F29840100D7376D /* Supporting Files */,
+			);
+			path = QSFindRetainCycleDemo;
+			sourceTree = "<group>";
+		};
+		8821B1F51F29840100D7376D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8821B1F61F29840100D7376D /* main.m */,
+				8821B2361F2993B300D7376D /* QSFindRetainCycleDemo-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8821B20E1F29840100D7376D /* QSFindRetainCycleDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				8821B20F1F29840100D7376D /* QSFindRetainCycleDemoTests.m */,
+				8821B2111F29840100D7376D /* Info.plist */,
+			);
+			path = QSFindRetainCycleDemoTests;
+			sourceTree = "<group>";
+		};
+		8821B2191F29840100D7376D /* QSFindRetainCycleDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8821B21A1F29840100D7376D /* QSFindRetainCycleDemoUITests.m */,
+				8821B21C1F29840100D7376D /* Info.plist */,
+			);
+			path = QSFindRetainCycleDemoUITests;
+			sourceTree = "<group>";
+		};
+		8821B2281F298EC000D7376D /* FBExtension */ = {
+			isa = PBXGroup;
+			children = (
+				8821B22F1F29903300D7376D /* Plugin */,
+			);
+			path = FBExtension;
+			sourceTree = "<group>";
+		};
+		8821B22F1F29903300D7376D /* Plugin */ = {
+			isa = PBXGroup;
+			children = (
+				8821B2301F29903300D7376D /* QSCacheCleanerPlugin.h */,
+				8821B2311F29903300D7376D /* QSCacheCleanerPlugin.m */,
+				8821B2321F29903300D7376D /* QSRetainCycleLoggerPlugin.h */,
+				8821B2331F29903300D7376D /* QSRetainCycleLoggerPlugin.m */,
+			);
+			path = Plugin;
+			sourceTree = "<group>";
+		};
+		ADBEA96142C8D5F54FE6A435 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				448207448C582580E265B8C9 /* libPods-QSFindRetainCycleDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8821B1F11F29840100D7376D /* QSFindRetainCycleDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8821B21F1F29840100D7376D /* Build configuration list for PBXNativeTarget "QSFindRetainCycleDemo" */;
+			buildPhases = (
+				3BF5F5677779ACA63437682E /* [CP] Check Pods Manifest.lock */,
+				8821B1EE1F29840100D7376D /* Sources */,
+				8821B1EF1F29840100D7376D /* Frameworks */,
+				8821B1F01F29840100D7376D /* Resources */,
+				D50EC2F786439A2EB1D819C1 /* [CP] Embed Pods Frameworks */,
+				90D773A0B208790F0CC65939 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSFindRetainCycleDemo;
+			productName = QSFindRetainCycleDemo;
+			productReference = 8821B1F21F29840100D7376D /* QSFindRetainCycleDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8821B20A1F29840100D7376D /* QSFindRetainCycleDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8821B2221F29840100D7376D /* Build configuration list for PBXNativeTarget "QSFindRetainCycleDemoTests" */;
+			buildPhases = (
+				8821B2071F29840100D7376D /* Sources */,
+				8821B2081F29840100D7376D /* Frameworks */,
+				8821B2091F29840100D7376D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8821B20D1F29840100D7376D /* PBXTargetDependency */,
+			);
+			name = QSFindRetainCycleDemoTests;
+			productName = QSFindRetainCycleDemoTests;
+			productReference = 8821B20B1F29840100D7376D /* QSFindRetainCycleDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8821B2151F29840100D7376D /* QSFindRetainCycleDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8821B2251F29840100D7376D /* Build configuration list for PBXNativeTarget "QSFindRetainCycleDemoUITests" */;
+			buildPhases = (
+				8821B2121F29840100D7376D /* Sources */,
+				8821B2131F29840100D7376D /* Frameworks */,
+				8821B2141F29840100D7376D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8821B2181F29840100D7376D /* PBXTargetDependency */,
+			);
+			name = QSFindRetainCycleDemoUITests;
+			productName = QSFindRetainCycleDemoUITests;
+			productReference = 8821B2161F29840100D7376D /* QSFindRetainCycleDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8821B1EA1F29840100D7376D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = shaoqing;
+				TargetAttributes = {
+					8821B1F11F29840100D7376D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+					};
+					8821B20A1F29840100D7376D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8821B1F11F29840100D7376D;
+					};
+					8821B2151F29840100D7376D = {
+						CreatedOnToolsVersion = 8.3.3;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8821B1F11F29840100D7376D;
+					};
+				};
+			};
+			buildConfigurationList = 8821B1ED1F29840100D7376D /* Build configuration list for PBXProject "QSFindRetainCycleDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8821B1E91F29840100D7376D;
+			productRefGroup = 8821B1F31F29840100D7376D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8821B1F11F29840100D7376D /* QSFindRetainCycleDemo */,
+				8821B20A1F29840100D7376D /* QSFindRetainCycleDemoTests */,
+				8821B2151F29840100D7376D /* QSFindRetainCycleDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8821B1F01F29840100D7376D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8821B2051F29840100D7376D /* LaunchScreen.storyboard in Resources */,
+				8821B2021F29840100D7376D /* Assets.xcassets in Resources */,
+				8821B2001F29840100D7376D /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8821B2091F29840100D7376D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8821B2141F29840100D7376D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3BF5F5677779ACA63437682E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90D773A0B208790F0CC65939 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSFindRetainCycleDemo/Pods-QSFindRetainCycleDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D50EC2F786439A2EB1D819C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSFindRetainCycleDemo/Pods-QSFindRetainCycleDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8821B1EE1F29840100D7376D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8821B2351F29903300D7376D /* QSRetainCycleLoggerPlugin.m in Sources */,
+				8821B1FD1F29840100D7376D /* ViewController.m in Sources */,
+				8821B1FA1F29840100D7376D /* AppDelegate.m in Sources */,
+				8821B2341F29903300D7376D /* QSCacheCleanerPlugin.m in Sources */,
+				8821B1F71F29840100D7376D /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8821B2071F29840100D7376D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8821B2101F29840100D7376D /* QSFindRetainCycleDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8821B2121F29840100D7376D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8821B21B1F29840100D7376D /* QSFindRetainCycleDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8821B20D1F29840100D7376D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8821B1F11F29840100D7376D /* QSFindRetainCycleDemo */;
+			targetProxy = 8821B20C1F29840100D7376D /* PBXContainerItemProxy */;
+		};
+		8821B2181F29840100D7376D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8821B1F11F29840100D7376D /* QSFindRetainCycleDemo */;
+			targetProxy = 8821B2171F29840100D7376D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8821B1FE1F29840100D7376D /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8821B1FF1F29840100D7376D /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8821B2031F29840100D7376D /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8821B2041F29840100D7376D /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8821B21D1F29840100D7376D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		8821B21E1F29840100D7376D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8821B2201F29840100D7376D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E1F28EB7757D645BCAD884 /* Pods-QSFindRetainCycleDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSFindRetainCycleDemo/QSFindRetainCycleDemo-Prefix.pch";
+				INFOPLIST_FILE = QSFindRetainCycleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSFindRetainCycleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8821B2211F29840100D7376D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CEAAD44B015C61A6C7F7E1BB /* Pods-QSFindRetainCycleDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = "${SRCROOT}/QSFindRetainCycleDemo/QSFindRetainCycleDemo-Prefix.pch";
+				INFOPLIST_FILE = QSFindRetainCycleDemo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSFindRetainCycleDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8821B2231F29840100D7376D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSFindRetainCycleDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSFindRetainCycleDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSFindRetainCycleDemo.app/QSFindRetainCycleDemo";
+			};
+			name = Debug;
+		};
+		8821B2241F29840100D7376D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSFindRetainCycleDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSFindRetainCycleDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSFindRetainCycleDemo.app/QSFindRetainCycleDemo";
+			};
+			name = Release;
+		};
+		8821B2261F29840100D7376D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSFindRetainCycleDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSFindRetainCycleDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSFindRetainCycleDemo;
+			};
+			name = Debug;
+		};
+		8821B2271F29840100D7376D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSFindRetainCycleDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSFindRetainCycleDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSFindRetainCycleDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8821B1ED1F29840100D7376D /* Build configuration list for PBXProject "QSFindRetainCycleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8821B21D1F29840100D7376D /* Debug */,
+				8821B21E1F29840100D7376D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8821B21F1F29840100D7376D /* Build configuration list for PBXNativeTarget "QSFindRetainCycleDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8821B2201F29840100D7376D /* Debug */,
+				8821B2211F29840100D7376D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8821B2221F29840100D7376D /* Build configuration list for PBXNativeTarget "QSFindRetainCycleDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8821B2231F29840100D7376D /* Debug */,
+				8821B2241F29840100D7376D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8821B2251F29840100D7376D /* Build configuration list for PBXNativeTarget "QSFindRetainCycleDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8821B2261F29840100D7376D /* Debug */,
+				8821B2271F29840100D7376D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8821B1EA1F29840100D7376D /* Project object */;
+}

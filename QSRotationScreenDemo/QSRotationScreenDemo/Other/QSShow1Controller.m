@@ -105,7 +105,7 @@
 //是否支持旋转
 - (BOOL)shouldAutorotate{
     
-    return YES;
+    return NO;
 }
 
 //支持的屏幕旋转种类

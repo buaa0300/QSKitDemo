@@ -29,6 +29,15 @@ static NSString *const kCellModelSuffix = @"Model";
     return self;
 }
 
+- (Class)cellClass{
+
+    Class class = Nil;
+    if (CHECK_VALID_STRING(self.cellClassName)) {
+        class = NSClassFromString(self.cellClassName);
+    }
+    return class;
+}
+
 @end
 
 #pragma mark - QSBaseCell

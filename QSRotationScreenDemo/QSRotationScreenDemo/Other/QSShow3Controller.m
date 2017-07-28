@@ -32,6 +32,12 @@
     return NO;
 }
 
+//显示状态栏
+- (BOOL)prefersStatusBarHidden{
+
+    return NO;
+}
+
 - (UIInterfaceOrientationMask)supportedInterfaceOrientations{
     
     return UIInterfaceOrientationMaskLandscapeRight;

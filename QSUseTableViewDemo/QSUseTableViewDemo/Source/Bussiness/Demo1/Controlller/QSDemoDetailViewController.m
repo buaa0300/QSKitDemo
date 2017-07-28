@@ -13,7 +13,6 @@
 @interface QSDemoDetailViewController (){
 
     NSString *_vcTitle;
-
 }
 
 @end
@@ -38,6 +37,7 @@
 
 - (void)refreshDataWithStyle:(QSRefreshTableViewDataStyle)refreshStyle{
 
+    [super refreshDataWithStyle:refreshStyle];
     [self mockAndParseData];
     [self.tableView reloadData];
 }

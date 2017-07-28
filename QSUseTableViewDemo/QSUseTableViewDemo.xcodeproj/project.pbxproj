@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8821B2391F2B42F400D7376D /* QSTableViewCellFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B2381F2B42F400D7376D /* QSTableViewCellFactory.m */; };
+		8821B2411F2B5FE200D7376D /* QSBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B23C1F2B5FE200D7376D /* QSBaseController.m */; };
+		8821B2421F2B5FE200D7376D /* QSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B23E1F2B5FE200D7376D /* QSNavigationController.m */; };
+		8821B2431F2B5FE200D7376D /* QSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8821B2401F2B5FE200D7376D /* QSTabBarController.m */; };
 		883FA1881EE6554800B357C4 /* QSDemoBigStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 883FA1761EE6554800B357C4 /* QSDemoBigStyleCell.m */; };
 		883FA1891EE6554800B357C4 /* QSDemoContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 883FA1781EE6554800B357C4 /* QSDemoContentCell.m */; };
 		883FA18A1EE6554800B357C4 /* QSDemoSmallStyleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 883FA17A1EE6554800B357C4 /* QSDemoSmallStyleCell.m */; };
@@ -97,6 +101,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8821B2371F2B42F400D7376D /* QSTableViewCellFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCellFactory.h; sourceTree = "<group>"; };
+		8821B2381F2B42F400D7376D /* QSTableViewCellFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCellFactory.m; sourceTree = "<group>"; };
+		8821B23B1F2B5FE200D7376D /* QSBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSBaseController.h; sourceTree = "<group>"; };
+		8821B23C1F2B5FE200D7376D /* QSBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSBaseController.m; sourceTree = "<group>"; };
+		8821B23D1F2B5FE200D7376D /* QSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSNavigationController.h; sourceTree = "<group>"; };
+		8821B23E1F2B5FE200D7376D /* QSNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSNavigationController.m; sourceTree = "<group>"; };
+		8821B23F1F2B5FE200D7376D /* QSTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTabBarController.h; sourceTree = "<group>"; };
+		8821B2401F2B5FE200D7376D /* QSTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTabBarController.m; sourceTree = "<group>"; };
 		883FA1751EE6554800B357C4 /* QSDemoBigStyleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDemoBigStyleCell.h; sourceTree = "<group>"; };
 		883FA1761EE6554800B357C4 /* QSDemoBigStyleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSDemoBigStyleCell.m; sourceTree = "<group>"; };
 		883FA1771EE6554800B357C4 /* QSDemoContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDemoContentCell.h; sourceTree = "<group>"; };
@@ -268,6 +280,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8821B23A1F2B5FE200D7376D /* BaseController */ = {
+			isa = PBXGroup;
+			children = (
+				8821B23B1F2B5FE200D7376D /* QSBaseController.h */,
+				8821B23C1F2B5FE200D7376D /* QSBaseController.m */,
+				8821B23D1F2B5FE200D7376D /* QSNavigationController.h */,
+				8821B23E1F2B5FE200D7376D /* QSNavigationController.m */,
+				8821B23F1F2B5FE200D7376D /* QSTabBarController.h */,
+				8821B2401F2B5FE200D7376D /* QSTabBarController.m */,
+			);
+			path = BaseController;
+			sourceTree = "<group>";
+		};
 		883FA1711EE6554800B357C4 /* Demo1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -626,6 +651,7 @@
 		88C739591E8F4B5B00A728BE /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				8821B23A1F2B5FE200D7376D /* BaseController */,
 				888F45DF1EB314AD00913A25 /* YYWeakProxy */,
 				888F44E61EAEF62B00913A25 /* MessageCenter */,
 				88C739811E8F922800A728BE /* Tool */,
@@ -643,6 +669,8 @@
 				88C7395E1E8F4B8600A728BE /* QSTableViewCell.h */,
 				88C7395F1E8F4B8600A728BE /* QSTableViewCell.m */,
 				88C739611E8F59F700A728BE /* QSTableViewDefine.h */,
+				8821B2371F2B42F400D7376D /* QSTableViewCellFactory.h */,
+				8821B2381F2B42F400D7376D /* QSTableViewCellFactory.m */,
 			);
 			path = "TableView ";
 			sourceTree = "<group>";
@@ -831,6 +859,7 @@
 				88C7393D1E8F48FC00A728BE /* MJRefreshConst.m in Sources */,
 				888F45871EB199CC00913A25 /* QSFPSLabel.m in Sources */,
 				88C7394D1E8F48FC00A728BE /* UIButton+WebCache.m in Sources */,
+				8821B2421F2B5FE200D7376D /* QSNavigationController.m in Sources */,
 				88C7394C1E8F48FC00A728BE /* SDWebImagePrefetcher.m in Sources */,
 				88C739541E8F48FC00A728BE /* UIView+WebCacheOperation.m in Sources */,
 				888F44EC1EAEF62B00913A25 /* QSMessageCenter.m in Sources */,
@@ -854,6 +883,7 @@
 				883FA18D1EE6554800B357C4 /* QSDemoListViewController.m in Sources */,
 				88D828701EE65CBC00494DB6 /* QSInfoCell.m in Sources */,
 				888F45E71EB314E300913A25 /* NSString+Size.m in Sources */,
+				8821B2431F2B5FE200D7376D /* QSTabBarController.m in Sources */,
 				88C739841E8F923F00A728BE /* QSTool.m in Sources */,
 				88C739301E8F48FC00A728BE /* MJRefreshComponent.m in Sources */,
 				88C7394F1E8F48FC00A728BE /* UIImage+MultiFormat.m in Sources */,
@@ -864,6 +894,7 @@
 				88C739531E8F48FC00A728BE /* UIView+WebCache.m in Sources */,
 				883FA18C1EE6554800B357C4 /* QSDemoDetailViewController.m in Sources */,
 				88C739421E8F48FC00A728BE /* MKAnnotationView+WebCache.m in Sources */,
+				8821B2391F2B42F400D7376D /* QSTableViewCellFactory.m in Sources */,
 				88C739441E8F48FC00A728BE /* NSImage+WebCache.m in Sources */,
 				88C7393A1E8F48FC00A728BE /* MJRefreshNormalHeader.m in Sources */,
 				88C739481E8F48FC00A728BE /* SDWebImageDecoder.m in Sources */,
@@ -872,6 +903,7 @@
 				883FA1931EE6558200B357C4 /* QSCompareViewController.m in Sources */,
 				883FA1901EE6557A00B357C4 /* QSHorizontalCell.m in Sources */,
 				88C739471E8F48FC00A728BE /* SDWebImageCompat.m in Sources */,
+				8821B2411F2B5FE200D7376D /* QSBaseController.m in Sources */,
 				888F45E81EB314E300913A25 /* UILabel+FitLines.m in Sources */,
 				88C7393B1E8F48FC00A728BE /* MJRefreshStateHeader.m in Sources */,
 				88C739431E8F48FC00A728BE /* NSData+ImageContentType.m in Sources */,

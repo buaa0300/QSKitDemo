@@ -8,11 +8,15 @@
 
 #import "QSTableViewController.h"
 #import "QSTableViewCell.h"
+#import "QSTableViewCellFactory.h"
 #import "MJRefresh.h"
+
+void delayPerformBlock(NSInteger delaySeconds,void (^block)(void));
 
 @interface QSTableViewController ()
 
 @property (nonatomic,strong)QSFPSLabel *fpsLabel;
+@property (nonatomic,strong)QSTableViewCellFactory *cellFactory;
 
 @end
 
@@ -21,16 +25,11 @@
 - (void)viewDidLoad {
     
     [super viewDidLoad];
-    
-    [self setEdgesForExtendedLayout:UIRectEdgeNone];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    self.view.backgroundColor = [UIColor lightGrayColor];
     [self.view addSubview:self.tableView];
-        
-    if (!self.isLazyLoadData) {
-        [self refreshDataWithStyle:QSRefreshTableViewDataStyleNormal];
-    }
+    [self showLoadingView];
+    delayPerformBlock(2, ^{
+       [self refreshDataWithStyle:QSRefreshTableViewDataStyleNormal];
+    });
 }
 
 - (NSMutableArray *)dataSource{
@@ -39,6 +38,14 @@
         _dataSource = [NSMutableArray array];
     }
     return _dataSource;
+}
+
+- (QSTableViewCellFactory *)cellFactory{
+    
+    if (!_cellFactory) {
+        _cellFactory = [[QSTableViewCellFactory alloc]initWithTableView:self.tableView];
+    }
+    return _cellFactory;
 }
 
 - (void)setNeedPullRefresh:(BOOL)needPullRefresh{
@@ -68,9 +75,7 @@
     MJRefreshHeader *header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         @strongify(self);
         NSLog(@"will下拉刷新数据....");
-//        delayPerformBlock(2,^{
-            [self refreshDataWithStyle:QSRefreshTableViewDataStylePull];
-//        });
+        [self refreshDataWithStyle:QSRefreshTableViewDataStylePull];
     }];
     self.tableView.mj_header = header;
 }
@@ -82,9 +87,7 @@
     MJRefreshAutoNormalFooter *footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
         @strongify(self);
         NSLog(@"will上拉加载更多数据....");
-//        delayPerformBlock(2,^{
-            [self refreshDataWithStyle:QSRefreshTableViewDataStyleLoadMore];
-//        });
+        [self refreshDataWithStyle:QSRefreshTableViewDataStyleLoadMore];
     }];
     
     [footer setTitle:@"已显示全部"forState:MJRefreshStateNoMoreData];
@@ -93,21 +96,6 @@
     self.tableView.mj_footer = footer;
     [footer.stateLabel setTextColor:[UIColor lightGrayColor]];
 }
-
-
-/**
- 延迟 若干s 执行,模拟网络延迟
- 
- */
-void delayPerformBlock(NSInteger delaySeconds,void (^block)(void)) {
-    
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        if (block) {
-            block();
-        }
-    });
-}
-
 
 - (void)refreshDataWithStyle:(QSRefreshTableViewDataStyle)refreshStyle{
 
@@ -131,12 +119,7 @@ void delayPerformBlock(NSInteger delaySeconds,void (^block)(void)) {
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
     QSTableViewCellModel *cellModel = [self.dataSource objectAtIndex:indexPath.section];
-    Class cellClass = [self p_cellClassWithName:cellModel.cellClassName];
-    if (cellClass && [cellClass isSubclassOfClass:[QSTableViewCell class]]){
-        
-        return [cellClass cellHeightWithModel:cellModel];
-    }
-    return 0.01f;
+    return [self.cellFactory cellHeightForData:cellModel];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -151,37 +134,10 @@ void delayPerformBlock(NSInteger delaySeconds,void (^block)(void)) {
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    QSTableViewCell *cell = nil;
     QSTableViewCellModel *cellModel = [self.dataSource objectAtIndex:indexPath.section];
-    
-    NSString *cellClassName = cellModel.cellClassName;
-    cell = [tableView dequeueReusableCellWithIdentifier:cellClassName];
-    Class cellClass = [self p_cellClassWithName:cellClassName];
-    
-    if (!cell && cellClass && [cellClass isSubclassOfClass:[QSTableViewCell class]]) {
-        
-        cell = [[cellClass alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:cellClassName];
-        if (cell && cellModel && CHECK_VALID_DELEGATE(self.controllerDelegate, @selector(tableView:cellInstance:cellModel:))) {
-            [self.controllerDelegate tableView:tableView cellInstance:cell cellModel:cellModel];
-        }
-    }
-    
-    //safe,make sure not return nil
-    if (!cell) {
-        cell = [[QSTableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"QSTableViewCell"];
-    }
-    
+    QSTableViewCell *cell = [self.cellFactory cellInstanceForData:cellModel];
     [cell layoutWithModel:cellModel];
     return cell;
-}
-
-- (Class)p_cellClassWithName:(NSString *)cellClassName{
-    
-    Class class = nil;
-    if (CHECK_VALID_STRING(cellClassName)) {
-        class = NSClassFromString(cellClassName);
-    }
-    return class;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section{
@@ -220,4 +176,18 @@ void delayPerformBlock(NSInteger delaySeconds,void (^block)(void)) {
     NSLog(@"%@安全释放....",NSStringFromClass([self class]));
 }
 
+
 @end
+
+/**
+ 延迟 若干s 执行,模拟网络延迟
+ 
+ */
+void delayPerformBlock(NSInteger delaySeconds,void (^block)(void)) {
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delaySeconds * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (block) {
+            block();
+        }
+    });
+}
