@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+            <meta name="viewport" content="initial-scale=1.0, user-scalable=no"/>
+        <title>简书文章</title>
+    <style type="text/css">
+        body {
+            background-color: #fff;
+            margin-left:15px;
+            margin-right: 15px;
+            text-align: justify;
+        }
+    
+    /*清除浮动*/
+    .clearfix:after {
+        content:".";
+        display:block;
+        height:0;
+        visibility:hidden;
+        clear:both;
+    }
+    
+    
+    div.title  {
+        color: #000000;
+        font-size: 25px;
+        margin-top: 20px;
+        line-height:30px;
+        font-weight:bold;
+    }
+    
+    div.subtitle {
+        
+        color: #c6c6c6;
+        font-size: 13px;
+        margin-top: 10px;
+    }
+    
+    div.text {
+        margin-top: 10px;
+        color: #333;
+        font-size: 16px;
+        line-height: 28px;
+        text-indent: 32px;
+    }
+    
+    div.image img {
+        width: 100%;
+        vertical-align:bottom;
+        display: block;
+        overflow: hidden;
+        margin-top: 10px;
+        background: #e6e6e6;
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        -webkit-user-select: none;
+        border-style: outset;
+        border-width: thick;
+    }
+    
+    #moredetail{
+        text-align:left;
+        margin:20px 0 15px 0;
+    }
+    
+    .detailpage {
+        
+        display: inline-block;
+        text-decoration: inherit;
+        font-size:15px;
+        padding:10px;
+        background:#e1e1e1;
+        color:#333333;
+        margin-right: 10px;
+        margin-bottom: 12px;
+        border-radius: 4px;
+    }   
+    </style>
+    </head>
+    <body onload="onLoaded()">
+        <div class="title">
+            iOS优化录1：解决iOS中像素不对齐问题（节选）
+        </div>
+        <div class="subtitle">
+            2017.05.08 17:23 字数 1640 阅读 64评论 2喜欢 5
+        </div>
+        <div class="text">
+            像素对齐并不是一个复杂的问题，但是开发中稍不注意的话，是会造成像素不对齐的情况（恰恰容易被忽视掉），本文使用一个案例来分析如何解决像素不对齐问题。如下图所示,文本部分出现洋红色（frame像素不对齐）和 图片部分是黄色(图片的缩放导致的不对齐)。
+        </div>
+        <div class="image">
+            <img img-index="0" img-src="http://upload-images.jianshu.io/upload_images/201701-6488810d0b101328.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" onclick="onImageClicked(0)"/>
+        </div>
+        <div class="text">
+            主要的解决像素不对齐的办法有：
+        </div>
+        <div class="text">
+            1、frame设置时候，使用整数; 需要计算frame时候，计算的结果使用ceil处理一下，避免小数点后有非0数存在。UITableViewCell的高度的高度是整数；
+        </div>
+        <div class="text">
+            2、项目中，要求UI设计师提供@2x和@3x的切图;
+        </div>
+        <div class="text">
+            其他略。经过若干优化后，效果如下图：
+        </div>
+        <div class="image">
+            <img img-index="1" img-src="http://upload-images.jianshu.io/upload_images/201701-9064a88debd6a43a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240" onclick="onImageClicked(1)" src=""/>
+        </div>
+        <div id="moredetail">
+            <span>详见</span>
+            <a class="detailpage" href="http://www.jianshu.com/p/432fea0232b8">iOS优化录1：解决iOS中像素不对齐问题</a>
+        </div>
+    </body>
+    
+    <script type="text/javascript">
+        //通过拦截URL来实现调用原生功能(js 调用 oc实现)
+        function setupWebViewJavascriptBridge(callback) {
+            if (window.WebViewJavascriptBridge) { return callback(WebViewJavascriptBridge); }
+            if (window.WVJBCallbacks) { return window.WVJBCallbacks.push(callback); }
+            window.WVJBCallbacks = [callback];
+            var WVJBIframe = document.createElement('iframe');
+            WVJBIframe.style.display = 'none';
+            WVJBIframe.src = 'wvjbscheme://__BRIDGE_LOADED__';
+            document.documentElement.appendChild(WVJBIframe);
+            setTimeout(function() { document.documentElement.removeChild(WVJBIframe) }, 0)
+        };
+    
+    
+    function onLoaded(){
+        
+        //    alert('onLoaded被调用');
+        var allImage = document.querySelectorAll("img");
+        allImage = Array.prototype.slice.call(allImage, 0);
+        var imageInfos = new Array();
+        allImage.forEach(function(image) {
+                         var imageSrc = image.getAttribute("img-src");
+                         var imageIndex = image.getAttribute("img-index");
+                         alert(imageSrc);
+                         imageInfos.push(new Array(imageIndex,imageSrc));
+                         });
+                         //调用OC的onLoaded方法
+                         WebViewJavascriptBridge.callHandler('onLoaded',imageInfos, function(response){
+                                                             
+                                                             })
+    };
+    
+    function onImageClicked(imageIndex) {
+        
+        var image = getImageAtIndex(imageIndex);
+        
+        x = image.getBoundingClientRect().left;
+        y = image.getBoundingClientRect().top;
+        x = x + document.documentElement.scrollLeft;
+        y = y + document.documentElement.scrollTop;
+        width = image.width;
+        height = image.height;
+        var array = new Array(imageIndex,x,y,width,height);
+        //    var dic = {'index':index,'x':x,'y':y,'width':width,'height':height}
+        //    alert('x=' + x + ',y=' + y + ',width=' + width  + ',height=' + height);
+        //    alert(array);
+        WebViewJavascriptBridge.callHandler('browImage',array, function(response){
+                                            
+                                            })
+    };
+    
+    //注册方法，OC调用JS
+    setupWebViewJavascriptBridge(function(bridge) {
+                                 
+                                 bridge.registerHandler('imageDownLoadCompleted', function(data, responseCallback) {
+                                                        
+                                                        //                               alert('index = ' + data[0] + 'filepath = ' + data[1]);
+                                                        image = getImageAtIndex(data[0])
+                                                        image.src = data[1];
+                                                        });
+                                 
+                                 });
+                                 
+                                 
+                                 //获取图片对象
+                                 function getImageAtIndex(imageIndex){
+                                     
+                                     var allImage = document.querySelectorAll("img");
+                                     allImage = Array.prototype.slice.call(allImage, 0);
+                                     image = allImage[imageIndex]
+                                     return image;
+                                 };
+    </script>
+    
+</html>
+
+

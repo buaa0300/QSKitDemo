@@ -19,11 +19,6 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>MLeaksFinder.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-QSFindRetainCycleDemo.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -37,17 +32,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>1C4CAAAFED44024024437B22684E0625</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
 		<key>39FF4552F574CA30CFC8B6288C9BF88C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AC139CEF10BCCB200972B4617F3CA14E</key>
+		<key>8C308676557C1C46DDC13C23C9D617FC</key>
 		<dict>
 			<key>primary</key>
 			<true/>

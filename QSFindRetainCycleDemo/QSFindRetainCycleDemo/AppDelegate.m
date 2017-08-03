@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "QSCacheCleanerPlugin.h"
 #import "QSRetainCycleLoggerPlugin.h"
+#import "ViewController.h"
 
 @interface AppDelegate (){
 #if DEBUG
@@ -38,11 +39,25 @@
 //    FBObjectGraphConfiguration *configuratin = [[FBObjectGraphConfiguration alloc]initWithFilterBlocks:FBGetStandardGraphEdgeFilters() shouldInspectTimers:YES];
     
     
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    ViewController *vc = [[ViewController alloc]init];
+    self.window.rootViewController = [[UINavigationController alloc]initWithRootViewController:vc];
+    [self.window makeKeyWindow];
+
+    
+    
     _memoryProfiler = [[FBMemoryProfiler alloc] initWithPlugins:@[[QSCacheCleanerPlugin new],
                                                                   [QSRetainCycleLoggerPlugin new]]
-                               retainCycleDetectorConfiguration:configure];
+                               retainCycleDetectorConfiguration:nil];
     [_memoryProfiler enable];
 #endif
+    
+    
+#if XXX_YYY
+    NSLog(@"来来来");
+#endif
+    
     return YES;
 }
 

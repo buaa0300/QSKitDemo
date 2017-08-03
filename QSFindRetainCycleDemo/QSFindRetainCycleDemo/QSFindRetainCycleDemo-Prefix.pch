@@ -17,4 +17,7 @@
 #import <FBRetainCycleDetector/FBRetainCycleDetector.h>
 #import <FBAllocationTracker/FBAllocationTrackerManager.h>
 
+
+#define XXX_YYY 0
+
 #endif /* QSFindRetainCycleDemo_Prefix_pch */

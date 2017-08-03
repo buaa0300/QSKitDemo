@@ -1,0 +1,27 @@
+html {
+    font-family: Helvetica;
+    color: red;
+}
+
+h1 {
+    color: steelblue;
+    font-size: 24px;
+    margin-top: 24px;
+}
+
+button {
+    margin: 0 3px 10px;
+    font-size: 12px;
+}
+
+.logLine {
+    border-bottom: 1px solid #ccc;
+    padding: 4px 2px;
+    font-family: courier;
+    font-size: 11px;
+}
+
+input {
+    height: 32px;
+    margin: 30px;
+}

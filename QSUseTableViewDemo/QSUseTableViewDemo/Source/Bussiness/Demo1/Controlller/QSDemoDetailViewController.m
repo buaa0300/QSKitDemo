@@ -37,8 +37,8 @@
 
 - (void)refreshDataWithStyle:(QSRefreshTableViewDataStyle)refreshStyle{
 
-    [super refreshDataWithStyle:refreshStyle];
     [self mockAndParseData];
+    [self endRefreshingWithMoreData:NO];
     [self.tableView reloadData];
 }
 

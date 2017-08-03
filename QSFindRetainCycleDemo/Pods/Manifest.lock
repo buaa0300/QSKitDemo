@@ -4,19 +4,15 @@ PODS:
     - FBAllocationTracker (~> 0.1)
     - FBRetainCycleDetector (~> 0.1)
   - FBRetainCycleDetector (0.1.3)
-  - MLeaksFinder (0.2.1):
-    - FBRetainCycleDetector
 
 DEPENDENCIES:
   - FBMemoryProfiler
-  - MLeaksFinder
 
 SPEC CHECKSUMS:
   FBAllocationTracker: dfdca3f71aceca6a85e95e3c6ec76a9785eba0f1
   FBMemoryProfiler: 623fc5f8a61f7d02ec75c87e3b97c90f621d8b02
   FBRetainCycleDetector: f0c7b290bf48ae77f6ae060843ce34ae341781eb
-  MLeaksFinder: 0850e2f2abc7227adc4d4e2d1992b431264eb4d5
 
-PODFILE CHECKSUM: bf67588d44e0491572a2b97ba61c22b113d4a996
+PODFILE CHECKSUM: 79647b7d74b92973b8d259f92ca38e16e0bad3e9
 
 COCOAPODS: 1.1.1

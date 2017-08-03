@@ -27,6 +27,7 @@ void delayPerformBlock(NSInteger delaySeconds,void (^block)(void));
     [super viewDidLoad];
     [self.view addSubview:self.tableView];
     [self showLoadingView];
+    //2s后执行，模拟网络延迟
     delayPerformBlock(2, ^{
        [self refreshDataWithStyle:QSRefreshTableViewDataStyleNormal];
     });
@@ -169,6 +170,7 @@ void delayPerformBlock(NSInteger delaySeconds,void (^block)(void));
             [self.tableView.mj_footer endRefreshingWithNoMoreData];
         }
     }
+    [self hideLoadingView];
 }
 
 - (void)dealloc{
