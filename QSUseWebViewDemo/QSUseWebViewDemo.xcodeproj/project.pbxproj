@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		440131F91F3371460060CF76 /* QSWKWebView1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 440131F81F3371460060CF76 /* QSWKWebView1Controller.m */; };
+		440131FF1F337C7D0060CF76 /* QSCompareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440131FE1F337C7D0060CF76 /* QSCompareViewController.m */; };
+		440132021F376BF50060CF76 /* QSLoadFileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 440132011F376BF50060CF76 /* QSLoadFileViewController.m */; };
 		8836F41D1EC561AE00AEB513 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8836F41C1EC561AE00AEB513 /* main.m */; };
 		8836F4201EC561AE00AEB513 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8836F41F1EC561AE00AEB513 /* AppDelegate.m */; };
 		8836F4231EC561AE00AEB513 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8836F4221EC561AE00AEB513 /* ViewController.m */; };
@@ -18,7 +21,6 @@
 		8836F4DE1EC5A67B00AEB513 /* icon_back@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8836F4DC1EC5A67B00AEB513 /* icon_back@2x.png */; };
 		8836F4DF1EC5A67B00AEB513 /* icon_back@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8836F4DD1EC5A67B00AEB513 /* icon_back@3x.png */; };
 		8863E9581F32CB3900751768 /* content2.html in Resources */ = {isa = PBXBuildFile; fileRef = 8863E9571F32CB3900751768 /* content2.html */; };
-		8863E95F1F32F95E00751768 /* QSLoadLocalFileView1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8863E95E1F32F95E00751768 /* QSLoadLocalFileView1Controller.m */; };
 		8863E9651F32F9DF00751768 /* points1.png in Resources */ = {isa = PBXBuildFile; fileRef = 8863E9611F32F9DF00751768 /* points1.png */; };
 		8863E9661F32F9DF00751768 /* points2.png in Resources */ = {isa = PBXBuildFile; fileRef = 8863E9621F32F9DF00751768 /* points2.png */; };
 		8863E9671F32F9DF00751768 /* points4.png in Resources */ = {isa = PBXBuildFile; fileRef = 8863E9631F32F9DF00751768 /* points4.png */; };
@@ -27,7 +29,6 @@
 		8863E9751F32FC5600751768 /* css1.css in Resources */ = {isa = PBXBuildFile; fileRef = 8863E9731F32FC5600751768 /* css1.css */; };
 		8863E9761F32FC5600751768 /* js1.js in Resources */ = {isa = PBXBuildFile; fileRef = 8863E9741F32FC5600751768 /* js1.js */; };
 		8892ADC01F31CE3700B48AD2 /* QSWebView1Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892AD6A1F31CE3700B48AD2 /* QSWebView1Controller.m */; };
-		8892ADE71F31CE9E00B48AD2 /* QSWebView2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892ADE61F31CE9E00B48AD2 /* QSWebView2Controller.m */; };
 		8892AE451F31CF0300B48AD2 /* QSBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892ADEB1F31CF0300B48AD2 /* QSBaseController.m */; };
 		8892AE461F31CF0300B48AD2 /* QSNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892ADED1F31CF0300B48AD2 /* QSNavigationController.m */; };
 		8892AE471F31CF0300B48AD2 /* QSTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892ADEF1F31CF0300B48AD2 /* QSTabBarController.m */; };
@@ -91,6 +92,12 @@
 /* Begin PBXFileReference section */
 		0A397DA0F9A16E9549E98BFD /* Pods-QSUseWebViewDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSUseWebViewDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QSUseWebViewDemo/Pods-QSUseWebViewDemo.release.xcconfig"; sourceTree = "<group>"; };
 		1494A30ADE6E4BA50F6551D0 /* libPods-QSUseWebViewDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QSUseWebViewDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		440131F71F3371460060CF76 /* QSWKWebView1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSWKWebView1Controller.h; sourceTree = "<group>"; };
+		440131F81F3371460060CF76 /* QSWKWebView1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSWKWebView1Controller.m; sourceTree = "<group>"; };
+		440131FD1F337C7D0060CF76 /* QSCompareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSCompareViewController.h; sourceTree = "<group>"; };
+		440131FE1F337C7D0060CF76 /* QSCompareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSCompareViewController.m; sourceTree = "<group>"; };
+		440132001F376BF50060CF76 /* QSLoadFileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSLoadFileViewController.h; sourceTree = "<group>"; };
+		440132011F376BF50060CF76 /* QSLoadFileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSLoadFileViewController.m; sourceTree = "<group>"; };
 		8836F4181EC561AE00AEB513 /* QSUseWebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSUseWebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8836F41C1EC561AE00AEB513 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8836F41E1EC561AE00AEB513 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -111,8 +118,6 @@
 		8836F4DC1EC5A67B00AEB513 /* icon_back@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@2x.png"; sourceTree = "<group>"; };
 		8836F4DD1EC5A67B00AEB513 /* icon_back@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_back@3x.png"; sourceTree = "<group>"; };
 		8863E9571F32CB3900751768 /* content2.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = content2.html; sourceTree = "<group>"; };
-		8863E95D1F32F95E00751768 /* QSLoadLocalFileView1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSLoadLocalFileView1Controller.h; sourceTree = "<group>"; };
-		8863E95E1F32F95E00751768 /* QSLoadLocalFileView1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSLoadLocalFileView1Controller.m; sourceTree = "<group>"; };
 		8863E9611F32F9DF00751768 /* points1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points1.png; sourceTree = "<group>"; };
 		8863E9621F32F9DF00751768 /* points2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points2.png; sourceTree = "<group>"; };
 		8863E9631F32F9DF00751768 /* points4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = points4.png; sourceTree = "<group>"; };
@@ -122,8 +127,6 @@
 		8863E9741F32FC5600751768 /* js1.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = js1.js; sourceTree = "<group>"; };
 		8892AD691F31CE3700B48AD2 /* QSWebView1Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = QSWebView1Controller.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
 		8892AD6A1F31CE3700B48AD2 /* QSWebView1Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = QSWebView1Controller.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
-		8892ADE51F31CE9E00B48AD2 /* QSWebView2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSWebView2Controller.h; sourceTree = "<group>"; };
-		8892ADE61F31CE9E00B48AD2 /* QSWebView2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSWebView2Controller.m; sourceTree = "<group>"; };
 		8892ADEA1F31CF0300B48AD2 /* QSBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSBaseController.h; sourceTree = "<group>"; };
 		8892ADEB1F31CF0300B48AD2 /* QSBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSBaseController.m; sourceTree = "<group>"; };
 		8892ADEC1F31CF0300B48AD2 /* QSNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSNavigationController.h; sourceTree = "<group>"; };
@@ -231,6 +234,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		440131F61F33711D0060CF76 /* UseWKWebView */ = {
+			isa = PBXGroup;
+			children = (
+				440132001F376BF50060CF76 /* QSLoadFileViewController.h */,
+				440132011F376BF50060CF76 /* QSLoadFileViewController.m */,
+				440131F71F3371460060CF76 /* QSWKWebView1Controller.h */,
+				440131F81F3371460060CF76 /* QSWKWebView1Controller.m */,
+				440131FD1F337C7D0060CF76 /* QSCompareViewController.h */,
+				440131FE1F337C7D0060CF76 /* QSCompareViewController.m */,
+			);
+			path = UseWKWebView;
+			sourceTree = "<group>";
+		};
 		730DA528AA869342273F5B88 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +326,7 @@
 		8836F44F1EC564BE00AEB513 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				440131F61F33711D0060CF76 /* UseWKWebView */,
 				8892ADE81F31CF0300B48AD2 /* Common */,
 				8892ADF01F31CF0300B48AD2 /* Vendor */,
 				8892AD671F31CE3700B48AD2 /* New */,
@@ -353,15 +370,6 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		8863E95C1F32F95E00751768 /* LoadLocalFile */ = {
-			isa = PBXGroup;
-			children = (
-				8863E95D1F32F95E00751768 /* QSLoadLocalFileView1Controller.h */,
-				8863E95E1F32F95E00751768 /* QSLoadLocalFileView1Controller.m */,
-			);
-			path = LoadLocalFile;
-			sourceTree = "<group>";
-		};
 		8863E9601F32F9DF00751768 /* Demo1 */ = {
 			isa = PBXGroup;
 			children = (
@@ -379,9 +387,6 @@
 		8892AD671F31CE3700B48AD2 /* New */ = {
 			isa = PBXGroup;
 			children = (
-				8863E95C1F32F95E00751768 /* LoadLocalFile */,
-				8892ADE51F31CE9E00B48AD2 /* QSWebView2Controller.h */,
-				8892ADE61F31CE9E00B48AD2 /* QSWebView2Controller.m */,
 				8892AE6C1F31D1C300B48AD2 /* QSWebView3Controller.h */,
 				8892AE6D1F31D1C300B48AD2 /* QSWebView3Controller.m */,
 				8892AE811F32BC1900B48AD2 /* QSBaseWebViewController.h */,
@@ -774,7 +779,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -791,10 +796,10 @@
 				8892AE511F31CF0300B48AD2 /* SDWebImageManager.m in Sources */,
 				8892AE4B1F31CF0300B48AD2 /* NSData+ImageContentType.m in Sources */,
 				8892AE5D1F31CF0300B48AD2 /* UIImage+XLExtension.m in Sources */,
-				8863E95F1F32F95E00751768 /* QSLoadLocalFileView1Controller.m in Sources */,
+				440131FF1F337C7D0060CF76 /* QSCompareViewController.m in Sources */,
 				8892AE4D1F31CF0300B48AD2 /* SDWebImageCompat.m in Sources */,
+				440132021F376BF50060CF76 /* QSLoadFileViewController.m in Sources */,
 				8892AE661F31CF0300B48AD2 /* TAAnimatedDotView.m in Sources */,
-				8892ADE71F31CE9E00B48AD2 /* QSWebView2Controller.m in Sources */,
 				8892AE681F31CF0300B48AD2 /* TAPageControl.m in Sources */,
 				8892AE491F31CF0300B48AD2 /* EXTSelectorChecking.m in Sources */,
 				8892AE581F31CF0300B48AD2 /* UIView+WebCacheOperation.m in Sources */,
@@ -823,6 +828,7 @@
 				8892AE541F31CF0300B48AD2 /* UIImage+GIF.m in Sources */,
 				8892AE4F1F31CF0300B48AD2 /* SDWebImageDownloader.m in Sources */,
 				8836F41D1EC561AE00AEB513 /* main.m in Sources */,
+				440131F91F3371460060CF76 /* QSWKWebView1Controller.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -23,52 +23,52 @@ static NSString  * const imageDownLoadCompletedJSName = @"imageDownLoadCompleted
 
 @implementation QSWebView3Controller
 
-//- (void)viewDidLoad {
+- (void)viewDidLoad {
+    
+    [super viewDidLoad];
+
+    
+    [self registerNativeHandler];
+    
+//    WKWebViewConfiguration *config =[[WKWebViewConfiguration alloc]init];
 //    
-//    [super viewDidLoad];
-//
+//    /** WebView的偏好设置 */
 //    
-//    [self registerNativeHandler];
+//    config.preferences.minimumFontSize = 10;
 //    
-////    WKWebViewConfiguration *config =[[WKWebViewConfiguration alloc]init];
-////    
-////    /** WebView的偏好设置 */
-////    
-////    config.preferences.minimumFontSize = 10;
-////    
-////    config.preferences.javaScriptEnabled = YES;
-////    
-////    /** 默认是不能通过JS自动打开窗口的，必须通过用户交互才能打开 */
-////    
-////    config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
-////    
-////    /**  添加JS到到HTML中  */
-////    
-////    NSString *js = @"window.alert('欢迎体验WkWebView!!');";
-////    
-////    WKUserScript *script = [[WKUserScript alloc]initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
-////    
-////    WKWebViewConfiguration *config =[[WKWebViewConfiguration alloc]init];
+//    config.preferences.javaScriptEnabled = YES;
 //    
-//
-//
+//    /** 默认是不能通过JS自动打开窗口的，必须通过用户交互才能打开 */
 //    
-//    NSString *htmlFilePath = [[NSBundle mainBundle]pathForResource:@"content2" ofType:@"html"];
-//    NSString *htmlContentString = [NSString stringWithContentsOfFile:htmlFilePath encoding:NSUTF8StringEncoding error:nil];
-//
-//    NSString *jsPath = [[NSBundle mainBundle] pathForResource:@"content1" ofType:@"js"];
-//    //读取JS文件内容
-////    NSString *jsContentString = [NSString stringWithContentsOfFile:jsPath encoding:NSUTF8StringEncoding error:nil];
-//////      content1.html中引入js和css文件直接使用wkWebView的loadHTMLString不能加载出来
-////    htmlContentString = [htmlContentString stringByReplacingOccurrencesOfString:@"{{script_content}}" withString:jsContentString];
-//    // loadRequest 也有问题
-////    [self.wkWebView loadHTMLString:htmlContentString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+//    config.preferences.javaScriptCanOpenWindowsAutomatically = NO;
 //    
-//     [self.wkWebView loadFileURL:[NSURL fileURLWithPath:htmlFilePath] allowingReadAccessToURL:[NSURL fileURLWithPath:htmlFilePath]];
+//    /**  添加JS到到HTML中  */
 //    
-////    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:htmlFilePath]]];
+//    NSString *js = @"window.alert('欢迎体验WkWebView!!');";
 //    
-//}
+//    WKUserScript *script = [[WKUserScript alloc]initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:YES];
+//    
+//    WKWebViewConfiguration *config =[[WKWebViewConfiguration alloc]init];
+    
+
+
+    
+    NSString *htmlFilePath = [[NSBundle mainBundle]pathForResource:@"content2" ofType:@"html"];
+    NSString *htmlContentString = [NSString stringWithContentsOfFile:htmlFilePath encoding:NSUTF8StringEncoding error:nil];
+
+    NSString *jsPath = [[NSBundle mainBundle] pathForResource:@"content1" ofType:@"js"];
+    //读取JS文件内容
+//    NSString *jsContentString = [NSString stringWithContentsOfFile:jsPath encoding:NSUTF8StringEncoding error:nil];
+////      content1.html中引入js和css文件直接使用wkWebView的loadHTMLString不能加载出来
+//    htmlContentString = [htmlContentString stringByReplacingOccurrencesOfString:@"{{script_content}}" withString:jsContentString];
+    // loadRequest 也有问题
+//    [self.wkWebView loadHTMLString:htmlContentString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+    
+     [self.wkWebView loadFileURL:[NSURL fileURLWithPath:htmlFilePath] allowingReadAccessToURL:[NSURL fileURLWithPath:htmlFilePath]];
+    
+//    [self.wkWebView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:htmlFilePath]]];
+    
+}
 
 //将文件copy到tmp目录
 //- (NSURL *)fileURLForBuggyWKWebView8:(NSURL *)fileURL {

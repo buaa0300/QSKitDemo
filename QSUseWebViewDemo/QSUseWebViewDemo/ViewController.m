@@ -8,10 +8,12 @@
 
 #import "ViewController.h"
 #import "QSWebView1Controller.h"
-#import "QSWebView2Controller.h"
 #import "QSWebView3Controller.h"
 
-#import "QSLoadLocalFileView1Controller.h"
+#import "QSWKWebView1Controller.h"
+#import "QSCompareViewController.h"
+
+#import "QSLoadFileViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -29,7 +31,7 @@
     
     self.title = @"QSUseWebViewDemo";
     
-    self.dataSource = [NSMutableArray arrayWithObjects:@[@"UIWebView加载页面"],@[@"WKWebView加载Url",@"WKWebView加载页面",@"WKWebView加载本地H5、CSS和JS方法1",@"清除缓存"], nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@[@"UIWebView实现内容落地页"],@[@"WKWebView基础使用(加载网页)",@"WebView加载速度对比",@"WKWebView加载本地H5、CSS和JS",@"WKWebView实现内容落地页",@"清除缓存"], nil];
     [self.view addSubview:self.tableView];
     
 }
@@ -138,12 +140,16 @@
         
         switch (indexPath.row) {
             case 0:
-                vc = [[QSWebView2Controller alloc]init];
+                vc = [[QSWKWebView1Controller alloc]initWithUrlString:@"https://baidu.com"];
                 break;
             case 1:
-                vc = [[QSWebView3Controller alloc]init];
+                vc = [[QSCompareViewController alloc]init];
+                break;
             case 2:
-                vc = [[QSLoadLocalFileView1Controller alloc]init];
+                vc = [[QSLoadFileViewController alloc]init];
+                break;
+            case 3:
+                vc = [[QSWebView3Controller alloc]init];
                 
             default:
                 break;

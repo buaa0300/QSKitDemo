@@ -1,5 +1,5 @@
 //
-//  QSLoadLocalFileView1Controller.h
+//  QSLoadFileViewController.h
 //  QSUseWebViewDemo
 //
 //  Created by zhongpingjiang on 2017/8/3.
@@ -8,6 +8,6 @@
 
 #import "QSBaseWebViewController.h"
 
-@interface QSLoadLocalFileView1Controller : QSBaseWebViewController
+@interface QSLoadFileViewController : QSBaseWebViewController
 
 @end

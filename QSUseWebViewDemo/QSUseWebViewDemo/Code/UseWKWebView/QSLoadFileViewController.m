@@ -1,21 +1,21 @@
 //
-//  QSLoadLocalFileView1Controller.m
+//  QSLoadFileViewController.m
 //  QSUseWebViewDemo
 //
 //  Created by zhongpingjiang on 2017/8/3.
 //  Copyright © 2017年 shaoqing. All rights reserved.
 //
 
-#import "QSLoadLocalFileView1Controller.h"
+#import "QSLoadFileViewController.h"
 #import "WKWebViewJavascriptBridge.h"
 
-@interface QSLoadLocalFileView1Controller ()
+@interface QSLoadFileViewController ()
 
 @property (nonatomic,strong)WKWebViewJavascriptBridge* bridge;
 
 @end
 
-@implementation QSLoadLocalFileView1Controller
+@implementation QSLoadFileViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
