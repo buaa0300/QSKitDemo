@@ -93,11 +93,30 @@ static NSString * const kWKWebViewLoadingKeyPath = @"loading";
 - (WKWebView *)wkWebView{
     
     if (!_wkWebView) {
-        _wkWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
-        _wkWebView.layer.borderColor = [UIColor redColor].CGColor;
-        _wkWebView.layer.borderWidth = 1;
+        
+        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc]init];
+        
+        WKUserContentController *contentController = [[WKUserContentController alloc]init];
+//        WKUserScript *cookieScript = [[WKUserScript alloc]initWithSource:@"document.cookie = 'myCookie=this is 没my cookie!;'" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+//        [contentController addUserScript:cookieScript];
+        
+        //注入js
+        WKUserScript *showCookieScript = [[WKUserScript alloc] initWithSource:@"alert(document.cookie);" injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
+        [contentController addUserScript:showCookieScript];
+        
+        
+        configuration.userContentController = contentController;
+        _wkWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) configuration:configuration];
+        //允许右滑返回上一个链接
+        _wkWebView.allowsBackForwardNavigationGestures = YES;
+        //允许链接3D Touch
+        _wkWebView.allowsLinkPreview = YES;
+        _wkWebView.customUserAgent = @"QSUseWebViewDemo"; //自定义UA
         _wkWebView.UIDelegate = self;
         _wkWebView.navigationDelegate = self;
+        
+        _wkWebView.layer.borderColor = [UIColor redColor].CGColor;
+        _wkWebView.layer.borderWidth = 1;
     }
     return _wkWebView;
 }

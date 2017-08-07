@@ -80,14 +80,44 @@
 - (WKWebView *)wkWebView{
     
     if (!_wkWebView) {
-        _wkWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
-        _wkWebView.layer.borderColor = [UIColor redColor].CGColor;
-        _wkWebView.layer.borderWidth = 1;
+        
+        WKWebViewConfiguration *configuration = [[WKWebViewConfiguration alloc]init];
+        
+        WKUserContentController *contentController = [[WKUserContentController alloc]init];
+        WKUserScript *cookieScript = [[WKUserScript alloc]initWithSource:@"document.cookie = 'myCookie=this is 没my cookie!;'" injectionTime:WKUserScriptInjectionTimeAtDocumentStart forMainFrameOnly:NO];
+        [contentController addUserScript:cookieScript];
+        
+        WKUserScript *showCookieScript = [[WKUserScript alloc] initWithSource:@"alert(document.cookie);" injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
+        [contentController addUserScript:showCookieScript];
+        
+
+        configuration.userContentController = contentController;
+        _wkWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64) configuration:configuration];
+        //允许右滑返回上一个链接
+        _wkWebView.allowsBackForwardNavigationGestures = YES;
+        //允许链接3D Touch
+        _wkWebView.allowsLinkPreview = YES;
+        _wkWebView.customUserAgent = @"QSUseWebViewDemo"; //自定义UA
         _wkWebView.UIDelegate = self;
         _wkWebView.navigationDelegate = self;
+        
+        _wkWebView.layer.borderColor = [UIColor redColor].CGColor;
+        _wkWebView.layer.borderWidth = 1;
     }
     return _wkWebView;
 }
+
+//- (WKWebView *)wkWebView{
+//    
+//    if (!_wkWebView) {
+//        _wkWebView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT - 64)];
+//        _wkWebView.layer.borderColor = [UIColor redColor].CGColor;
+//        _wkWebView.layer.borderWidth = 1;
+//        _wkWebView.UIDelegate = self;
+//        _wkWebView.navigationDelegate = self;
+//    }
+//    return _wkWebView;
+//}
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
     
@@ -96,7 +126,7 @@
     }
     
    	if ([keyPath isEqualToString:@"title"]) {
-        self.title = self.wkWebView.title;
+//        self.title = self.wkWebView.title;
         
     } else  if ([keyPath isEqualToString:@"estimatedProgress"]) {
         double progress = self.wkWebView.estimatedProgress;
