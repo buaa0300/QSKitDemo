@@ -123,6 +123,10 @@
  */
 - (UIImage *)clipImageWithCornerRadius:(CGFloat)cornerRadius bgColor:(UIColor *)bgColor{
     
+    
+    
+    
+    
     CGSize imageSize = self.size;
     CGRect rect = CGRectMake(0, 0, imageSize.width, imageSize.height);
 

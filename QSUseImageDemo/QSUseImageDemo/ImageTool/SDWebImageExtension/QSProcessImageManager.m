@@ -8,17 +8,6 @@
 
 #import "QSProcessImageManager.h"
 
-#pragma mark - QSProcessImageConfig
-@implementation QSProcessImageConfig
-
-- (NSString *)description{
-    
-    return [NSString stringWithFormat:@"%@-%.0lf",NSStringFromCGSize(self.outputSize), round(self.cornerRadius)];
-}
-
-@end
-
-
 #pragma mark - QSProcessImageManager
 @implementation QSProcessImageManager
 
