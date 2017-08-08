@@ -7,8 +7,7 @@
 //
 
 #import "QSCornerImageController.h"
-#import "QSProcessImageUtil.h"
-
+#import "QSProcessImageManager.h"
 
 @interface QSCornerImageController ()
 
@@ -44,13 +43,9 @@
         _scaleImageView;
     })];
     
-    QSProcessImageConfig *config = [[QSProcessImageConfig alloc]init];
-    config.outputSize = _scaleImageView.frame.size;
-    config.cornerRadius = 10;
-    config.bgColor = [UIColor whiteColor];
-    config.corners = QSProcessImageCornerAllCorners;
-    
-    _scaleImageView.image =  [QSProcessImageUtil processImage:originImage config:config];
+//    QSProcessImageConfig *config = [QSProcessImageConfig roundCofigWithOutputSize:_scaleImageView.frame.size];
+    QSProcessImageConfig *config = [[QSProcessImageConfig alloc]initWithOutputSize:_scaleImageView.frame.size cornerRadius:30 corners:QSProcessImageCornerLeftTop | QSProcessImageCornerLeftBottom];
+    _scaleImageView.image =  [QSProcessImageManager processImage:originImage config:config];
 }
 
 

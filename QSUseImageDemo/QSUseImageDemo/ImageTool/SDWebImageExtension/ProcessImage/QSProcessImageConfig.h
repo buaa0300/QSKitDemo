@@ -17,14 +17,30 @@ typedef NS_ENUM(NSUInteger, QSProcessImageCorner) {
     QSProcessImageCornerAllCorners = UIRectCornerAllCorners
 };
 
+#pragma mark - QSProcessImageConfig
 @interface QSProcessImageConfig : NSObject
-
 /**
  图片输出大小
  */
-@property (nonatomic,assign)CGSize outputSize;
-@property (nonatomic,strong)UIColor *bgColor;
+@property (nonatomic, assign) CGSize outputSize;
+@property (nonatomic, strong) UIColor *bgColor;
 @property (nonatomic, assign) CGFloat cornerRadius;          //圆角半径,值为0不处理圆角
 @property (nonatomic, assign) QSProcessImageCorner corners;  //需要处理的圆角
+@property (nonatomic, assign) BOOL opaque;                   //是否透明
+
++ (instancetype)defaultConfigWithOutputSize:(CGSize)outputSize;
+
++ (instancetype)roundCofigWithOutputSize:(CGSize)outputSize;
+
+- (instancetype)initWithOutputSize:(CGSize)outputSize
+                      cornerRadius:(CGFloat)cornerRadius
+                           corners:(QSProcessImageCorner)corners;
+
+- (instancetype)initWithOutputSize:(CGSize)outputSize
+                           bgColor:(UIColor *)bgColor
+                      cornerRadius:(CGFloat)cornerRadius
+                           corners:(QSProcessImageCorner)corners
+                            opaque:(BOOL)opaque;
 
 @end
+

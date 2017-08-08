@@ -62,13 +62,12 @@
 - (void)onDownLoad{
     
     UIImage *originImage = [UIImage imageNamed:@"icon.jpeg"];
-    QSProcessImageConfig *config = [[QSProcessImageConfig alloc]init];
-    config.outputSize = CGSizeMake(100, 100);
-    config.cornerRadius = 30;
-    config.bgColor = [UIColor whiteColor];
+    QSProcessImageConfig *config1 = [QSProcessImageConfig defaultConfigWithOutputSize:CGSizeMake(100, 100)];
+    QSProcessImageConfig *config2 = [QSProcessImageConfig roundCofigWithOutputSize:CGSizeMake(100, 100)];
+    
     //对比
-    [self.originImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:originImage];
-    [self.scaleImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:originImage config:config];
+    [self.originImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:originImage config:config1];
+    [self.scaleImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:originImage config:config2];
 }
 
 

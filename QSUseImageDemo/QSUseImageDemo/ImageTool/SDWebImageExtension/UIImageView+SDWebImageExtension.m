@@ -40,21 +40,17 @@
             NSLog(@"end download....");
         }else{
             
-           
             [manager.imageDownloader downloadImageWithURL:url options:SDWebImageRetryFailed | SDWebImageHighPriority | SDWebImageAvoidAutoSetImage  progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
                 
                 if (image) {
-                    
-                    [QSProcessImageManager imageWithOriginImage:image config:config completed:^(UIImage *outputImage) {
-                        
+                    [QSProcessImageManager processImage:image config:config cache:cache cacheKey:cacheKey completed:^(UIImage *outputImage) {
                         if (outputImage) {
                             self.image = outputImage;
-                            [cache storeImage:outputImage forKey:cacheKey completion:nil];
                         }
                     }];
+    
                 }else{
                     NSLog(@"下载失败");
-                    
                 }
                 NSLog(@"end download....");
             }];
