@@ -24,7 +24,7 @@
     }
     
     NSString *configDesc = [config description];
-    NSString *cacheUrlString = [NSString stringWithFormat:@"%@?%@",urlString,configDesc];
+    NSString *cacheUrlString = [NSString stringWithFormat:@"%@_%@",urlString,configDesc];
     NSLog(@"cacheUrlString = %@",cacheUrlString);
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     SDImageCache *cache = manager.imageCache;

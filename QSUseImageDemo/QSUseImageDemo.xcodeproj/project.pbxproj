@@ -18,6 +18,7 @@
 		886C76111F3AAEBD00B4B192 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C760A1F3AAEBD00B4B192 /* UIImage+Tool.m */; };
 		886C76121F3AAEBD00B4B192 /* UIView+SnapShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C760C1F3AAEBD00B4B192 /* UIView+SnapShot.m */; };
 		886C76161F3AB41200B4B192 /* QSDispatchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76151F3AB41200B4B192 /* QSDispatchQueue.m */; };
+		886C761C1F3AF40400B4B192 /* UIColor+Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C761B1F3AF40400B4B192 /* UIColor+Value.m */; };
 		889227B51F1E301E0062B308 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892278E1F1E301E0062B308 /* MKAnnotationView+WebCache.m */; };
 		889227B61F1E301E0062B308 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 889227901F1E301E0062B308 /* NSData+ImageContentType.m */; };
 		889227B71F1E301E0062B308 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 889227921F1E301E0062B308 /* NSImage+WebCache.m */; };
@@ -85,6 +86,8 @@
 		886C760C1F3AAEBD00B4B192 /* UIView+SnapShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SnapShot.m"; sourceTree = "<group>"; };
 		886C76141F3AB41200B4B192 /* QSDispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDispatchQueue.h; sourceTree = "<group>"; };
 		886C76151F3AB41200B4B192 /* QSDispatchQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSDispatchQueue.m; sourceTree = "<group>"; };
+		886C761A1F3AF40400B4B192 /* UIColor+Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Value.h"; sourceTree = "<group>"; };
+		886C761B1F3AF40400B4B192 /* UIColor+Value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Value.m"; sourceTree = "<group>"; };
 		8892278D1F1E301E0062B308 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		8892278E1F1E301E0062B308 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		8892278F1F1E301E0062B308 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -193,6 +196,8 @@
 		886C75F41F3AAEA800B4B192 /* ProcessImage */ = {
 			isa = PBXGroup;
 			children = (
+				886C761A1F3AF40400B4B192 /* UIColor+Value.h */,
+				886C761B1F3AF40400B4B192 /* UIColor+Value.m */,
 				886C75F51F3AAEA800B4B192 /* QSProcessImageConfig.h */,
 				886C75F61F3AAEA800B4B192 /* QSProcessImageConfig.m */,
 				886C75F71F3AAEA800B4B192 /* QSProcessImageManager.h */,
@@ -509,6 +514,7 @@
 				889227BA1F1E301E0062B308 /* SDWebImageCompat.m in Sources */,
 				889227C61F1E301E0062B308 /* UIView+WebCache.m in Sources */,
 				889227BF1F1E301E0062B308 /* SDWebImagePrefetcher.m in Sources */,
+				886C761C1F3AF40400B4B192 /* UIColor+Value.m in Sources */,
 				889227C21F1E301E0062B308 /* UIImage+MultiFormat.m in Sources */,
 				889227C71F1E301E0062B308 /* UIView+WebCacheOperation.m in Sources */,
 				889227B71F1E301E0062B308 /* NSImage+WebCache.m in Sources */,

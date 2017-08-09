@@ -7,6 +7,7 @@
 //
 
 #import "QSProcessImageConfig.h"
+#import "UIColor+Value.h"
 
 #pragma mark - process Block
 //默认处理：缩放指定大小 + 裁圆角
@@ -21,15 +22,14 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
         
         UIBezierPath *bgRect = [UIBezierPath bezierPathWithRect:rect];
         UIColor *bgColor = config.bgColor;
-        if (!bgColor) {
-            bgColor = [UIColor whiteColor];
+        if (bgColor) {
+            [bgColor setFill];
         }
-        [bgColor setFill];
         [bgRect fill];
     }
     
     //裁剪圆角
-    if (cornerRadius > 0 && config.corners != QSProcessImageCornerNone) {
+    if (cornerRadius > 0 && config.corners != 0) {
         
         UIBezierPath *roundRectPath = [UIBezierPath bezierPathWithRoundedRect:rect
                                                             byRoundingCorners:(UIRectCorner)config.corners
@@ -47,12 +47,10 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
 
 + (instancetype)defaultConfigWithOutputSize:(CGSize)outputSize{
 
-    QSProcessImageConfig *config = [[QSProcessImageConfig alloc]initWithOutputSize:outputSize cornerRadius:0 corners:QSProcessImageCornerNone processBlock:__QSDefaultProcessImageBlock];
-    
-    return [self configWithOutputSize:outputSize
-                         cornerRadius:0
-                              corners:QSProcessImageCornerNone];
-    
+    QSProcessImageConfig *config = [[QSProcessImageConfig alloc]initWithOutputSize:outputSize
+                                                                      cornerRadius:0
+                                                                           corners:0
+                                                                      processBlock:__QSDefaultProcessImageBlock];
     return config;
 }
 
@@ -60,12 +58,12 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
 
     return [self configWithOutputSize:outputSize
                          cornerRadius:MIN(outputSize.width, outputSize.height)/2.0
-                              corners:QSProcessImageCornerAllCorners];
+                              corners:UIRectCornerAllCorners];
 }
 
 + (instancetype)configWithOutputSize:(CGSize)outputSize
                         cornerRadius:(CGFloat)cornerRadius
-                             corners:(QSProcessImageCorner)corners{
+                             corners:(UIRectCorner)corners{
 
     return [self configWithOutputSize:outputSize
                          cornerRadius:cornerRadius
@@ -76,7 +74,7 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
 
 + (instancetype)configWithOutputSize:(CGSize)outputSize
                       cornerRadius:(CGFloat)cornerRadius
-                           corners:(QSProcessImageCorner)corners
+                           corners:(UIRectCorner)corners
                       processBlock:(QSProcessImageBlock)processBlock{
     
     QSProcessImageConfig *config = [[QSProcessImageConfig alloc]initWithOutputSize:outputSize
@@ -90,7 +88,7 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
 - (instancetype)configWithOutputSize:(CGSize)outputSize
                            bgColor:(UIColor *)bgColor
                       cornerRadius:(CGFloat)cornerRadius
-                           corners:(QSProcessImageCorner)corners
+                           corners:(UIRectCorner)corners
                             opaque:(BOOL)opaque
                         processBlock:(QSProcessImageBlock)processBlock{
 
@@ -106,7 +104,7 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
 
 - (instancetype)initWithOutputSize:(CGSize)outputSize
                       cornerRadius:(CGFloat)cornerRadius
-                           corners:(QSProcessImageCorner)corners
+                           corners:(UIRectCorner)corners
                       processBlock:(QSProcessImageBlock)processBlock{
     
     return [self initWithOutputSize:outputSize
@@ -120,13 +118,13 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
 - (instancetype)initWithOutputSize:(CGSize)outputSize
                            bgColor:(UIColor *)bgColor
                       cornerRadius:(CGFloat)cornerRadius
-                           corners:(QSProcessImageCorner)corners
+                           corners:(UIRectCorner)corners
                             opaque:(BOOL)opaque
                       processBlock:(QSProcessImageBlock)processBlock{
     self = [super init];
     if (self) {
         _outputSize = outputSize;
-        _bgColor = bgColor;
+        _bgColor = (bgColor != nil)? bgColor : [UIColor whiteColor];
         _cornerRadius = MIN(cornerRadius, MIN(outputSize.width, outputSize.height) / 2.0f);
         _corners = corners;
         _opaque = opaque;
@@ -140,7 +138,7 @@ QSProcessImageBlock __QSDefaultProcessImageBlock = ^(CGContextRef context, UIIma
 }
 
 - (NSString *)description{
-    return [NSString stringWithFormat:@"width=%.0lf&height=%.0lf&corners=%lu&cornerradius=%.1lf&opaque=%d",self.outputSize.width,self.outputSize.height,(unsigned long)self.corners,round(self.cornerRadius),self.opaque];
+    return [NSString stringWithFormat:@"width=%.0lf_height=%.0lf_corners=%lu_cornerradius=%.1lf_opaque=%d_color=%@",self.outputSize.width,self.outputSize.height,(unsigned long)self.corners,round(self.cornerRadius),self.opaque,[self.bgColor colorValueString]];
 }
 
 @end

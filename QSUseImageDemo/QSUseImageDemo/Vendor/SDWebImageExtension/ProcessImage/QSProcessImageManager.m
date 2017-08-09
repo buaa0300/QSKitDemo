@@ -9,15 +9,6 @@
 #import "QSProcessImageManager.h"
 #import "QSDispatchQueue.h"
 
-#pragma mark - 图片处理函数
-/**
- 处理图片
- */
-void QSProcessImageAction(CGContextRef context, UIImage *originImage, QSProcessImageConfig *config);
-
-
-
-
 #pragma mark - QSProcessImageManager
 @implementation QSProcessImageManager
 
@@ -71,52 +62,15 @@ void QSProcessImageAction(CGContextRef context, UIImage *originImage, QSProcessI
     UIGraphicsBeginImageContextWithOptions(rect.size, config.opaque, 0.0);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextClearRect(ctx, rect);
-    QSProcessImageAction(ctx,image,config);
+//    if(con)
+    if (config.processBlock ) {
+        config.processBlock(ctx, image, config);
+    }
+    
+//    QSProcessImageAction(ctx,image,config);
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
     return newImage;
 }
-
-
-#pragma mark - 图片处理函数
-/**
- 处理图片
- */
-void QSProcessImageAction(CGContextRef context, UIImage *originImage, QSProcessImageConfig *config){
-    
-    CGContextSaveGState(context);
-    CGRect rect = CGContextGetClipBoundingBox(context);
-    CGFloat radius = MIN(CGRectGetWidth(rect), CGRectGetHeight(rect)) / 2.0f;
-    CGFloat cornerRadius = MIN(config.cornerRadius, radius);
-    
-    if (!CGSizeEqualToSize(CGSizeZero, rect.size)){
-        
-        UIBezierPath *bgRect = [UIBezierPath bezierPathWithRect:rect];
-        UIColor *bgColor = config.bgColor;
-        if (!bgColor) {
-            bgColor = [UIColor whiteColor];
-        }
-        [bgColor setFill];
-        [bgRect fill];
-    }
-    
-    //裁剪圆角
-    if (cornerRadius > 0 && config.corners != QSProcessImageCornerNone) {
-    
-        UIBezierPath *roundRectPath = [UIBezierPath bezierPathWithRoundedRect:rect
-                                                            byRoundingCorners:(UIRectCorner)config.corners
-                                                                  cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
-        [roundRectPath addClip];
-        
-    }
-    [originImage drawInRect:rect];
-    CGContextRestoreGState(context);
-}
-
-
-
-
-
-
 
 @end

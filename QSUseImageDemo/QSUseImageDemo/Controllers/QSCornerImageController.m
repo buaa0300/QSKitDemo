@@ -11,7 +11,6 @@
 #import "UIImageView+SDWebImageExtension.h"
 #import "UIImageView+WebCache.h"
 
-
 @interface QSCornerImageController ()
 
 @property (nonatomic,strong)UIImageView *sdImageView;
@@ -67,15 +66,15 @@
 
     QSProcessImageConfig *config1 = [QSProcessImageConfig defaultConfigWithOutputSize:outputSize];  //没有任何圆角
     
-    QSProcessImageConfig *config2 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerLeftTop];
-    QSProcessImageConfig *config3 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerLeftBottom];
-    QSProcessImageConfig *config4 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightTop];
-    QSProcessImageConfig *config5 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightBottom];
+    QSProcessImageConfig *config2 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopLeft];
+    QSProcessImageConfig *config3 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerBottomLeft];
+    QSProcessImageConfig *config4 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopRight];
+    QSProcessImageConfig *config5 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerBottomRight];
     
-    QSProcessImageConfig *config6 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerLeftTop | QSProcessImageCornerLeftBottom];
-    QSProcessImageConfig *config7 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightTop | QSProcessImageCornerRightBottom];
+    QSProcessImageConfig *config6 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopLeft | UIRectCornerBottomLeft];
+    QSProcessImageConfig *config7 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopRight | UIRectCornerBottomRight];
     
-    QSProcessImageConfig *config8 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightTop | QSProcessImageCornerAllCorners];
+    QSProcessImageConfig *config8 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopRight | UIRectCornerAllCorners];
     QSProcessImageConfig *config9 = [QSProcessImageConfig roundCofigWithOutputSize:outputSize];
     
     return @[config1,config2,config3,config4,config5,config6,config7,config8,config9];
