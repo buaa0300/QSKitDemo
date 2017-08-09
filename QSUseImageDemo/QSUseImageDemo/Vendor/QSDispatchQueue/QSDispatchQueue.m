@@ -79,6 +79,21 @@ static const NSUInteger kMaxConcurrentCount = 32;    //最大并发数
     return queue;
 }
 
++ (QSDispatchQueue *)processImageQueue{
+
+    static QSDispatchQueue *queue;
+    static dispatch_once_t onceToken;
+    static dispatch_queue_t processImageQueue;
+    dispatch_once(&onceToken, ^{
+        
+        processImageQueue = dispatch_queue_create("com.jzp.com.process.image.queue", DISPATCH_QUEUE_CONCURRENT);
+        queue = [[QSDispatchQueue alloc]initWithQueue:processImageQueue
+                                      concurrentCount:kGlobalConcurrentCount];
+    });
+    
+    return queue;
+}
+
 #pragma mark - lifycycle
 - (instancetype)init{
 

@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "QSLocalImageController.h"
-#import "QSWebImageController.h"
 #import "QSCornerImageController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
@@ -30,7 +29,7 @@
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.dataSource = [NSMutableArray arrayWithObjects:@"本地图片处理",@"网络图片处理",@"圆角图片的处理",nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@"本地图片处理",@"网络图片圆角的处理",nil];
     [self.view addSubview:self.tableView];
 }
 
@@ -99,11 +98,6 @@
         }
             break;
         case 1:{
-            QSWebImageController *vc2 = [[QSWebImageController alloc]init];
-            [self.navigationController pushViewController:vc2 animated:YES];
-        }
-            break;
-        case 2:{
             QSCornerImageController *vc3 = [[QSCornerImageController alloc]init];
             [self.navigationController pushViewController:vc3 animated:YES];
         }

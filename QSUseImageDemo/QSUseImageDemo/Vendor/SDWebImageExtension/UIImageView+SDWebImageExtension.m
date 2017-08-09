@@ -14,7 +14,6 @@
 
 - (void)qs_setImageWithURL:(nullable NSURL *)url placeholderImage:(nullable UIImage *)placeholder config:(QSProcessImageConfig *)config{
 
-    NSLog(@"start download....");
     if (placeholder && self.image != placeholder) {
         self.image = placeholder;
     }
@@ -24,11 +23,9 @@
         return;
     }
     
-    NSString *cacheUrlString = [NSString stringWithFormat:@"%@-%@",urlString,[config description]];
-
-    
+    NSString *configDesc = [config description];
+    NSString *cacheUrlString = [NSString stringWithFormat:@"%@?%@",urlString,configDesc];
     NSLog(@"cacheUrlString = %@",cacheUrlString);
-    
     SDWebImageManager *manager = [SDWebImageManager sharedManager];
     SDImageCache *cache = manager.imageCache;
     
@@ -37,9 +34,9 @@
     
         if (image) {
             self.image = image;
-            NSLog(@"end download....");
+            NSLog(@"find it....");
         }else{
-            
+             NSLog(@"start download....");
             [manager.imageDownloader downloadImageWithURL:url options:SDWebImageRetryFailed | SDWebImageHighPriority | SDWebImageAvoidAutoSetImage  progress:nil completed:^(UIImage * _Nullable image, NSData * _Nullable data, NSError * _Nullable error, BOOL finished) {
                 
                 if (image) {

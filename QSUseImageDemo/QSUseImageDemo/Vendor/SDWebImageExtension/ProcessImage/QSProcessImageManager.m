@@ -7,12 +7,16 @@
 //
 
 #import "QSProcessImageManager.h"
+#import "QSDispatchQueue.h"
 
 #pragma mark - 图片处理函数
 /**
  处理图片
  */
 void QSProcessImageAction(CGContextRef context, UIImage *originImage, QSProcessImageConfig *config);
+
+
+
 
 #pragma mark - QSProcessImageManager
 @implementation QSProcessImageManager
@@ -30,18 +34,20 @@ void QSProcessImageAction(CGContextRef context, UIImage *originImage, QSProcessI
             cacheKey:(NSString *)cacheKey
            completed:(QSProcessImageCompletionBlock)completedBlock{
 
-    dispatch_async(dispatch_get_global_queue(0, 0), ^{
-        
+    //使用[QSDispatchQueue processImageQueue]控制最大线程并发数
+    [[QSDispatchQueue processImageQueue]async:^{
+
         UIImage *newImage = [self processImage:image config:config];
         if (cache && cacheKey && cacheKey.length > 0 && image) {
-            [cache storeImage:image forKey:cacheKey completion:nil];
+            [cache storeImage:newImage forKey:cacheKey completion:nil];
         }
+        NSLog(@"currentThread info is: %@",[NSThread currentThread]);
         dispatch_async(dispatch_get_main_queue(),^{
             if (completedBlock) {
                 completedBlock(newImage);
             }
         });
-    });
+    }];
 }
 
 

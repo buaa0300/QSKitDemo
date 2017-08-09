@@ -8,11 +8,14 @@
 
 #import "QSCornerImageController.h"
 #import "QSProcessImageManager.h"
+#import "UIImageView+SDWebImageExtension.h"
+#import "UIImageView+WebCache.h"
+
 
 @interface QSCornerImageController ()
 
-@property (nonatomic,strong)UIImageView *originImageView;
-@property (nonatomic,strong)UIImageView *scaleImageView;
+@property (nonatomic,strong)UIImageView *sdImageView;
+@property (nonatomic,strong)NSMutableArray *processImageViews;
 
 @end
 
@@ -23,29 +26,59 @@
     // Do any additional setup after loading the view.
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
-    self.navigationItem.title = @"圆角图片处理";
+    self.navigationItem.title = @"网络图片圆角的处理";
     
-    NSString *imageName = @"icon_lena@3x.png";  //icon.jpeg
-    UIImage *originImage = [UIImage imageNamed:imageName];
+    self.processImageViews = [NSMutableArray array];
     
+    NSInteger imageCount = 3;
+    CGFloat margin = 10;
+    CGFloat cornerRadius = 30;
+    
+    CGFloat width = ceilf((SCREEN_WIDTH - margin * (imageCount + 1))/imageCount);
+    
+    
+    UIImage *placeholderImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
+                                                             config:[QSProcessImageConfig defaultConfigWithOutputSize:CGSizeMake(width, width)]];
     [self.view addSubview:({
-        _originImageView = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH - 100)/2, 0, 100, 100)];
-        _originImageView.layer.borderColor = [UIColor blueColor].CGColor;
-        _originImageView.layer.borderWidth = 1.0f;
-        _originImageView.image = originImage;
-        _originImageView;
+        _sdImageView = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH - 100)/2, 0, width, width)];
+        _sdImageView.layer.borderColor = [UIColor blueColor].CGColor;
+        _sdImageView.layer.borderWidth = 1.0f;
+        _sdImageView;
     })];
     
-    [self.view addSubview:({
-        _scaleImageView = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH - 100)/2, CGRectGetMaxY(_originImageView.frame) + 15, 100, 100)];
-        _scaleImageView.layer.borderColor = [UIColor blueColor].CGColor;
-        _scaleImageView.layer.borderWidth = 1.0f;
-        _scaleImageView;
-    })];
+    [_sdImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:placeholderImage];
     
-//    QSProcessImageConfig *config = [QSProcessImageConfig roundCofigWithOutputSize:_scaleImageView.frame.size];
-    QSProcessImageConfig *config = [[QSProcessImageConfig alloc]initWithOutputSize:_scaleImageView.frame.size cornerRadius:30 corners:QSProcessImageCornerLeftTop | QSProcessImageCornerLeftBottom];
-    _scaleImageView.image =  [QSProcessImageManager processImage:originImage config:config];
+    NSArray *configs = [self p_processConfigArrayWithOutputSize:CGSizeMake(width, width) cornerRadius:cornerRadius];
+
+    for (NSInteger i = 0; i < 9; i++) {
+        
+        CGFloat offsetX = margin + (width + margin) * (i%3);
+        CGFloat offsetY = CGRectGetMaxY(_sdImageView.frame) + 15 + ((width + 15) * (i/3));
+        
+        UIImageView *pImageView = [[UIImageView alloc]initWithFrame:CGRectMake(offsetX, offsetY, width, width)];
+        pImageView.layer.borderColor = [UIColor blueColor].CGColor;
+        pImageView.layer.borderWidth = 1.0f;
+        [self.view addSubview:pImageView];
+        [pImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:placeholderImage config:configs[i]];
+    }
+}
+
+- (NSArray *)p_processConfigArrayWithOutputSize:(CGSize)outputSize cornerRadius:(CGFloat)cornerRadius{
+
+    QSProcessImageConfig *config1 = [QSProcessImageConfig defaultConfigWithOutputSize:outputSize];  //没有任何圆角
+    
+    QSProcessImageConfig *config2 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerLeftTop];
+    QSProcessImageConfig *config3 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerLeftBottom];
+    QSProcessImageConfig *config4 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightTop];
+    QSProcessImageConfig *config5 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightBottom];
+    
+    QSProcessImageConfig *config6 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerLeftTop | QSProcessImageCornerLeftBottom];
+    QSProcessImageConfig *config7 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightTop | QSProcessImageCornerRightBottom];
+    
+    QSProcessImageConfig *config8 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:QSProcessImageCornerRightTop | QSProcessImageCornerAllCorners];
+    QSProcessImageConfig *config9 = [QSProcessImageConfig roundCofigWithOutputSize:outputSize];
+    
+    return @[config1,config2,config3,config4,config5,config6,config7,config8,config9];
 }
 
 
@@ -58,53 +91,6 @@
     
     NSLog(@"释放");
     
-}
-
-
-/*
- *UIRectCorner:圆角位置
- *     = 1 << 0,     //左上角
- *    = 1 << 1,     //右上角
- *  = 1 << 2,     //左下角
- * = 1 << 3,     //右下角
- *        //所有角
- *
- */
-//rectangleCorner = [UIBezierPath bezierPathWithRoundedRect:CGRectMake(50, 260, 40, 40) byRoundingCorners:UIRectCornerTopLeft | UIRectCornerTopRight cornerRadii:CGSizeMake(4, 4)];
-//[rectangleCorner stroke];
-
-- (UIImage *)p_processImageWithOriginImage:(UIImage *)originImage{
-    
-    //开启绘制（参考size,cornerRadius)
-    UIRectCorner corners = 123;
-//    UIRectCornerTopLeft | UIRectCornerTopRight;
-    NSLog(@"corners = %lud",(unsigned long)corners);
-    UIImage *newImage = nil;
-    if ((corners & UIRectCornerTopLeft) || (corners & UIRectCornerTopRight) || (corners & UIRectCornerBottomLeft) || (corners & UIRectCornerBottomRight) || (corners & UIRectCornerAllCorners)) {
-  
-        CGFloat cornerRadius = 50;
-        CGRect rect = CGRectMake(0, 0, originImage.size.width, originImage.size.height);
-        //    UIBezierPath *roundRectPath = [UIBezierPath bezierPathWithRoundedRect:rect cornerRadius:cornerRadius];
-        
-        UIBezierPath *roundRectPath = [UIBezierPath bezierPathWithRoundedRect:rect byRoundingCorners:corners cornerRadii:CGSizeMake(cornerRadius, cornerRadius)];
-        
-        UIGraphicsBeginImageContextWithOptions(rect.size, YES, 0);
-        UIBezierPath *bgRect = [UIBezierPath bezierPathWithRect:rect];
-        [[UIColor whiteColor] setFill];
-        [bgRect fill];
-        
-        //裁剪
-        [roundRectPath addClip];
-        //绘制
-        [originImage drawInRect:rect];
-        newImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-    }
-    
-    
-
-    
-    return newImage;
 }
 
 @end
