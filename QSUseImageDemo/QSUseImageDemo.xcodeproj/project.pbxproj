@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		44630A1D1F3CB177005C88D8 /* QSImageProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 44630A1C1F3CB177005C88D8 /* QSImageProcess.m */; };
+		44630A201F3CB1F0005C88D8 /* QSImageProcessConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 44630A1F1F3CB1F0005C88D8 /* QSImageProcessConfig.m */; };
+		44630A231F3CB6F2005C88D8 /* QSImageProcessUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 44630A221F3CB6F2005C88D8 /* QSImageProcessUtil.m */; };
 		883971231EA5A88F00908C7F /* icon_lena@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8839711F1EA5A88F00908C7F /* icon_lena@3x.png */; };
 		883971281EA5ABCB00908C7F /* image1_3.6MB_4032 × 3024.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 883971261EA5ABCB00908C7F /* image1_3.6MB_4032 × 3024.jpeg */; };
 		8839712E1EA5C03000908C7F /* icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8839712D1EA5C03000908C7F /* icon.jpeg */; };
@@ -74,6 +77,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		44630A1B1F3CB177005C88D8 /* QSImageProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSImageProcess.h; sourceTree = "<group>"; };
+		44630A1C1F3CB177005C88D8 /* QSImageProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSImageProcess.m; sourceTree = "<group>"; };
+		44630A1E1F3CB1F0005C88D8 /* QSImageProcessConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSImageProcessConfig.h; sourceTree = "<group>"; };
+		44630A1F1F3CB1F0005C88D8 /* QSImageProcessConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSImageProcessConfig.m; sourceTree = "<group>"; };
+		44630A211F3CB6F2005C88D8 /* QSImageProcessUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSImageProcessUtil.h; sourceTree = "<group>"; };
+		44630A221F3CB6F2005C88D8 /* QSImageProcessUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSImageProcessUtil.m; sourceTree = "<group>"; };
 		8839711F1EA5A88F00908C7F /* icon_lena@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_lena@3x.png"; sourceTree = "<group>"; };
 		883971261EA5ABCB00908C7F /* image1_3.6MB_4032 × 3024.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1_3.6MB_4032 × 3024.jpeg"; sourceTree = "<group>"; };
 		8839712D1EA5C03000908C7F /* icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpeg; sourceTree = "<group>"; };
@@ -195,6 +204,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		44630A1A1F3CB161005C88D8 /* QSImageProcess */ = {
+			isa = PBXGroup;
+			children = (
+				44630A1B1F3CB177005C88D8 /* QSImageProcess.h */,
+				44630A1C1F3CB177005C88D8 /* QSImageProcess.m */,
+				44630A1E1F3CB1F0005C88D8 /* QSImageProcessConfig.h */,
+				44630A1F1F3CB1F0005C88D8 /* QSImageProcessConfig.m */,
+				44630A211F3CB6F2005C88D8 /* QSImageProcessUtil.h */,
+				44630A221F3CB6F2005C88D8 /* QSImageProcessUtil.m */,
+			);
+			path = QSImageProcess;
+			sourceTree = "<group>";
+		};
 		8839711B1EA5A88F00908C7F /* Images */ = {
 			isa = PBXGroup;
 			children = (
@@ -274,6 +296,7 @@
 		889227881F1E301E0062B308 /* Vendor */ = {
 			isa = PBXGroup;
 			children = (
+				44630A1A1F3CB161005C88D8 /* QSImageProcess */,
 				886C76131F3AB41200B4B192 /* QSDispatchQueue */,
 				886C75F31F3AAEA800B4B192 /* SDWebImageExtension */,
 				889227891F1E301E0062B308 /* SDWebImage */,
@@ -551,6 +574,7 @@
 				889227BE1F1E301E0062B308 /* SDWebImageManager.m in Sources */,
 				886C761F1F3BFDA100B4B192 /* QSMainViewController.m in Sources */,
 				886C75FB1F3AAEA800B4B192 /* QSProcessImageConfig.m in Sources */,
+				44630A231F3CB6F2005C88D8 /* QSImageProcessUtil.m in Sources */,
 				889227B51F1E301E0062B308 /* MKAnnotationView+WebCache.m in Sources */,
 				886C75FD1F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.m in Sources */,
 				886C764F1F3C649100B4B192 /* QSTableViewCell2.m in Sources */,
@@ -563,6 +587,7 @@
 				889227BF1F1E301E0062B308 /* SDWebImagePrefetcher.m in Sources */,
 				886C761C1F3AF40400B4B192 /* UIColor+Value.m in Sources */,
 				886C76401F3C3BCA00B4B192 /* QSImageTableViewCell.m in Sources */,
+				44630A1D1F3CB177005C88D8 /* QSImageProcess.m in Sources */,
 				889227C21F1E301E0062B308 /* UIImage+MultiFormat.m in Sources */,
 				889227C71F1E301E0062B308 /* UIView+WebCacheOperation.m in Sources */,
 				886C76521F3C686A00B4B192 /* QSTableViewCell3.m in Sources */,
@@ -583,6 +608,7 @@
 				886C76491F3C633200B4B192 /* QSTableViewCell1.m in Sources */,
 				889227C11F1E301E0062B308 /* UIImage+GIF.m in Sources */,
 				889227C31F1E301E0062B308 /* UIImage+WebP.m in Sources */,
+				44630A201F3CB1F0005C88D8 /* QSImageProcessConfig.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

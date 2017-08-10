@@ -10,6 +10,7 @@
 #import "QSProcessImageManager.h"
 #import "UIImageView+SDWebImageExtension.h"
 #import "UIImageView+WebCache.h"
+#import "QSImageProcess.h"
 
 @interface QSCornerImageController ()
 
@@ -37,9 +38,9 @@
     
     CGFloat width = ceilf((SCREEN_WIDTH - margin * (imageCount + 1))/imageCount);
     
-    
-    UIImage *placeholderImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
-                                                             config:[QSProcessImageConfig defaultConfigWithOutputSize:CGSizeMake(width, width)]];
+    QSImageProcessConfig *config = [[QSImageProcessConfig alloc]initWithOutputSize:CGSizeMake(width, width)];
+    config.option = QSImageProcessOptionCircle;
+    UIImage *placeholderImage = [[QSImageProcess sharedImageProcess]processImage:[UIImage imageNamed:@"icon_lena@3x.png"] config:config];
     [self.view addSubview:({
         _sdImageView = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH - width * 2 + 20)/2, 0, width, width)];
         _sdImageView;
@@ -62,7 +63,8 @@
         
         UIImageView *pImageView = [[UIImageView alloc]initWithFrame:CGRectMake(offsetX, offsetY, width, width)];
         [self.view addSubview:pImageView];
-        [pImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"]
+        [pImageView qs_setImageWithURL:nil
+//         [NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"]
                       placeholderImage:placeholderImage
                                 config:configs[i]];
     }
