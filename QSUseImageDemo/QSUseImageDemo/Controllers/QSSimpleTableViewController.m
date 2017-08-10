@@ -1,16 +1,20 @@
 //
-//  ViewController.m
+//  QSSimpleTableViewController.m
 //  QSUseImageDemo
 //
-//  Created by zhongpingjiang on 17/4/11.
+//  Created by zhongpingjiang on 2017/8/10.
 //  Copyright © 2017年 shaoqing. All rights reserved.
 //
 
-#import "ViewController.h"
-#import "QSLocalImageController.h"
-#import "QSCornerImageController.h"
+#import "QSSimpleTableViewController.h"
+#import "QSImageTableViewCell.h"
+#import "QSBaseTableViewCell.h"
+#import "QSTableViewCell1.h"
+#import "QSTableViewCell2.h"
+#import "QSTableViewCell3.h"
+#import "QSTableViewCell4.h"
 
-@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface QSSimpleTableViewController ()<UITableViewDelegate,UITableViewDataSource>
 
 @property (nonatomic,strong)UITableView *tableView;
 @property (nonatomic,strong)NSMutableArray *dataSource;
@@ -18,19 +22,25 @@
 @end
 
 
-@implementation ViewController
+@implementation QSSimpleTableViewController
 
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
     
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
-    self.title = @"QSUseImageDemo";
+    self.title = @"cell按下";
     
     // Do any additional setup after loading the view, typically from a nib.
     
-    self.dataSource = [NSMutableArray arrayWithObjects:@"本地图片处理",@"网络图片圆角的处理",nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",nil];
     [self.view addSubview:self.tableView];
+    
+    [self.tableView registerClass:[QSTableViewCell1 class] forCellReuseIdentifier:@"QSTableViewCell1"];
+    [self.tableView registerClass:[QSTableViewCell2 class] forCellReuseIdentifier:@"QSTableViewCell2"];
+    [self.tableView registerClass:[QSTableViewCell3 class] forCellReuseIdentifier:@"QSTableViewCell3"];
+    [self.tableView registerClass:[QSTableViewCell4 class] forCellReuseIdentifier:@"QSTableViewCell4"];
 }
 
 - (UITableView *)tableView{
@@ -55,7 +65,7 @@
 #pragma mark - UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    return 44.0f;
+    return [QSTableViewCell1 cellHeight];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
@@ -70,11 +80,9 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    if (!cell) {
-        cell = [[UITableViewCell alloc]initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell"];
-    }
-    cell.textLabel.text = [self.dataSource objectAtIndex:indexPath.section];
+    NSString *cellIdentifier = [NSString stringWithFormat:@"QSTableViewCell%ld",(long)indexPath.section + 1];
+    QSBaseTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier];
+    [cell layoutSubviewsWithUrl:[NSURL URLWithString:[self.dataSource objectAtIndex:indexPath.section]]];
     return cell;
 }
 
@@ -90,22 +98,14 @@
 
 #pragma mark - UITableViewDelegate
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+
+    UIViewController *vc = [[UIViewController alloc]init];
+    [self.navigationController pushViewController:vc animated:YES];
     
-    switch (indexPath.section) {
-        case 0:{
-            QSLocalImageController *vc1 = [[QSLocalImageController alloc]init];
-            [self.navigationController pushViewController:vc1 animated:YES];
-        }
-            break;
-        case 1:{
-            QSCornerImageController *vc3 = [[QSCornerImageController alloc]init];
-            [self.navigationController pushViewController:vc3 animated:YES];
-        }
-        default:
-            break;
-    }
     
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
 
 @end
+
+

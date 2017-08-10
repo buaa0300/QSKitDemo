@@ -9,6 +9,7 @@
 #import "QSProcessImageManager.h"
 #import "QSDispatchQueue.h"
 
+
 #pragma mark - QSProcessImageManager
 @implementation QSProcessImageManager
 
@@ -59,18 +60,19 @@
     }
     
     CGRect rect = {CGPointZero, config.outputSize};
-    UIGraphicsBeginImageContextWithOptions(rect.size, config.opaque, 0.0);
+    UIGraphicsBeginImageContextWithOptions(rect.size,config.opaque, 0.0);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
     CGContextClearRect(ctx, rect);
-//    if(con)
     if (config.processBlock ) {
         config.processBlock(ctx, image, config);
     }
     
-//    QSProcessImageAction(ctx,image,config);
+    
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
+    
     return newImage;
 }
+
 
 @end

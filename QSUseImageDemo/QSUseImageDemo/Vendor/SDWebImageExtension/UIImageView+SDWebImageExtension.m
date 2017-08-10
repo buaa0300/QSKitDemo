@@ -12,6 +12,12 @@
 
 @implementation UIImageView (SDWebImageExtension)
 
+- (void)qs_setImageWithURL:(nullable NSURL *)url placeholderImage:(nullable UIImage *)placeholder{
+
+    QSProcessImageConfig *cofig = [QSProcessImageConfig defaultConfigWithOutputSize:self.bounds.size];
+    [self qs_setImageWithURL:url placeholderImage:placeholder config:cofig];
+}
+
 - (void)qs_setImageWithURL:(nullable NSURL *)url placeholderImage:(nullable UIImage *)placeholder config:(QSProcessImageConfig *)config{
 
     if (placeholder && self.image != placeholder) {
@@ -47,15 +53,12 @@
                     }];
     
                 }else{
-                    NSLog(@"下载失败");
+                    NSLog(@"down error");
                 }
                 NSLog(@"end download....");
             }];
         }
     }];
-
-
-
 }
 
 @end

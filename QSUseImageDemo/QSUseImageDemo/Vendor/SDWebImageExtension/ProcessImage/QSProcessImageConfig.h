@@ -32,7 +32,10 @@ typedef void(^QSProcessImageBlock)(CGContextRef context, UIImage *image, QSProce
 + (instancetype)defaultConfigWithOutputSize:(CGSize)outputSize;
 
 //圆角图片处理默认：缩放到指定大小且像素对齐 + 圆形
-+ (instancetype)roundCofigWithOutputSize:(CGSize)outputSize;
++ (instancetype)circleCofigWithOutputSize:(CGSize)outputSize;
+
++ (instancetype)circleCofigWithOutputSize:(CGSize)outputSize
+                                   opaque:(BOOL)opaque;
 
 //缩放到指定大小且像素对齐 + 自定义圆角
 + (instancetype)configWithOutputSize:(CGSize)outputSize
@@ -42,19 +45,13 @@ typedef void(^QSProcessImageBlock)(CGContextRef context, UIImage *image, QSProce
 
 //自定义图片处理
 + (instancetype)configWithOutputSize:(CGSize)outputSize
+                             bgColor:(UIColor *)bgColor
                         cornerRadius:(CGFloat)cornerRadius
                              corners:(UIRectCorner)corners
+                              opaque:(BOOL)opaque
                         processBlock:(QSProcessImageBlock)processBlock;
 
-
-
-//init方法1
-- (instancetype)initWithOutputSize:(CGSize)outputSize
-                      cornerRadius:(CGFloat)cornerRadius
-                           corners:(UIRectCorner)corners
-                      processBlock:(QSProcessImageBlock)processBlock;
-
-//init方法2
+//init方法
 - (instancetype)initWithOutputSize:(CGSize)outputSize
                            bgColor:(UIColor *)bgColor
                       cornerRadius:(CGFloat)cornerRadius
@@ -64,3 +61,5 @@ typedef void(^QSProcessImageBlock)(CGContextRef context, UIImage *image, QSProce
 
 @end
 
+
+static QSProcessImageBlock __QSDefaultProcessImageBlock;

@@ -14,6 +14,7 @@
 @interface QSCornerImageController ()
 
 @property (nonatomic,strong)UIImageView *sdImageView;
+@property (nonatomic,strong)UIImageView *qsImageView;
 @property (nonatomic,strong)NSMutableArray *processImageViews;
 
 @end
@@ -25,7 +26,8 @@
     // Do any additional setup after loading the view.
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
-    self.navigationItem.title = @"网络图片圆角的处理";
+    self.navigationItem.title = @"网络图片的处理";
+    self.view.backgroundColor = [UIColor whiteColor];
     
     self.processImageViews = [NSMutableArray array];
     
@@ -39,32 +41,37 @@
     UIImage *placeholderImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
                                                              config:[QSProcessImageConfig defaultConfigWithOutputSize:CGSizeMake(width, width)]];
     [self.view addSubview:({
-        _sdImageView = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH - 100)/2, 0, width, width)];
-        _sdImageView.layer.borderColor = [UIColor blueColor].CGColor;
-        _sdImageView.layer.borderWidth = 1.0f;
+        _sdImageView = [[UIImageView alloc]initWithFrame:CGRectMake((SCREEN_WIDTH - width * 2 + 20)/2, 0, width, width)];
         _sdImageView;
     })];
     
     [_sdImageView sd_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:placeholderImage];
     
+    [self.view addSubview:({
+        _qsImageView = [[UIImageView alloc]initWithFrame:CGRectMake(CGRectGetMaxX(_sdImageView.frame) + 20, 0, width, width)];
+        _qsImageView;
+    })];
+    
+    [_qsImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:placeholderImage];
+    
     NSArray *configs = [self p_processConfigArrayWithOutputSize:CGSizeMake(width, width) cornerRadius:cornerRadius];
-
     for (NSInteger i = 0; i < 9; i++) {
         
         CGFloat offsetX = margin + (width + margin) * (i%3);
         CGFloat offsetY = CGRectGetMaxY(_sdImageView.frame) + 15 + ((width + 15) * (i/3));
         
         UIImageView *pImageView = [[UIImageView alloc]initWithFrame:CGRectMake(offsetX, offsetY, width, width)];
-        pImageView.layer.borderColor = [UIColor blueColor].CGColor;
-        pImageView.layer.borderWidth = 1.0f;
         [self.view addSubview:pImageView];
-        [pImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"] placeholderImage:placeholderImage config:configs[i]];
+        [pImageView qs_setImageWithURL:[NSURL URLWithString:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg"]
+                      placeholderImage:placeholderImage
+                                config:configs[i]];
     }
 }
 
 - (NSArray *)p_processConfigArrayWithOutputSize:(CGSize)outputSize cornerRadius:(CGFloat)cornerRadius{
 
     QSProcessImageConfig *config1 = [QSProcessImageConfig defaultConfigWithOutputSize:outputSize];  //没有任何圆角
+    
     
     QSProcessImageConfig *config2 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopLeft];
     QSProcessImageConfig *config3 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerBottomLeft];
@@ -74,8 +81,10 @@
     QSProcessImageConfig *config6 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopLeft | UIRectCornerBottomLeft];
     QSProcessImageConfig *config7 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopRight | UIRectCornerBottomRight];
     
-    QSProcessImageConfig *config8 = [QSProcessImageConfig configWithOutputSize:outputSize cornerRadius:cornerRadius corners:UIRectCornerTopRight | UIRectCornerAllCorners];
-    QSProcessImageConfig *config9 = [QSProcessImageConfig roundCofigWithOutputSize:outputSize];
+    QSProcessImageConfig *config8 = [QSProcessImageConfig configWithOutputSize:outputSize
+                                                                  cornerRadius:cornerRadius
+                                                                       corners:UIRectCornerTopRight | UIRectCornerAllCorners];
+    QSProcessImageConfig *config9 = [QSProcessImageConfig circleCofigWithOutputSize:outputSize];
     
     return @[config1,config2,config3,config4,config5,config6,config7,config8,config9];
 }

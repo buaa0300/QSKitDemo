@@ -11,7 +11,14 @@
 
 @interface UIImageView (SDWebImageExtension)
 
-- (void)qs_setImageWithURL:(nullable NSURL *)url placeholderImage:(nullable UIImage *)placeholder config:(QSProcessImageConfig *)config;
+- (void)qs_setImageWithURL:(nullable NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder
+                    config:(QSProcessImageConfig *)config;
 
+/**
+ 调用前需要先设置好View的frame或bounds
+ */
+- (void)qs_setImageWithURL:(nullable NSURL *)url
+          placeholderImage:(nullable UIImage *)placeholder;
 
 @end
