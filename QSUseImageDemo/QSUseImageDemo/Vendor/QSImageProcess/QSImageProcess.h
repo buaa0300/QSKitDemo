@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "QSImageProcessConfig.h"
 
+
 typedef void(^QSImageProcessCompletedBlock)(UIImage *outputImage);
 
 @class QSImageProcessConfig;
@@ -28,7 +29,7 @@ typedef void(^QSImageProcessCompletedBlock)(UIImage *outputImage);
  异步图片处理
 
  @param image 待处理的图片
- @param config 图片处理配置描述
+ @param config 图片处理配置对象
  @param completedBlock 处理完成块
  */
 - (void)processImage:(UIImage *)image
@@ -41,7 +42,7 @@ typedef void(^QSImageProcessCompletedBlock)(UIImage *outputImage);
  同步图片处理
 
  @param image 待处理的图片
- @param config 图片处理配置描述
+ @param config 图片处理配置对象
  @return 返回处理好的图片
  */
 - (UIImage *)processImage:(UIImage *)image

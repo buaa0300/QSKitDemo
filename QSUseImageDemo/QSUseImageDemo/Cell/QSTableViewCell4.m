@@ -7,10 +7,8 @@
 //
 
 #import "QSTableViewCell4.h"
-#import "QSTableViewCell1.h"
-#import "QSProcessImageManager.h"
-#import "UIImageView+SDWebImageExtension.h"
-#import "UIColor+RGB.h"
+#import "QSImageProcess.h"
+#import "UIImageView+QSImageProcess.h"
 
 @interface QSTableViewCell4()
 
@@ -38,7 +36,7 @@
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(100, 15, 200, 80)];
     self.label.backgroundColor = [UIColor whiteColor];
     self.label.textColor = [UIColor redColor];
-    self.label.text = @"圆角情形 nice";
+    self.label.text = @"圆角透明，像素混合，折中方案";
     self.label.font = [UIFont systemFontOfSize:15];
     self.label.layer.borderColor = [UIColor redColor].CGColor;
     self.label.layer.borderWidth = 1;
@@ -50,10 +48,8 @@
 
 - (void)layoutSubviewsWithUrl:(NSURL *)url{
 
-    UIImage *placeholderImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
-                                                             config:[QSProcessImageConfig defaultConfigWithOutputSize:self.pImageView.frame.size]];
-    QSProcessImageConfig *config = [QSProcessImageConfig circleCofigWithOutputSize:self.pImageView.frame.size opaque:NO];
-    
+    QSImageProcessConfig *config = [QSImageProcessConfig circleConfigWithOutputSize:self.pImageView.frame.size];
+    UIImage *placeholderImage = [[QSImageProcess sharedImageProcess]processImage:[UIImage imageNamed:@"icon_lena@3x.png"] config:config];
     [self.pImageView qs_setImageWithURL:url placeholderImage:placeholderImage config:config];
 }
 

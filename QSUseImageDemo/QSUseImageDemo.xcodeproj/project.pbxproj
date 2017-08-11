@@ -13,24 +13,20 @@
 		883971231EA5A88F00908C7F /* icon_lena@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 8839711F1EA5A88F00908C7F /* icon_lena@3x.png */; };
 		883971281EA5ABCB00908C7F /* image1_3.6MB_4032 × 3024.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 883971261EA5ABCB00908C7F /* image1_3.6MB_4032 × 3024.jpeg */; };
 		8839712E1EA5C03000908C7F /* icon.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 8839712D1EA5C03000908C7F /* icon.jpeg */; };
-		886C75EC1F39B18900B4B192 /* QSCornerImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C75EB1F39B18900B4B192 /* QSCornerImageController.m */; };
-		886C75FB1F3AAEA800B4B192 /* QSProcessImageConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C75F61F3AAEA800B4B192 /* QSProcessImageConfig.m */; };
-		886C75FC1F3AAEA800B4B192 /* QSProcessImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C75F81F3AAEA800B4B192 /* QSProcessImageManager.m */; };
-		886C75FD1F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C75FA1F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.m */; };
+		886C75EC1F39B18900B4B192 /* QSWebImageController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C75EB1F39B18900B4B192 /* QSWebImageController.m */; };
 		886C760D1F3AAEBD00B4B192 /* NSData+Length.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76001F3AAEBD00B4B192 /* NSData+Length.m */; };
 		886C76111F3AAEBD00B4B192 /* UIImage+Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C760A1F3AAEBD00B4B192 /* UIImage+Tool.m */; };
 		886C76121F3AAEBD00B4B192 /* UIView+SnapShot.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C760C1F3AAEBD00B4B192 /* UIView+SnapShot.m */; };
 		886C76161F3AB41200B4B192 /* QSDispatchQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76151F3AB41200B4B192 /* QSDispatchQueue.m */; };
-		886C761C1F3AF40400B4B192 /* UIColor+Value.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C761B1F3AF40400B4B192 /* UIColor+Value.m */; };
 		886C761F1F3BFDA100B4B192 /* QSMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C761E1F3BFDA100B4B192 /* QSMainViewController.m */; };
-		886C763C1F3C3B4100B4B192 /* QSSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C763B1F3C3B4100B4B192 /* QSSimpleTableViewController.m */; };
-		886C76401F3C3BCA00B4B192 /* QSImageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C763F1F3C3BCA00B4B192 /* QSImageTableViewCell.m */; };
-		886C76431F3C47E200B4B192 /* UIColor+RGB.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76421F3C47E200B4B192 /* UIColor+RGB.m */; };
-		886C76491F3C633200B4B192 /* QSTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76481F3C633200B4B192 /* QSTableViewCell1.m */; };
-		886C764C1F3C641500B4B192 /* QSBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C764B1F3C641500B4B192 /* QSBaseTableViewCell.m */; };
-		886C764F1F3C649100B4B192 /* QSTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C764E1F3C649100B4B192 /* QSTableViewCell2.m */; };
-		886C76521F3C686A00B4B192 /* QSTableViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76511F3C686A00B4B192 /* QSTableViewCell3.m */; };
-		886C76551F3C82D700B4B192 /* QSTableViewCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76541F3C82D700B4B192 /* QSTableViewCell4.m */; };
+		886C765C1F3D43DF00B4B192 /* UIImageView+QSImageProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C765B1F3D43DF00B4B192 /* UIImageView+QSImageProcess.m */; };
+		886C76651F3D483200B4B192 /* UIColor+QSImageProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76641F3D483200B4B192 /* UIColor+QSImageProcess.m */; };
+		886C76731F3D5F2800B4B192 /* QSBaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76681F3D5F2800B4B192 /* QSBaseTableViewCell.m */; };
+		886C76751F3D5F2800B4B192 /* QSTableViewCell1.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C766C1F3D5F2800B4B192 /* QSTableViewCell1.m */; };
+		886C76761F3D5F2800B4B192 /* QSTableViewCell2.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C766E1F3D5F2800B4B192 /* QSTableViewCell2.m */; };
+		886C76771F3D5F2800B4B192 /* QSTableViewCell3.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76701F3D5F2800B4B192 /* QSTableViewCell3.m */; };
+		886C76781F3D5F2800B4B192 /* QSTableViewCell4.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C76721F3D5F2800B4B192 /* QSTableViewCell4.m */; };
+		886C767B1F3D61C800B4B192 /* QSSimpleTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 886C767A1F3D61C800B4B192 /* QSSimpleTableViewController.m */; };
 		889227B51F1E301E0062B308 /* MKAnnotationView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 8892278E1F1E301E0062B308 /* MKAnnotationView+WebCache.m */; };
 		889227B61F1E301E0062B308 /* NSData+ImageContentType.m in Sources */ = {isa = PBXBuildFile; fileRef = 889227901F1E301E0062B308 /* NSData+ImageContentType.m */; };
 		889227B71F1E301E0062B308 /* NSImage+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 889227921F1E301E0062B308 /* NSImage+WebCache.m */; };
@@ -86,14 +82,8 @@
 		8839711F1EA5A88F00908C7F /* icon_lena@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_lena@3x.png"; sourceTree = "<group>"; };
 		883971261EA5ABCB00908C7F /* image1_3.6MB_4032 × 3024.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image1_3.6MB_4032 × 3024.jpeg"; sourceTree = "<group>"; };
 		8839712D1EA5C03000908C7F /* icon.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = icon.jpeg; sourceTree = "<group>"; };
-		886C75EA1F39B18900B4B192 /* QSCornerImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSCornerImageController.h; sourceTree = "<group>"; };
-		886C75EB1F39B18900B4B192 /* QSCornerImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSCornerImageController.m; sourceTree = "<group>"; };
-		886C75F51F3AAEA800B4B192 /* QSProcessImageConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSProcessImageConfig.h; sourceTree = "<group>"; };
-		886C75F61F3AAEA800B4B192 /* QSProcessImageConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSProcessImageConfig.m; sourceTree = "<group>"; };
-		886C75F71F3AAEA800B4B192 /* QSProcessImageManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSProcessImageManager.h; sourceTree = "<group>"; };
-		886C75F81F3AAEA800B4B192 /* QSProcessImageManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSProcessImageManager.m; sourceTree = "<group>"; };
-		886C75F91F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+SDWebImageExtension.h"; sourceTree = "<group>"; };
-		886C75FA1F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDWebImageExtension.m"; sourceTree = "<group>"; };
+		886C75EA1F39B18900B4B192 /* QSWebImageController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSWebImageController.h; sourceTree = "<group>"; };
+		886C75EB1F39B18900B4B192 /* QSWebImageController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSWebImageController.m; sourceTree = "<group>"; };
 		886C75FF1F3AAEBD00B4B192 /* NSData+Length.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Length.h"; sourceTree = "<group>"; };
 		886C76001F3AAEBD00B4B192 /* NSData+Length.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Length.m"; sourceTree = "<group>"; };
 		886C76091F3AAEBD00B4B192 /* UIImage+Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Tool.h"; sourceTree = "<group>"; };
@@ -102,26 +92,24 @@
 		886C760C1F3AAEBD00B4B192 /* UIView+SnapShot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SnapShot.m"; sourceTree = "<group>"; };
 		886C76141F3AB41200B4B192 /* QSDispatchQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDispatchQueue.h; sourceTree = "<group>"; };
 		886C76151F3AB41200B4B192 /* QSDispatchQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSDispatchQueue.m; sourceTree = "<group>"; };
-		886C761A1F3AF40400B4B192 /* UIColor+Value.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Value.h"; sourceTree = "<group>"; };
-		886C761B1F3AF40400B4B192 /* UIColor+Value.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Value.m"; sourceTree = "<group>"; };
 		886C761D1F3BFDA100B4B192 /* QSMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSMainViewController.h; sourceTree = "<group>"; };
 		886C761E1F3BFDA100B4B192 /* QSMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSMainViewController.m; sourceTree = "<group>"; };
-		886C763A1F3C3B4100B4B192 /* QSSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSimpleTableViewController.h; sourceTree = "<group>"; };
-		886C763B1F3C3B4100B4B192 /* QSSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSSimpleTableViewController.m; sourceTree = "<group>"; };
-		886C763E1F3C3BCA00B4B192 /* QSImageTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSImageTableViewCell.h; sourceTree = "<group>"; };
-		886C763F1F3C3BCA00B4B192 /* QSImageTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSImageTableViewCell.m; sourceTree = "<group>"; };
-		886C76411F3C47E200B4B192 /* UIColor+RGB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+RGB.h"; sourceTree = "<group>"; };
-		886C76421F3C47E200B4B192 /* UIColor+RGB.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+RGB.m"; sourceTree = "<group>"; };
-		886C76471F3C633200B4B192 /* QSTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell1.h; sourceTree = "<group>"; };
-		886C76481F3C633200B4B192 /* QSTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell1.m; sourceTree = "<group>"; };
-		886C764A1F3C641500B4B192 /* QSBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSBaseTableViewCell.h; sourceTree = "<group>"; };
-		886C764B1F3C641500B4B192 /* QSBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSBaseTableViewCell.m; sourceTree = "<group>"; };
-		886C764D1F3C649100B4B192 /* QSTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell2.h; sourceTree = "<group>"; };
-		886C764E1F3C649100B4B192 /* QSTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell2.m; sourceTree = "<group>"; };
-		886C76501F3C686A00B4B192 /* QSTableViewCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell3.h; sourceTree = "<group>"; };
-		886C76511F3C686A00B4B192 /* QSTableViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell3.m; sourceTree = "<group>"; };
-		886C76531F3C82D700B4B192 /* QSTableViewCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell4.h; sourceTree = "<group>"; };
-		886C76541F3C82D700B4B192 /* QSTableViewCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell4.m; sourceTree = "<group>"; };
+		886C765A1F3D43DF00B4B192 /* UIImageView+QSImageProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+QSImageProcess.h"; sourceTree = "<group>"; };
+		886C765B1F3D43DF00B4B192 /* UIImageView+QSImageProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+QSImageProcess.m"; sourceTree = "<group>"; };
+		886C76631F3D483200B4B192 /* UIColor+QSImageProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+QSImageProcess.h"; sourceTree = "<group>"; };
+		886C76641F3D483200B4B192 /* UIColor+QSImageProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+QSImageProcess.m"; sourceTree = "<group>"; };
+		886C76671F3D5F2800B4B192 /* QSBaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSBaseTableViewCell.h; sourceTree = "<group>"; };
+		886C76681F3D5F2800B4B192 /* QSBaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSBaseTableViewCell.m; sourceTree = "<group>"; };
+		886C766B1F3D5F2800B4B192 /* QSTableViewCell1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell1.h; sourceTree = "<group>"; };
+		886C766C1F3D5F2800B4B192 /* QSTableViewCell1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell1.m; sourceTree = "<group>"; };
+		886C766D1F3D5F2800B4B192 /* QSTableViewCell2.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell2.h; sourceTree = "<group>"; };
+		886C766E1F3D5F2800B4B192 /* QSTableViewCell2.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell2.m; sourceTree = "<group>"; };
+		886C766F1F3D5F2800B4B192 /* QSTableViewCell3.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell3.h; sourceTree = "<group>"; };
+		886C76701F3D5F2800B4B192 /* QSTableViewCell3.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell3.m; sourceTree = "<group>"; };
+		886C76711F3D5F2800B4B192 /* QSTableViewCell4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSTableViewCell4.h; sourceTree = "<group>"; };
+		886C76721F3D5F2800B4B192 /* QSTableViewCell4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSTableViewCell4.m; sourceTree = "<group>"; };
+		886C76791F3D61C800B4B192 /* QSSimpleTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSSimpleTableViewController.h; sourceTree = "<group>"; };
+		886C767A1F3D61C800B4B192 /* QSSimpleTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSSimpleTableViewController.m; sourceTree = "<group>"; };
 		8892278D1F1E301E0062B308 /* MKAnnotationView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKAnnotationView+WebCache.h"; sourceTree = "<group>"; };
 		8892278E1F1E301E0062B308 /* MKAnnotationView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKAnnotationView+WebCache.m"; sourceTree = "<group>"; };
 		8892278F1F1E301E0062B308 /* NSData+ImageContentType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+ImageContentType.h"; sourceTree = "<group>"; };
@@ -207,12 +195,15 @@
 		44630A1A1F3CB161005C88D8 /* QSImageProcess */ = {
 			isa = PBXGroup;
 			children = (
+				886C76561F3D43AD00B4B192 /* SDWebImageExtension */,
 				44630A1B1F3CB177005C88D8 /* QSImageProcess.h */,
 				44630A1C1F3CB177005C88D8 /* QSImageProcess.m */,
 				44630A1E1F3CB1F0005C88D8 /* QSImageProcessConfig.h */,
 				44630A1F1F3CB1F0005C88D8 /* QSImageProcessConfig.m */,
 				44630A211F3CB6F2005C88D8 /* QSImageProcessUtil.h */,
 				44630A221F3CB6F2005C88D8 /* QSImageProcessUtil.m */,
+				886C76631F3D483200B4B192 /* UIColor+QSImageProcess.h */,
+				886C76641F3D483200B4B192 /* UIColor+QSImageProcess.m */,
 			);
 			path = QSImageProcess;
 			sourceTree = "<group>";
@@ -227,34 +218,9 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
-		886C75F31F3AAEA800B4B192 /* SDWebImageExtension */ = {
-			isa = PBXGroup;
-			children = (
-				886C75F41F3AAEA800B4B192 /* ProcessImage */,
-				886C75F91F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.h */,
-				886C75FA1F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.m */,
-			);
-			path = SDWebImageExtension;
-			sourceTree = "<group>";
-		};
-		886C75F41F3AAEA800B4B192 /* ProcessImage */ = {
-			isa = PBXGroup;
-			children = (
-				886C761A1F3AF40400B4B192 /* UIColor+Value.h */,
-				886C761B1F3AF40400B4B192 /* UIColor+Value.m */,
-				886C75F51F3AAEA800B4B192 /* QSProcessImageConfig.h */,
-				886C75F61F3AAEA800B4B192 /* QSProcessImageConfig.m */,
-				886C75F71F3AAEA800B4B192 /* QSProcessImageManager.h */,
-				886C75F81F3AAEA800B4B192 /* QSProcessImageManager.m */,
-			);
-			path = ProcessImage;
-			sourceTree = "<group>";
-		};
 		886C75FE1F3AAEBD00B4B192 /* ImageTool */ = {
 			isa = PBXGroup;
 			children = (
-				886C76411F3C47E200B4B192 /* UIColor+RGB.h */,
-				886C76421F3C47E200B4B192 /* UIColor+RGB.m */,
 				886C75FF1F3AAEBD00B4B192 /* NSData+Length.h */,
 				886C76001F3AAEBD00B4B192 /* NSData+Length.m */,
 				886C76091F3AAEBD00B4B192 /* UIImage+Tool.h */,
@@ -274,21 +240,28 @@
 			path = QSDispatchQueue;
 			sourceTree = "<group>";
 		};
-		886C763D1F3C3BAB00B4B192 /* Cell */ = {
+		886C76561F3D43AD00B4B192 /* SDWebImageExtension */ = {
 			isa = PBXGroup;
 			children = (
-				886C763E1F3C3BCA00B4B192 /* QSImageTableViewCell.h */,
-				886C763F1F3C3BCA00B4B192 /* QSImageTableViewCell.m */,
-				886C76471F3C633200B4B192 /* QSTableViewCell1.h */,
-				886C76481F3C633200B4B192 /* QSTableViewCell1.m */,
-				886C764A1F3C641500B4B192 /* QSBaseTableViewCell.h */,
-				886C764B1F3C641500B4B192 /* QSBaseTableViewCell.m */,
-				886C764D1F3C649100B4B192 /* QSTableViewCell2.h */,
-				886C764E1F3C649100B4B192 /* QSTableViewCell2.m */,
-				886C76501F3C686A00B4B192 /* QSTableViewCell3.h */,
-				886C76511F3C686A00B4B192 /* QSTableViewCell3.m */,
-				886C76531F3C82D700B4B192 /* QSTableViewCell4.h */,
-				886C76541F3C82D700B4B192 /* QSTableViewCell4.m */,
+				886C765A1F3D43DF00B4B192 /* UIImageView+QSImageProcess.h */,
+				886C765B1F3D43DF00B4B192 /* UIImageView+QSImageProcess.m */,
+			);
+			path = SDWebImageExtension;
+			sourceTree = "<group>";
+		};
+		886C76661F3D5F2800B4B192 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				886C76671F3D5F2800B4B192 /* QSBaseTableViewCell.h */,
+				886C76681F3D5F2800B4B192 /* QSBaseTableViewCell.m */,
+				886C766B1F3D5F2800B4B192 /* QSTableViewCell1.h */,
+				886C766C1F3D5F2800B4B192 /* QSTableViewCell1.m */,
+				886C766D1F3D5F2800B4B192 /* QSTableViewCell2.h */,
+				886C766E1F3D5F2800B4B192 /* QSTableViewCell2.m */,
+				886C766F1F3D5F2800B4B192 /* QSTableViewCell3.h */,
+				886C76701F3D5F2800B4B192 /* QSTableViewCell3.m */,
+				886C76711F3D5F2800B4B192 /* QSTableViewCell4.h */,
+				886C76721F3D5F2800B4B192 /* QSTableViewCell4.m */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -298,7 +271,6 @@
 			children = (
 				44630A1A1F3CB161005C88D8 /* QSImageProcess */,
 				886C76131F3AB41200B4B192 /* QSDispatchQueue */,
-				886C75F31F3AAEA800B4B192 /* SDWebImageExtension */,
 				889227891F1E301E0062B308 /* SDWebImage */,
 			);
 			path = Vendor;
@@ -353,14 +325,14 @@
 		88C777CE1F258B3C006FF783 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				886C76791F3D61C800B4B192 /* QSSimpleTableViewController.h */,
+				886C767A1F3D61C800B4B192 /* QSSimpleTableViewController.m */,
 				88C777CF1F258B3C006FF783 /* QSLocalImageController.h */,
 				88C777D01F258B3C006FF783 /* QSLocalImageController.m */,
-				886C75EA1F39B18900B4B192 /* QSCornerImageController.h */,
-				886C75EB1F39B18900B4B192 /* QSCornerImageController.m */,
+				886C75EA1F39B18900B4B192 /* QSWebImageController.h */,
+				886C75EB1F39B18900B4B192 /* QSWebImageController.m */,
 				886C761D1F3BFDA100B4B192 /* QSMainViewController.h */,
 				886C761E1F3BFDA100B4B192 /* QSMainViewController.m */,
-				886C763A1F3C3B4100B4B192 /* QSSimpleTableViewController.h */,
-				886C763B1F3C3B4100B4B192 /* QSSimpleTableViewController.m */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -388,7 +360,7 @@
 		88CFF2C91E9C841C00B620A2 /* QSUseImageDemo */ = {
 			isa = PBXGroup;
 			children = (
-				886C763D1F3C3BAB00B4B192 /* Cell */,
+				886C76661F3D5F2800B4B192 /* Cell */,
 				886C75FE1F3AAEBD00B4B192 /* ImageTool */,
 				88C777CE1F258B3C006FF783 /* Controllers */,
 				889227881F1E301E0062B308 /* Vendor */,
@@ -569,43 +541,39 @@
 				889227C41F1E301E0062B308 /* UIImageView+HighlightedWebCache.m in Sources */,
 				889227BB1F1E301E0062B308 /* SDWebImageDecoder.m in Sources */,
 				889227C51F1E301E0062B308 /* UIImageView+WebCache.m in Sources */,
-				886C76431F3C47E200B4B192 /* UIColor+RGB.m in Sources */,
 				889227BD1F1E301E0062B308 /* SDWebImageDownloaderOperation.m in Sources */,
 				889227BE1F1E301E0062B308 /* SDWebImageManager.m in Sources */,
 				886C761F1F3BFDA100B4B192 /* QSMainViewController.m in Sources */,
-				886C75FB1F3AAEA800B4B192 /* QSProcessImageConfig.m in Sources */,
 				44630A231F3CB6F2005C88D8 /* QSImageProcessUtil.m in Sources */,
 				889227B51F1E301E0062B308 /* MKAnnotationView+WebCache.m in Sources */,
-				886C75FD1F3AAEA800B4B192 /* UIImageView+SDWebImageExtension.m in Sources */,
-				886C764F1F3C649100B4B192 /* QSTableViewCell2.m in Sources */,
 				886C76161F3AB41200B4B192 /* QSDispatchQueue.m in Sources */,
+				886C76761F3D5F2800B4B192 /* QSTableViewCell2.m in Sources */,
 				88CFF2CF1E9C841C00B620A2 /* AppDelegate.m in Sources */,
 				889227BC1F1E301E0062B308 /* SDWebImageDownloader.m in Sources */,
 				889227BA1F1E301E0062B308 /* SDWebImageCompat.m in Sources */,
-				886C763C1F3C3B4100B4B192 /* QSSimpleTableViewController.m in Sources */,
 				889227C61F1E301E0062B308 /* UIView+WebCache.m in Sources */,
 				889227BF1F1E301E0062B308 /* SDWebImagePrefetcher.m in Sources */,
-				886C761C1F3AF40400B4B192 /* UIColor+Value.m in Sources */,
-				886C76401F3C3BCA00B4B192 /* QSImageTableViewCell.m in Sources */,
 				44630A1D1F3CB177005C88D8 /* QSImageProcess.m in Sources */,
 				889227C21F1E301E0062B308 /* UIImage+MultiFormat.m in Sources */,
 				889227C71F1E301E0062B308 /* UIView+WebCacheOperation.m in Sources */,
-				886C76521F3C686A00B4B192 /* QSTableViewCell3.m in Sources */,
 				889227B71F1E301E0062B308 /* NSImage+WebCache.m in Sources */,
-				886C76551F3C82D700B4B192 /* QSTableViewCell4.m in Sources */,
 				886C76111F3AAEBD00B4B192 /* UIImage+Tool.m in Sources */,
-				886C75EC1F39B18900B4B192 /* QSCornerImageController.m in Sources */,
+				886C76771F3D5F2800B4B192 /* QSTableViewCell3.m in Sources */,
+				886C75EC1F39B18900B4B192 /* QSWebImageController.m in Sources */,
+				886C767B1F3D61C800B4B192 /* QSSimpleTableViewController.m in Sources */,
+				886C76781F3D5F2800B4B192 /* QSTableViewCell4.m in Sources */,
 				886C760D1F3AAEBD00B4B192 /* NSData+Length.m in Sources */,
+				886C76651F3D483200B4B192 /* UIColor+QSImageProcess.m in Sources */,
 				889227B61F1E301E0062B308 /* NSData+ImageContentType.m in Sources */,
+				886C76751F3D5F2800B4B192 /* QSTableViewCell1.m in Sources */,
+				886C76731F3D5F2800B4B192 /* QSBaseTableViewCell.m in Sources */,
 				889227C01F1E301E0062B308 /* UIButton+WebCache.m in Sources */,
 				88CFF2CC1E9C841C00B620A2 /* main.m in Sources */,
+				886C765C1F3D43DF00B4B192 /* UIImageView+QSImageProcess.m in Sources */,
 				88C777D31F258B3C006FF783 /* QSLocalImageController.m in Sources */,
-				886C764C1F3C641500B4B192 /* QSBaseTableViewCell.m in Sources */,
 				889227B91F1E301E0062B308 /* SDImageCacheConfig.m in Sources */,
 				886C76121F3AAEBD00B4B192 /* UIView+SnapShot.m in Sources */,
 				889227B81F1E301E0062B308 /* SDImageCache.m in Sources */,
-				886C75FC1F3AAEA800B4B192 /* QSProcessImageManager.m in Sources */,
-				886C76491F3C633200B4B192 /* QSTableViewCell1.m in Sources */,
 				889227C11F1E301E0062B308 /* UIImage+GIF.m in Sources */,
 				889227C31F1E301E0062B308 /* UIImage+WebP.m in Sources */,
 				44630A201F3CB1F0005C88D8 /* QSImageProcessConfig.m in Sources */,

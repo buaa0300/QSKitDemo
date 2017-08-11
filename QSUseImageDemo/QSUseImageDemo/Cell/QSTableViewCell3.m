@@ -8,16 +8,12 @@
 
 
 #import "QSTableViewCell3.h"
-#import "QSProcessImageManager.h"
-#import "UIImageView+SDWebImageExtension.h"
-#import "UIColor+RGB.h"
+#import "QSImageProcess.h"
 
 @interface QSTableViewCell3()
 
 @property (nonatomic,strong)UILabel *label;
 @property (nonatomic,strong)UIImageView *pImageView;
-@property (nonatomic,strong)QSProcessImageConfig *normalConfig;
-@property (nonatomic,strong)QSProcessImageConfig *selectedConfig;
 @property (nonatomic,strong)NSURL *url;
 @property (nonatomic, strong)UIImageView *maskContentView;
 @end
@@ -29,14 +25,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleNone;
-        _selectedConfig = [[QSProcessImageConfig alloc]initWithOutputSize:CGSizeMake(80, 80)
-                                                                  bgColor:[UIColor grayColor]
-                                                             cornerRadius:30
-                                                                  corners:UIRectCornerAllCorners
-                                                                   opaque:YES
-                                                             processBlock:__QSDefaultProcessImageBlock];
-        
-        _normalConfig = [QSProcessImageConfig configWithOutputSize:CGSizeMake(80, 80) cornerRadius:30 corners:UIRectCornerAllCorners];
         [self setupSubViews];
     }
     return self;
@@ -65,7 +53,7 @@
     
     self.label.backgroundColor = [UIColor whiteColor];
     self.label.textColor = [UIColor redColor];
-    self.label.text = @"圆角情形下,cell的高亮重写效果2";
+    self.label.text = @"圆角情形下,cell的高亮重写效果2，UI交互最差";
     self.label.font = [UIFont systemFontOfSize:15];
     self.label.layer.borderColor = [UIColor redColor].CGColor;
     self.label.layer.borderWidth = 1;
@@ -77,9 +65,9 @@
 - (void)layoutSubviewsWithUrl:(NSURL *)url{
     
 //    self.url = url;
-    UIImage *placeholderImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
-                                                             config:_normalConfig ];
     
+    QSImageProcessConfig *config = [QSImageProcessConfig circleConfigWithOutputSize:self.pImageView.frame.size clipBgColor:[UIColor whiteColor]];
+    UIImage *placeholderImage = [[QSImageProcess sharedImageProcess]processImage:[UIImage imageNamed:@"icon_lena@3x.png"] config:config];
     self.pImageView.image = placeholderImage;
 }
 

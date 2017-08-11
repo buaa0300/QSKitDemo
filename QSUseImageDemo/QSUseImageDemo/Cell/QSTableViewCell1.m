@@ -7,15 +7,12 @@
 //
 
 #import "QSTableViewCell1.h"
-#import "QSProcessImageManager.h"
-#import "UIImageView+SDWebImageExtension.h"
-#import "UIColor+RGB.h"
+#import "QSImageProcess.h"
 
 @interface QSTableViewCell1()
 
 @property (nonatomic,strong)UILabel *label;
 @property (nonatomic,strong)UIImageView *pImageView;
-@property (nonatomic,strong)QSProcessImageConfig *normalConfig;
 @property (nonatomic,strong)NSURL *url;
 @end
 
@@ -26,9 +23,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleGray;
-        _normalConfig = [QSProcessImageConfig configWithOutputSize:CGSizeMake(80, 80)
-                                                      cornerRadius:30
-                                                           corners:UIRectCornerAllCorners];
         [self setupSubViews];
     }
     return self;
@@ -42,7 +36,7 @@
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(100, 15, 200, 80)];
     self.label.backgroundColor = [UIColor whiteColor];
     self.label.textColor = [UIColor redColor];
-    self.label.text = @"圆角情形下，cell的默认高亮效果";
+    self.label.text = @"圆角情形下，cell的默认高亮效果，UI不合格";
     self.label.font = [UIFont systemFontOfSize:15];
     self.label.layer.borderColor = [UIColor redColor].CGColor;
     self.label.layer.borderWidth = 1;
@@ -55,9 +49,9 @@
 - (void)layoutSubviewsWithUrl:(NSURL *)url{
     
 //    self.url = url;
-    UIImage *placeholderImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
-                                                             config:_normalConfig];
     
+    QSImageProcessConfig *config = [QSImageProcessConfig circleConfigWithOutputSize:self.pImageView.frame.size clipBgColor:[UIColor whiteColor]];
+    UIImage *placeholderImage = [[QSImageProcess sharedImageProcess]processImage:[UIImage imageNamed:@"icon_lena@3x.png"] config:config];
     self.pImageView.image = placeholderImage;
 }
 

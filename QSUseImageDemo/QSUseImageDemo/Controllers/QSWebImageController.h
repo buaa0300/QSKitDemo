@@ -1,5 +1,5 @@
 //
-//  QSCornerImageController.h
+//  QSWebImageController.h
 //  QSUseImageDemo
 //
 //  Created by zhongpingjiang on 2017/8/8.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface QSCornerImageController : UIViewController
+@interface QSWebImageController : UIViewController
 
 @end

@@ -7,12 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "UIColor+QSImageProcess.h"
 
 typedef NS_ENUM(NSInteger,QSImageProcessOption) {
     QSImageProcessOptionDefault = 0,
     QSImageProcessOptionClipCorner = 1,
     QSImageProcessOptionCircle = 2,
-    
+    QSImageProcessOptionRound = 3,
+    QSImageProcessOptionAddGradationMask = 4,
+    QSImageProcessOptionAddWholeMask = 5
 };
 
 @interface QSImageProcessConfig : NSObject
@@ -46,6 +49,31 @@ typedef NS_ENUM(NSInteger,QSImageProcessOption) {
  CG创建上下文，是否不透明
  */
 @property (nonatomic, assign) BOOL opaque;
+
+/**
+ 默认的图片(不透明)配置
+ */
++ (instancetype)defaultConfigWithOutputSize:(CGSize)outputSize;
+
+/**
+ 默认的图片(不透明)配置,可配置背景色
+ */
++ (instancetype)defaultConfigWithOutputSize:(CGSize)outputSize clipBgColor:(UIColor *)clipBgColor;
+
+/**
+ 不透明的圆形图片配置,需要设置clipBgColor
+ */
++ (instancetype)circleConfigWithOutputSize:(CGSize)outputSize clipBgColor:(UIColor *)clipBgColor;
+
+/**
+ 透明的圆形图片配置
+ */
++ (instancetype)circleConfigWithOutputSize:(CGSize)outputSize;
+
+/**
+ 圆角图片配置
+ */
++ (instancetype)configWithOutputSize:(CGSize)outputSize cornerRadius:(CGFloat)cornerRadius corners:(UIRectCorner)corners;
 
 
 /**
