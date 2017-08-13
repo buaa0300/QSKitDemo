@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>index page</title>
+    </head>
+
+    <body onload="loadImage()">
+        <div>
+            <input type="text" id="inputid" >
+            <button type="button" id="buttonid" onclick="validate()">校验数据</button>
+            <img src="" id="imageid"  width=200 height=200/>
+        </div>
+    </body>
+    
+    <script type="text/javascript">
+
+        function validate(){
+            var value = document.getElementById('inputid').value;
+            qs.validateInput(value,'alert');
+        };
+    
+        function loadImage(){
+            qs.loadImage("http://inews.gtimg.com/newsapp_match/0/1362322146/0",'downloadImageComplete');
+        };
+    
+        function downloadImageComplete(imageSrc){
+            var image = document.getElementById('imageid');
+            image.src = imageSrc;
+        };
+    
+    </script>
+</html>

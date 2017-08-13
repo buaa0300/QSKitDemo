@@ -1,0 +1,701 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0DB7B4ED505FD865A77E2D94 /* libPods-QSUseGoogleVRDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 88FAEAA91A058F84D6377E42 /* libPods-QSUseGoogleVRDemo.a */; };
+		88257D3E1EA703E5005CC843 /* QSPanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D3D1EA703E5005CC843 /* QSPanoramaView.m */; };
+		88257D411EA70408005CC843 /* QSVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D401EA70408005CC843 /* QSVideoView.m */; };
+		88257D6A1EA8BF7B005CC843 /* QSVRView.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 88257D691EA8BF7B005CC843 /* QSVRView.bundle */; };
+		88257D7F1EA8C025005CC843 /* QSPanoramaViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D7A1EA8C025005CC843 /* QSPanoramaViewController.m */; };
+		88257D801EA8C025005CC843 /* QSVideoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D7C1EA8C025005CC843 /* QSVideoViewController.m */; };
+		88257D811EA8C025005CC843 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D7E1EA8C025005CC843 /* ViewController.m */; };
+		88257D8B1EA8C053005CC843 /* QSDownloadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D851EA8C053005CC843 /* QSDownloadManager.m */; };
+		88257D8C1EA8C053005CC843 /* MBProgressHUD+Load.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D881EA8C053005CC843 /* MBProgressHUD+Load.m */; };
+		88257D8D1EA8C053005CC843 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D8A1EA8C053005CC843 /* MBProgressHUD.m */; };
+		88257D901EA8C0A5005CC843 /* UIImage+QSView.m in Sources */ = {isa = PBXBuildFile; fileRef = 88257D8F1EA8C0A5005CC843 /* UIImage+QSView.m */; };
+		883971401EA7026E00908C7F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8839713F1EA7026E00908C7F /* main.m */; };
+		883971431EA7026E00908C7F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 883971421EA7026E00908C7F /* AppDelegate.m */; };
+		883971491EA7026E00908C7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 883971471EA7026E00908C7F /* Main.storyboard */; };
+		8839714B1EA7026E00908C7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8839714A1EA7026E00908C7F /* Assets.xcassets */; };
+		8839714E1EA7026E00908C7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8839714C1EA7026E00908C7F /* LaunchScreen.storyboard */; };
+		883971591EA7026E00908C7F /* QSUseGoogleVRDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883971581EA7026E00908C7F /* QSUseGoogleVRDemoTests.m */; };
+		883971641EA7026E00908C7F /* QSUseGoogleVRDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 883971631EA7026E00908C7F /* QSUseGoogleVRDemoUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		883971551EA7026E00908C7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883971331EA7026E00908C7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8839713A1EA7026E00908C7F;
+			remoteInfo = QSUseGoogleVRDemo;
+		};
+		883971601EA7026E00908C7F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 883971331EA7026E00908C7F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 8839713A1EA7026E00908C7F;
+			remoteInfo = QSUseGoogleVRDemo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		55986534D1F423194BC2ECB3 /* Pods-QSUseGoogleVRDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSUseGoogleVRDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-QSUseGoogleVRDemo/Pods-QSUseGoogleVRDemo.release.xcconfig"; sourceTree = "<group>"; };
+		88257D3C1EA703E5005CC843 /* QSPanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPanoramaView.h; sourceTree = "<group>"; };
+		88257D3D1EA703E5005CC843 /* QSPanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPanoramaView.m; sourceTree = "<group>"; };
+		88257D3F1EA70408005CC843 /* QSVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSVideoView.h; sourceTree = "<group>"; };
+		88257D401EA70408005CC843 /* QSVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSVideoView.m; sourceTree = "<group>"; };
+		88257D691EA8BF7B005CC843 /* QSVRView.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QSVRView.bundle; sourceTree = "<group>"; };
+		88257D791EA8C025005CC843 /* QSPanoramaViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSPanoramaViewController.h; sourceTree = "<group>"; };
+		88257D7A1EA8C025005CC843 /* QSPanoramaViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSPanoramaViewController.m; sourceTree = "<group>"; };
+		88257D7B1EA8C025005CC843 /* QSVideoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSVideoViewController.h; sourceTree = "<group>"; };
+		88257D7C1EA8C025005CC843 /* QSVideoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSVideoViewController.m; sourceTree = "<group>"; };
+		88257D7D1EA8C025005CC843 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		88257D7E1EA8C025005CC843 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		88257D831EA8C053005CC843 /* QSDownLoadDefine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDownLoadDefine.h; sourceTree = "<group>"; };
+		88257D841EA8C053005CC843 /* QSDownloadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QSDownloadManager.h; sourceTree = "<group>"; };
+		88257D851EA8C053005CC843 /* QSDownloadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QSDownloadManager.m; sourceTree = "<group>"; };
+		88257D871EA8C053005CC843 /* MBProgressHUD+Load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+Load.h"; sourceTree = "<group>"; };
+		88257D881EA8C053005CC843 /* MBProgressHUD+Load.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+Load.m"; sourceTree = "<group>"; };
+		88257D891EA8C053005CC843 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		88257D8A1EA8C053005CC843 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		88257D8E1EA8C0A5005CC843 /* UIImage+QSView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+QSView.h"; sourceTree = "<group>"; };
+		88257D8F1EA8C0A5005CC843 /* UIImage+QSView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+QSView.m"; sourceTree = "<group>"; };
+		8839713B1EA7026E00908C7F /* QSUseGoogleVRDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QSUseGoogleVRDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8839713F1EA7026E00908C7F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		883971411EA7026E00908C7F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		883971421EA7026E00908C7F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		883971481EA7026E00908C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8839714A1EA7026E00908C7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8839714D1EA7026E00908C7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8839714F1EA7026E00908C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		883971541EA7026E00908C7F /* QSUseGoogleVRDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSUseGoogleVRDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		883971581EA7026E00908C7F /* QSUseGoogleVRDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSUseGoogleVRDemoTests.m; sourceTree = "<group>"; };
+		8839715A1EA7026E00908C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8839715F1EA7026E00908C7F /* QSUseGoogleVRDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QSUseGoogleVRDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		883971631EA7026E00908C7F /* QSUseGoogleVRDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QSUseGoogleVRDemoUITests.m; sourceTree = "<group>"; };
+		883971651EA7026E00908C7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		88FAEAA91A058F84D6377E42 /* libPods-QSUseGoogleVRDemo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QSUseGoogleVRDemo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		AAEACFA79BB6AD88F4DC85B0 /* Pods-QSUseGoogleVRDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QSUseGoogleVRDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QSUseGoogleVRDemo/Pods-QSUseGoogleVRDemo.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		883971381EA7026E00908C7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0DB7B4ED505FD865A77E2D94 /* libPods-QSUseGoogleVRDemo.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883971511EA7026E00908C7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8839715C1EA7026E00908C7F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		812D2A70D9472149611B35BE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				88FAEAA91A058F84D6377E42 /* libPods-QSUseGoogleVRDemo.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		88257D3B1EA703B6005CC843 /* QSVRView */ = {
+			isa = PBXGroup;
+			children = (
+				88257D821EA8C053005CC843 /* DownLoader */,
+				88257D861EA8C053005CC843 /* MBProgressHUD */,
+				88257D3C1EA703E5005CC843 /* QSPanoramaView.h */,
+				88257D3D1EA703E5005CC843 /* QSPanoramaView.m */,
+				88257D3F1EA70408005CC843 /* QSVideoView.h */,
+				88257D401EA70408005CC843 /* QSVideoView.m */,
+				88257D691EA8BF7B005CC843 /* QSVRView.bundle */,
+				88257D8E1EA8C0A5005CC843 /* UIImage+QSView.h */,
+				88257D8F1EA8C0A5005CC843 /* UIImage+QSView.m */,
+			);
+			path = QSVRView;
+			sourceTree = "<group>";
+		};
+		88257D781EA8C025005CC843 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				88257D791EA8C025005CC843 /* QSPanoramaViewController.h */,
+				88257D7A1EA8C025005CC843 /* QSPanoramaViewController.m */,
+				88257D7B1EA8C025005CC843 /* QSVideoViewController.h */,
+				88257D7C1EA8C025005CC843 /* QSVideoViewController.m */,
+				88257D7D1EA8C025005CC843 /* ViewController.h */,
+				88257D7E1EA8C025005CC843 /* ViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		88257D821EA8C053005CC843 /* DownLoader */ = {
+			isa = PBXGroup;
+			children = (
+				88257D831EA8C053005CC843 /* QSDownLoadDefine.h */,
+				88257D841EA8C053005CC843 /* QSDownloadManager.h */,
+				88257D851EA8C053005CC843 /* QSDownloadManager.m */,
+			);
+			path = DownLoader;
+			sourceTree = "<group>";
+		};
+		88257D861EA8C053005CC843 /* MBProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				88257D871EA8C053005CC843 /* MBProgressHUD+Load.h */,
+				88257D881EA8C053005CC843 /* MBProgressHUD+Load.m */,
+				88257D891EA8C053005CC843 /* MBProgressHUD.h */,
+				88257D8A1EA8C053005CC843 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUD;
+			sourceTree = "<group>";
+		};
+		883971321EA7026E00908C7F = {
+			isa = PBXGroup;
+			children = (
+				8839713D1EA7026E00908C7F /* QSUseGoogleVRDemo */,
+				883971571EA7026E00908C7F /* QSUseGoogleVRDemoTests */,
+				883971621EA7026E00908C7F /* QSUseGoogleVRDemoUITests */,
+				8839713C1EA7026E00908C7F /* Products */,
+				E1420D3A26603D35D93A985D /* Pods */,
+				812D2A70D9472149611B35BE /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		8839713C1EA7026E00908C7F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8839713B1EA7026E00908C7F /* QSUseGoogleVRDemo.app */,
+				883971541EA7026E00908C7F /* QSUseGoogleVRDemoTests.xctest */,
+				8839715F1EA7026E00908C7F /* QSUseGoogleVRDemoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8839713D1EA7026E00908C7F /* QSUseGoogleVRDemo */ = {
+			isa = PBXGroup;
+			children = (
+				88257D781EA8C025005CC843 /* Controller */,
+				88257D3B1EA703B6005CC843 /* QSVRView */,
+				883971411EA7026E00908C7F /* AppDelegate.h */,
+				883971421EA7026E00908C7F /* AppDelegate.m */,
+				883971471EA7026E00908C7F /* Main.storyboard */,
+				8839714A1EA7026E00908C7F /* Assets.xcassets */,
+				8839714C1EA7026E00908C7F /* LaunchScreen.storyboard */,
+				8839714F1EA7026E00908C7F /* Info.plist */,
+				8839713E1EA7026E00908C7F /* Supporting Files */,
+			);
+			path = QSUseGoogleVRDemo;
+			sourceTree = "<group>";
+		};
+		8839713E1EA7026E00908C7F /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8839713F1EA7026E00908C7F /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		883971571EA7026E00908C7F /* QSUseGoogleVRDemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				883971581EA7026E00908C7F /* QSUseGoogleVRDemoTests.m */,
+				8839715A1EA7026E00908C7F /* Info.plist */,
+			);
+			path = QSUseGoogleVRDemoTests;
+			sourceTree = "<group>";
+		};
+		883971621EA7026E00908C7F /* QSUseGoogleVRDemoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				883971631EA7026E00908C7F /* QSUseGoogleVRDemoUITests.m */,
+				883971651EA7026E00908C7F /* Info.plist */,
+			);
+			path = QSUseGoogleVRDemoUITests;
+			sourceTree = "<group>";
+		};
+		E1420D3A26603D35D93A985D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				AAEACFA79BB6AD88F4DC85B0 /* Pods-QSUseGoogleVRDemo.debug.xcconfig */,
+				55986534D1F423194BC2ECB3 /* Pods-QSUseGoogleVRDemo.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8839713A1EA7026E00908C7F /* QSUseGoogleVRDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 883971681EA7026E00908C7F /* Build configuration list for PBXNativeTarget "QSUseGoogleVRDemo" */;
+			buildPhases = (
+				6AB80674327042F254E2704D /* [CP] Check Pods Manifest.lock */,
+				883971371EA7026E00908C7F /* Sources */,
+				883971381EA7026E00908C7F /* Frameworks */,
+				883971391EA7026E00908C7F /* Resources */,
+				01CE0513ECD2A4A344BD0B6B /* [CP] Embed Pods Frameworks */,
+				BAAB4C2DAE589FF3FE2B4404 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QSUseGoogleVRDemo;
+			productName = QSUseGoogleVRDemo;
+			productReference = 8839713B1EA7026E00908C7F /* QSUseGoogleVRDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		883971531EA7026E00908C7F /* QSUseGoogleVRDemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8839716B1EA7026E00908C7F /* Build configuration list for PBXNativeTarget "QSUseGoogleVRDemoTests" */;
+			buildPhases = (
+				883971501EA7026E00908C7F /* Sources */,
+				883971511EA7026E00908C7F /* Frameworks */,
+				883971521EA7026E00908C7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				883971561EA7026E00908C7F /* PBXTargetDependency */,
+			);
+			name = QSUseGoogleVRDemoTests;
+			productName = QSUseGoogleVRDemoTests;
+			productReference = 883971541EA7026E00908C7F /* QSUseGoogleVRDemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		8839715E1EA7026E00908C7F /* QSUseGoogleVRDemoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8839716E1EA7026E00908C7F /* Build configuration list for PBXNativeTarget "QSUseGoogleVRDemoUITests" */;
+			buildPhases = (
+				8839715B1EA7026E00908C7F /* Sources */,
+				8839715C1EA7026E00908C7F /* Frameworks */,
+				8839715D1EA7026E00908C7F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				883971611EA7026E00908C7F /* PBXTargetDependency */,
+			);
+			name = QSUseGoogleVRDemoUITests;
+			productName = QSUseGoogleVRDemoUITests;
+			productReference = 8839715F1EA7026E00908C7F /* QSUseGoogleVRDemoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		883971331EA7026E00908C7F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = shaoqing;
+				TargetAttributes = {
+					8839713A1EA7026E00908C7F = {
+						CreatedOnToolsVersion = 8.2;
+						DevelopmentTeam = 6S2E2NHF33;
+						ProvisioningStyle = Automatic;
+					};
+					883971531EA7026E00908C7F = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8839713A1EA7026E00908C7F;
+					};
+					8839715E1EA7026E00908C7F = {
+						CreatedOnToolsVersion = 8.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 8839713A1EA7026E00908C7F;
+					};
+				};
+			};
+			buildConfigurationList = 883971361EA7026E00908C7F /* Build configuration list for PBXProject "QSUseGoogleVRDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 883971321EA7026E00908C7F;
+			productRefGroup = 8839713C1EA7026E00908C7F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8839713A1EA7026E00908C7F /* QSUseGoogleVRDemo */,
+				883971531EA7026E00908C7F /* QSUseGoogleVRDemoTests */,
+				8839715E1EA7026E00908C7F /* QSUseGoogleVRDemoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		883971391EA7026E00908C7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88257D6A1EA8BF7B005CC843 /* QSVRView.bundle in Resources */,
+				8839714E1EA7026E00908C7F /* LaunchScreen.storyboard in Resources */,
+				8839714B1EA7026E00908C7F /* Assets.xcassets in Resources */,
+				883971491EA7026E00908C7F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883971521EA7026E00908C7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8839715D1EA7026E00908C7F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01CE0513ECD2A4A344BD0B6B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSUseGoogleVRDemo/Pods-QSUseGoogleVRDemo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6AB80674327042F254E2704D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BAAB4C2DAE589FF3FE2B4404 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QSUseGoogleVRDemo/Pods-QSUseGoogleVRDemo-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		883971371EA7026E00908C7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				88257D3E1EA703E5005CC843 /* QSPanoramaView.m in Sources */,
+				883971431EA7026E00908C7F /* AppDelegate.m in Sources */,
+				883971401EA7026E00908C7F /* main.m in Sources */,
+				88257D811EA8C025005CC843 /* ViewController.m in Sources */,
+				88257D801EA8C025005CC843 /* QSVideoViewController.m in Sources */,
+				88257D901EA8C0A5005CC843 /* UIImage+QSView.m in Sources */,
+				88257D8B1EA8C053005CC843 /* QSDownloadManager.m in Sources */,
+				88257D411EA70408005CC843 /* QSVideoView.m in Sources */,
+				88257D8D1EA8C053005CC843 /* MBProgressHUD.m in Sources */,
+				88257D8C1EA8C053005CC843 /* MBProgressHUD+Load.m in Sources */,
+				88257D7F1EA8C025005CC843 /* QSPanoramaViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		883971501EA7026E00908C7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883971591EA7026E00908C7F /* QSUseGoogleVRDemoTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8839715B1EA7026E00908C7F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				883971641EA7026E00908C7F /* QSUseGoogleVRDemoUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		883971561EA7026E00908C7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8839713A1EA7026E00908C7F /* QSUseGoogleVRDemo */;
+			targetProxy = 883971551EA7026E00908C7F /* PBXContainerItemProxy */;
+		};
+		883971611EA7026E00908C7F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 8839713A1EA7026E00908C7F /* QSUseGoogleVRDemo */;
+			targetProxy = 883971601EA7026E00908C7F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		883971471EA7026E00908C7F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				883971481EA7026E00908C7F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8839714C1EA7026E00908C7F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8839714D1EA7026E00908C7F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		883971661EA7026E00908C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		883971671EA7026E00908C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		883971691EA7026E00908C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AAEACFA79BB6AD88F4DC85B0 /* Pods-QSUseGoogleVRDemo.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				INFOPLIST_FILE = QSUseGoogleVRDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseGoogleVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8839716A1EA7026E00908C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55986534D1F423194BC2ECB3 /* Pods-QSUseGoogleVRDemo.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 6S2E2NHF33;
+				INFOPLIST_FILE = QSUseGoogleVRDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = buaa.test.QSUseGoogleVRDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		8839716C1EA7026E00908C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSUseGoogleVRDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseGoogleVRDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSUseGoogleVRDemo.app/QSUseGoogleVRDemo";
+			};
+			name = Debug;
+		};
+		8839716D1EA7026E00908C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QSUseGoogleVRDemoTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseGoogleVRDemoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QSUseGoogleVRDemo.app/QSUseGoogleVRDemo";
+			};
+			name = Release;
+		};
+		8839716F1EA7026E00908C7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSUseGoogleVRDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseGoogleVRDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSUseGoogleVRDemo;
+			};
+			name = Debug;
+		};
+		883971701EA7026E00908C7F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = QSUseGoogleVRDemoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.test.QSUseGoogleVRDemoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QSUseGoogleVRDemo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		883971361EA7026E00908C7F /* Build configuration list for PBXProject "QSUseGoogleVRDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883971661EA7026E00908C7F /* Debug */,
+				883971671EA7026E00908C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		883971681EA7026E00908C7F /* Build configuration list for PBXNativeTarget "QSUseGoogleVRDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				883971691EA7026E00908C7F /* Debug */,
+				8839716A1EA7026E00908C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8839716B1EA7026E00908C7F /* Build configuration list for PBXNativeTarget "QSUseGoogleVRDemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8839716C1EA7026E00908C7F /* Debug */,
+				8839716D1EA7026E00908C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8839716E1EA7026E00908C7F /* Build configuration list for PBXNativeTarget "QSUseGoogleVRDemoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8839716F1EA7026E00908C7F /* Debug */,
+				883971701EA7026E00908C7F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 883971331EA7026E00908C7F /* Project object */;
+}

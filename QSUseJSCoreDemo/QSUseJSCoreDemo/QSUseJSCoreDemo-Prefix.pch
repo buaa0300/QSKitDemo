@@ -1,0 +1,17 @@
+//
+//  QSUseJSCoreDemo-Prefix.pch
+//  QSUseJSCoreDemo
+//
+//  Created by zhongpingjiang on 17/5/9.
+//  Copyright © 2017年 shaoqing. All rights reserved.
+//
+
+#ifndef QSUseJSCoreDemo_Prefix_pch
+#define QSUseJSCoreDemo_Prefix_pch
+
+#import <JavaScriptCore/JavaScriptCore.h>
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif /* QSUseJSCoreDemo_Prefix_pch */

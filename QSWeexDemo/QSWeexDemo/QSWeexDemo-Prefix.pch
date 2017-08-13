@@ -1,0 +1,22 @@
+//
+//  QSWeexDemo-Prefix.pch
+//  QSWeexDemo
+//
+//  Created by zhongpingjiang on 2017/5/16.
+//  Copyright © 2017年 shaoqing. All rights reserved.
+//
+
+#ifndef QSWeexDemo_Prefix_pch
+#define QSWeexDemo_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define SCREEN_HEIGHT CGRectGetHeight([[UIScreen mainScreen] bounds])
+#define SCREEN_WIDTH  CGRectGetWidth([[UIScreen mainScreen] bounds])
+
+#import "SDWebImageManager.h"
+#import <WeexSDK/WeexSDK.h>
+#import "EXTScope.h"
+
+#endif /* QSWeexDemo_Prefix_pch */
