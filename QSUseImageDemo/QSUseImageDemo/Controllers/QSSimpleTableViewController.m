@@ -7,8 +7,6 @@
 //
 
 #import "QSSimpleTableViewController.h"
-#import "QSImageTableViewCell.h"
-#import "QSBaseTableViewCell.h"
 #import "QSTableViewCell1.h"
 #import "QSTableViewCell2.h"
 #import "QSTableViewCell3.h"
@@ -21,7 +19,6 @@
 
 @end
 
-
 @implementation QSSimpleTableViewController
 
 - (void)viewDidLoad {
@@ -30,13 +27,15 @@
     
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
-    self.title = @"cell按下";
+    self.title = @"cell点按态和不透明图冲突";
     
     // Do any additional setup after loading the view, typically from a nib.
+
+    NSString *urlString = @"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg";
     
-    self.dataSource = [NSMutableArray arrayWithObjects:@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",@"http://img6.faloo.com/Picture/0x0/0/183/183388.jpg",nil];
+    self.dataSource = [NSMutableArray arrayWithObjects:@"",@"",@"",urlString,nil];
     [self.view addSubview:self.tableView];
-    
+//    
     [self.tableView registerClass:[QSTableViewCell1 class] forCellReuseIdentifier:@"QSTableViewCell1"];
     [self.tableView registerClass:[QSTableViewCell2 class] forCellReuseIdentifier:@"QSTableViewCell2"];
     [self.tableView registerClass:[QSTableViewCell3 class] forCellReuseIdentifier:@"QSTableViewCell3"];

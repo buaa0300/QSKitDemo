@@ -7,16 +7,12 @@
 //
 
 #import "QSTableViewCell2.h"
-#import "QSProcessImageManager.h"
-#import "UIImageView+SDWebImageExtension.h"
-#import "UIColor+RGB.h"
+#import "QSImageProcess.h"
 
 @interface QSTableViewCell2()
 
 @property (nonatomic,strong)UILabel *label;
 @property (nonatomic,strong)UIImageView *pImageView;
-@property (nonatomic,strong)QSProcessImageConfig *normalConfig;
-@property (nonatomic,strong)QSProcessImageConfig *selectedConfig;
 @property (nonatomic,strong)NSURL *url;
 
 @property (nonatomic,strong)UIImage *normalImage;
@@ -32,16 +28,6 @@
     self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
     if (self) {
         self.selectionStyle = UITableViewCellSelectionStyleGray;
-        _selectedConfig = [[QSProcessImageConfig alloc]initWithOutputSize:CGSizeMake(80, 80)
-                                                                  bgColor:[UIColor colorWithRGB:0xdddddd]
-                                                             cornerRadius:30
-                                                                  corners:UIRectCornerAllCorners
-                                                                   opaque:YES
-                                                             processBlock:__QSDefaultProcessImageBlock];
-        
-        _normalConfig = [QSProcessImageConfig configWithOutputSize:CGSizeMake(80, 80)
-                                                      cornerRadius:30
-                                                           corners:UIRectCornerAllCorners];
         [self setupSubViews];
     }
     return self;
@@ -51,14 +37,12 @@
     
     self.pImageView = [[UIImageView alloc]initWithFrame:CGRectMake(15, 15, 80, 80)];
     self.pImageView.backgroundColor = [UIColor whiteColor];
-//    self.pImageView.layer.borderColor = [UIColor blueColor].CGColor;
-//    self.pImageView.layer.borderWidth = 1;
     [self.contentView addSubview: self.pImageView];
     
     self.label = [[UILabel alloc]initWithFrame:CGRectMake(100, 15, 200, 80)];
     self.label.backgroundColor = [UIColor whiteColor];
     self.label.textColor = [UIColor redColor];
-    self.label.text = @"圆角情形下,cell的高亮重写效果1";
+    self.label.text = @"圆角情形下,cell的高亮重写效果1,性能最差";
     self.label.font = [UIFont systemFontOfSize:15];
     self.label.layer.borderColor = [UIColor redColor].CGColor;
     self.label.layer.borderWidth = 1;
@@ -66,11 +50,13 @@
     [self.label sizeToFit];
     [self.contentView addSubview:self.label];
     
-    _normalImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
-                                                config:_normalConfig ];
+    QSImageProcessConfig *config1 = [QSImageProcessConfig circleConfigWithOutputSize:self.pImageView.frame.size clipBgColor:[UIColor whiteColor]];
+    _normalImage = [[QSImageProcess sharedImageProcess]processImage:[UIImage imageNamed:@"icon_lena@3x.png"] config:config1];
+
     
-    _selectImage = [QSProcessImageManager processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
-                                                config:_selectedConfig];
+    QSImageProcessConfig *config2 = [QSImageProcessConfig circleConfigWithOutputSize:self.pImageView.frame.size clipBgColor:[UIColor colorWithRGB:0xdddddd]];
+    _selectImage = [[QSImageProcess sharedImageProcess] processImage:[UIImage imageNamed:@"icon_lena@3x.png"]
+                                                config:config2];
     
 }
 

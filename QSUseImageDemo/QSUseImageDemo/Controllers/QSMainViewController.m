@@ -9,7 +9,7 @@
 #import "QSMainViewController.h"
 #import "QSSimpleTableViewController.h"
 #import "QSLocalImageController.h"
-#import "QSCornerImageController.h"
+#import "QSWebImageController.h"
 
 @interface QSMainViewController ()<UITableViewDelegate,UITableViewDataSource>
 
@@ -26,11 +26,8 @@
     
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     
-//    self.title = @"QSUseImageDemo";
-    
-    // Do any additional setup after loading the view, typically from a nib.
-    
-    self.dataSource = [NSMutableArray arrayWithObjects:@"本地图片处理",@"网络图片的处理",@"cell选中",nil];
+    self.title = @"QSUseImageDemo";
+    self.dataSource = [NSMutableArray arrayWithObjects:@"本地图片处理",@"网络图片的处理",@"cell点按态和不透明图冲突",nil];
     [self.view addSubview:self.tableView];
 }
 
@@ -101,7 +98,7 @@
         }
             break;
         case 1:{
-            QSCornerImageController *vc2 = [[QSCornerImageController alloc]init];
+            QSWebImageController *vc2 = [[QSWebImageController alloc]init];
             [self.navigationController pushViewController:vc2 animated:YES];
 //            [self presentViewController:vc1 animated:YES completion:nil];
             break;

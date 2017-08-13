@@ -58,15 +58,38 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     CGContextClearRect(context, rect);
     
-    if (config.option == QSImageProcessOptionClipCorner) {
-        
-        QSImageProcessClipCorner(context, image, config);
-    
-    }else if(config.option == QSImageProcessOptionCircle){
-        
-        config.cornerRadius = (MIN(config.outputSize.width, config.outputSize.height)) /2.0f;
-        config.corners = UIRectCornerAllCorners;
-        QSImageProcessClipCorner(context, image, config);
+    switch (config.option) {
+        case QSImageProcessOptionDefault:{
+            [image drawInRect:rect];
+        }
+            break;
+            
+        case QSImageProcessOptionClipCorner:{
+            QSImageProcessClipCorner(context, image, config);
+        }
+            break;
+            
+        case QSImageProcessOptionCircle:{
+            QSImageProcessClipCorner(context, image, config);
+        }
+            break;
+            
+        case QSImageProcessOptionRound:{
+            QSImageProcessRound(context, image, config);
+        }
+            break;
+            
+        case QSImageProcessOptionAddGradationMask:{
+            QSImageProcessAddGradationMask(context, image, config);
+        }
+            break;
+         
+        case QSImageProcessOptionAddWholeMask:{
+            QSImageProcessAddWholeMask(context, image, config);
+        }
+            
+        default:
+            break;
     }
 
     UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
